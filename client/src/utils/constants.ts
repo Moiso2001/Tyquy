@@ -23,7 +23,7 @@ export const opinions: Opinion[] = [{
     img: ''
 }]
 
-export const services: Service[] = [{
+export const benefits: Service[] = [{
     id: 1,
     title: 'Ruta puerta a puerta',
     text: 'Nos encargamos de recoger a tu mascota desde tu puerta y llevarla de regreso después de un día lleno de diversión. Nuestra ruta se adapta a tu horario, garantizando la máxima conveniencia para ti.',

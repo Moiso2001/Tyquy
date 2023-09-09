@@ -1,9 +1,12 @@
 // import React from 'react'
 
 /* Utils */
-import { services, opinions } from "../../utils/constants"
+import { benefits, opinions } from "../../utils/constants"
+
+/* Components */
 import Opinion from "../Opinion/Opinion";
 import Card from "./Cards/Card";
+
 
 export default function Why() {
   const twoOpinions = opinions.filter(opinion => opinion.id > 2);
@@ -22,7 +25,7 @@ export default function Why() {
             </div>
 
             <div>
-              {services.map(service => 
+              {benefits.map(service => 
                 <Card
                   {...service}
                 />)
