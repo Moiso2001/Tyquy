@@ -28,9 +28,8 @@ export default function Head() {
         {/* Register button */}
         <div>
             <div>
-                <p>
-                    No esperes más para brindarle a tu mascota una experiencia unica.
-                </p>
+                <span>No esperes más para brindarle a tu mascota una experiencia unica.</span>
+                <p>Necesitaremos unos datos de tu peludito, escribenos y uno de nuestros asesores te ayudara con la inscripcion.</p>
             </div>
             
             {/* Dog and arrow Icons */}
@@ -41,7 +40,7 @@ export default function Head() {
         </div>
 
         {/* Opinions */}
-        
+
     </div>
   )
 }
