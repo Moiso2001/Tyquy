@@ -13,10 +13,7 @@ export type OpinionProps = {
 
 export default function Opinion({text, img, id, owner}: OpinionProps) {
   return (
-    <div 
-        key={id}
-        className={styles.div__global}
-    >
+    <div className={styles.div__global}>
         <img/>
 
         <div>

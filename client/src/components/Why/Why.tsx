@@ -25,9 +25,10 @@ export default function Why() {
             </div>
 
             <div>
-              {benefits.map(service => 
+              {benefits.map(benefit => 
                 <Card
-                  {...service}
+                  key={benefit.id}
+                  {...benefit}
                 />)
               }
             </div>
@@ -37,6 +38,7 @@ export default function Why() {
         <div>
           {twoOpinions.map(opinion => 
             <Opinion
+              key={opinion.id}
               {...opinion}
             />)
           }

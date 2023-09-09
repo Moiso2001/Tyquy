@@ -52,6 +52,7 @@ export default function Head() {
 
             {twoOpinions.map(opinion => 
             <Opinion
+                key={opinion.id}
                 {...opinion}
             />)}
         </div>

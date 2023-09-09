@@ -18,6 +18,7 @@ export default function Services() {
       <div>
         {services.map(service => 
           <Card
+            key={service.id}
             {...service}
           />)
         }
