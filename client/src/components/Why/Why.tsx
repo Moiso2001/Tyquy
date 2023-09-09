@@ -3,7 +3,7 @@
 /* Utils */
 import { services, opinions } from "../../utils/constants"
 import Opinion from "../Opinion/Opinion";
-import Services from "../Services/Services"
+import Card from "./Cards/Card";
 
 export default function Why() {
   const twoOpinions = opinions.filter(opinion => opinion.id > 2);
@@ -23,7 +23,7 @@ export default function Why() {
 
             <div>
               {services.map(service => 
-                <Services
+                <Card
                   {...service}
                 />)
               }
