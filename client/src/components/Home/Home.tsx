@@ -1,7 +1,12 @@
-import React from 'react'
+// import React from 'react'
+
+/* Componetns */
+import Head from '../Head/Head'
 
 export default function Home() {
   return (
-    <div>Main</div>
+    <div>
+      <Head/>
+    </div>
   )
 }

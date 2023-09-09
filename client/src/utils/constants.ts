@@ -1,6 +1,6 @@
 import { OpinionProps } from "../components/Opinion/Opinion"
 
-const opinions: OpinionProps[] = [{
+export const opinions: OpinionProps[] = [{
     id: 1,
     text: 'Estaba nerviosa de dejar solo a Sam con extraños, pero el trato a los perritos y sus hermosas instalaciones hicieron que las dudas se fueran rapidamente.',
     owner: 'Sara P.',

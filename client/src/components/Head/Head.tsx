@@ -4,9 +4,11 @@
 import Opinion from "../Opinion/Opinion";
 import styles from "./Head.module.css";
 
+/* UTILS */
+import { opinions } from "../../utils/constants";
+
 export default function Head() {
-
-
+    const twoOpinions = opinions.filter(e => e.id < 3);
 
   return (
     <div className={styles.divGlobal}>
@@ -48,8 +50,10 @@ export default function Head() {
             {/* Greek Pattern */}
             <img/>
 
-            <Opinion/>
-            <Opinion/>
+            {twoOpinions.map(opinion => 
+            <Opinion
+                {...opinion}
+            />)}
         </div>
 
     </div>

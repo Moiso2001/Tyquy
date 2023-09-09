@@ -8,7 +8,7 @@ export type OpinionProps = {
     text: string
     owner: string
     img: string
-    id: string | number
+    id: number
 }
 
 export default function Opinion({text, img, id, owner}: OpinionProps) {
