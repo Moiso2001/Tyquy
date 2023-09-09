@@ -1,4 +1,4 @@
-import { Opinion, Service } from "../types/global"
+import { Opinion, Benefit, Service } from "../types/global"
 
 
 export const opinions: Opinion[] = [{
@@ -23,7 +23,7 @@ export const opinions: Opinion[] = [{
     img: ''
 }]
 
-export const benefits: Service[] = [{
+export const benefits: Benefit[] = [{
     id: 1,
     title: 'Ruta puerta a puerta',
     text: 'Nos encargamos de recoger a tu mascota desde tu puerta y llevarla de regreso después de un día lleno de diversión. Nuestra ruta se adapta a tu horario, garantizando la máxima conveniencia para ti.',
@@ -48,4 +48,21 @@ export const benefits: Service[] = [{
     title: 'Reportes por whatsapp',
     text: ' Te mantenemos informado en tiempo real con reportes y noticias importantes sobre tu mascota a través de WhatsApp. Así, estarás siempre al tanto de su bienestar y actividades.',
     icon: ''
+}]
+
+export const services: Service[] =[{
+    id: 1,
+    title: 'Dog Office',
+    img: '',
+    text: 'Nuestra guardería canina ofrece un servicio puerta a puerta, cuidando de tu mascota mientras trabajas. Recogemos por la mañana y entregamos por la tarde-noche. ¡Comodidad y seguridad para tu peludo amigo!'
+}, {
+    id: 2,
+    title: 'Dog Hotel',
+    img: '',
+    text: '¿Necesitas viajar o una noche fuera? Confía en nuestra guardería para el descanso seguro de tu mascota. Responsabilidad y cuidado en un entorno acogedor y tranquilo.'
+}, {
+    id: 3,
+    title: 'Dog Spa',
+    img: '',
+    text: 'Permítenos cuidar el aseo y pelaje de tu mascota. Te entregamos a tu compañero limpio, radiante y perfumado para llenar tu hogar de un delicioso aroma',
 }]

@@ -1,5 +1,11 @@
 // import React from 'react'
 
+/* Utils */
+import { services } from "../../utils/constants";
+
+/* Components */
+import Card from "./Cards/Card";
+
 export default function Services() {
   return (
     <div>
@@ -9,7 +15,13 @@ export default function Services() {
       </div>
 
       {/* Cards */}
-      
+      <div>
+        {services.map(service => 
+          <Card
+            {...service}
+          />)
+        }
+      </div>
     </div>
   )
 }

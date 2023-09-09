@@ -7,9 +7,16 @@ export type Opinion = {
     id: number
 }
 
-export type Service = {
+export type Benefit = {
     id: number
     title: string
     text: string
     icon: string
+}
+
+export type Service = {
+    id: number
+    title: string
+    text: string
+    img: string
 }
