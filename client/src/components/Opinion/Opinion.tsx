@@ -4,7 +4,7 @@
 import styles from "./Opinion.module.css";
 
 
-type OpinionProps = {
+export type OpinionProps = {
     text: string
     owner: string
     img: string

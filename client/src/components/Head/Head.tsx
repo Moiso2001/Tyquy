@@ -1,9 +1,13 @@
 // import React from 'react'
 
 /* CSS */
+import Opinion from "../Opinion/Opinion";
 import styles from "./Head.module.css";
 
 export default function Head() {
+
+
+
   return (
     <div className={styles.divGlobal}>
         {/* Head */}
@@ -40,6 +44,13 @@ export default function Head() {
         </div>
 
         {/* Opinions */}
+        <div>
+            {/* Greek Pattern */}
+            <img/>
+
+            <Opinion/>
+            <Opinion/>
+        </div>
 
     </div>
   )
