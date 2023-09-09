@@ -1,4 +1,8 @@
-import React from 'react'
+// import React from 'react'
+
+/* Utils */
+import { services } from "../../utils/constants"
+import Services from "../Services/Services"
 
 export default function Why() {
   return (
@@ -15,9 +19,12 @@ export default function Why() {
             </div>
 
             <div>
-                
+              {services.map(service => 
+              <Services
+                {...service}
+              />)
+              }
             </div>
-
         </div>
     </div>
   )
