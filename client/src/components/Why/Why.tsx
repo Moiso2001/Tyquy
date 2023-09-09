@@ -1,10 +1,13 @@
 // import React from 'react'
 
 /* Utils */
-import { services } from "../../utils/constants"
+import { services, opinions } from "../../utils/constants"
+import Opinion from "../Opinion/Opinion";
 import Services from "../Services/Services"
 
 export default function Why() {
+  const twoOpinions = opinions.filter(opinion => opinion.id > 2);
+
   return (
     <div>
         {/* Title */}
@@ -20,12 +23,22 @@ export default function Why() {
 
             <div>
               {services.map(service => 
-              <Services
-                {...service}
-              />)
+                <Services
+                  {...service}
+                />)
               }
             </div>
         </div>
+
+        {/* Opinions */}
+        <div>
+          {twoOpinions.map(opinion => 
+            <Opinion
+              {...opinion}
+            />)
+          }
+        </div>
+        
     </div>
   )
 }
