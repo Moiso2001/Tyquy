@@ -7,6 +7,7 @@ import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api"
 
 export default function Map() {
   const {isLoaded} = useLoadScript({googleMapsApiKey: import.meta.env.VITE_REACT_APP_GOOGLE_MAPS_API_KEY})
+  const center = useMemo(() => ({lat: 4.686122, lng: -73.941499}),[])
 
   return (
     <div>
@@ -23,10 +24,10 @@ export default function Map() {
           ? <div><span>Loading...</span></div>
           : <GoogleMap
               zoom={15}
-              center={{lat: 4.686122, lng: -73.941499}}
+              center={center}
               mapContainerStyle={{ width: '50%', height: '400px'}} 
             >
-             <MarkerF key={1} position={{lat: 4.686122, lng: -73.941499}}/> 
+             <MarkerF key={1} position={center}/> 
             </GoogleMap>
         }
     </div>
