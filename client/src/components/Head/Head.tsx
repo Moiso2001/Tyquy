@@ -4,6 +4,10 @@
 import Opinion from "../Opinion/Opinion";
 import styles from "./Head.module.css";
 
+/* Images */
+import homeDogs from "../../assets/homedogs.jpg"
+import logoTyquyWhite from "../../assets/logo white.png"
+
 /* UTILS */
 import { opinions } from "../../utils/constants";
 
@@ -11,21 +15,24 @@ export default function Head() {
     const twoOpinions = opinions.filter(e => e.id < 3);
 
   return (
-    <div className={styles.divGlobal}>
+    <div className={styles.div_global}>
         {/* Head */}
-        <div>
-            <div>
-                <img/>
+        <div 
+            style={{ backgroundImage: `url(${homeDogs})` }}
+            className={styles.div_head}
+        >
+            <div className={styles.head__div_title}>
+                <img src={logoTyquyWhite}/>
                 <span>Hotel y Guardería Canina en Bogotá</span>
             </div>
-            <div>
+            <div className={styles.head__div_body}>
                 <div>
                     <p>
                         Guardería canina en entorno natural con áreas verdes y 
                         cuidado excepcional, cerca de las afueras de la ciudad.
                     </p>
                 </div>
-                <div>
+                <div className={styles.head_body__div_button}>
                     <button>Contáctanos</button>
                 </div>
             </div>
