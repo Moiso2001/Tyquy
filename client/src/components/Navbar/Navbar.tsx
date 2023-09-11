@@ -6,11 +6,8 @@ import {AiFillInstagram, AiOutlineClose} from "react-icons/ai"
 import {IoLogoWhatsapp} from "react-icons/io5"
 import {HiMenu} from "react-icons/hi"
 
-
-
 /* CSS */
 import styles from "./Navbar.module.css";
-
 
 
 export default function Navbar() {
@@ -18,10 +15,10 @@ export default function Navbar() {
 
 
   return (
-    <div className={styles.divGlobal}>
+    <div className={styles.div_global}>
 
         {/* Phone UI */}
-        <nav>
+        <nav className={styles.nav_mobile}>
             <div onClick={() => setIsOpen(state => !state)}>
                 {
                     isOpen
@@ -54,7 +51,7 @@ export default function Navbar() {
         </nav>
 
         {/* Desktop UI */}
-        <nav>
+        <nav className={styles.nav_desktop}>
             <div>
                 <span>Inicio</span>
             </div>
