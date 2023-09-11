@@ -1,8 +1,42 @@
 .div_global{
-    background-color: red;
-}
+    background-color: #faf5e4;
+    position: fixed;
+    width: 91%;
 
+    padding: 1rem;
+    text-align: right;
+}
 
 .nav_desktop{
     display: none;
+}
+
+.mobile__icon{
+    font-size: 1.4rem;
+    color: #000000d8
+}
+
+.mobile__close_nav {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in; /* Adjust the duration and easing as needed */
+}
+  
+.mobile__open_nav{
+  max-height: 200px; /* Set the maximum height based on your content */
+  overflow: hidden;
+  transition: max-height 0.2s ease-in; /* Adjust the duration and easing as needed */
+}
+
+.mobile__open_span{
+    display: flex;
+
+    margin: 1rem 0 1rem 0;
+
+    font-weight: 300;
+}
+
+.mobile__icon__social{
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
 }
