@@ -1,23 +1,54 @@
-// import React from 'react'
+/* React */
+import {useState, useEffect} from 'react'
 
 /* Lottie */
-import Lottie from "lottie-react";
 import dogAnimation from "../../assets/lottie/animation_dog.json"
+import Lottie from "lottie-react";
 
 /* CSS */
 import Opinion from "../Opinion/Opinion";
 import styles from "./Head.module.css";
 
 /* Images */
-import homeDogs from "../../assets/homedogs.jpg"
+import greekPattern from "../../assets/greek decoration/Greek pattern horizontal.png"
 import logoTyquyWhite from "../../assets/logo white.png"
+import homeDogs from "../../assets/homedogs.jpg"
 import arrow from "../../assets/arrow.png";
 
 /* UTILS */
 import { opinions } from "../../utils/constants";
 
+/* Definition */
+import { OpinionDef } from '../../types/global';
+
+
 export default function Head() {
-    const twoOpinions = opinions.filter(e => e.id < 3);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const [opinionsToShow, setOpinions] = useState<OpinionDef[]>([])
+
+    /* Catch the window width to be used on how many opinions will be displayed */
+    useEffect(() => {
+        const handleWindowResize = () => {
+          setWindowWidth(window.innerWidth);
+        };
+    
+        window.addEventListener('resize', handleWindowResize);
+    
+        // Remove event listener when the component unmounts to avoid memory leaks
+        return () => {
+          window.removeEventListener('resize', handleWindowResize);
+        };
+    }, []);
+
+    /* Opinion effect handler */
+    useEffect(() => {
+        if(windowWidth < 600){
+            setOpinions(opinions.filter(e => e.id < 2));
+        } else {
+            setOpinions(opinions.filter(e => e.id < 3));
+        }
+    }, [windowWidth])
+
 
   return (
     <div className={styles.div_global}>
@@ -59,11 +90,14 @@ export default function Head() {
         </div>
 
         {/* Opinions */}
-        <div>
+        <div className={styles.div_opinion}>
             {/* Greek Pattern */}
-            <img/>
+            <img 
+                className={styles.opinion__greekPattern} 
+                src={greekPattern}
+            />
 
-            {twoOpinions.map(opinion => 
+            {opinionsToShow.map(opinion => 
             <Opinion
                 key={opinion.id}
                 {...opinion}
