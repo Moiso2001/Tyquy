@@ -37,8 +37,8 @@ export default function Why() {
           <div className={styles.benefits__div_title}>
             <p>¡Bienvenidos a nuestra guardería canina de confianza! Aquí, su peludo amigo experimentará cuidado de primera clase. Nuestro equipo dedicado ofrece atención personalizada, amplias áreas de juego y un entorno seguro. ¡Elije la felicidad y tranquilidad para tu mascota!</p>
           </div>
-          
-          <div>
+
+          <div className={styles.benefits__div_cards}>
             {benefits.map(benefit => 
               <Card
                 key={benefit.id}
