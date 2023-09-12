@@ -14,6 +14,8 @@ import styles from "./Why.module.css"
 import  grassBG from "../../assets/grass.png";
 import muiscaMask from "../../assets/tribu decoration/muiscaMask.png"
 import greekPattern from "../../assets/tribu decoration/pngwing.com (1) (1).png"
+import greekPatternVertical from "../../assets/tribu decoration/Greek pattern horizontal.png"
+
 
 /* Definitions */
 import { OpinionDef } from '../../types/global';
@@ -66,7 +68,7 @@ export default function Why() {
           </div>
 
           <div className={styles.benefits__div_cards}>
-            <img src={greekPattern} className={styles.benefit__pattern}/>
+            <img src={greekPattern} className={styles.benefit__greek_pattern}/>
             {benefits.map(benefit => 
               <Card
                 key={benefit.id}
@@ -77,6 +79,15 @@ export default function Why() {
         </div>
 
         <div className={styles.div_opinion}>
+            <img 
+                className={styles.opinion__greekPattern1} 
+                src={greekPatternVertical}
+            />
+            <img 
+                className={styles.opinion__greekPattern2} 
+                src={greekPatternVertical}
+            />
+
           {opinionsToShow.map(opinion => 
             <Opinion
               key={opinion.id}
