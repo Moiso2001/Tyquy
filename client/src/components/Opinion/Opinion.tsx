@@ -3,6 +3,10 @@
 /* CSS */
 import styles from "./Opinion.module.css";
 
+/* Icons */
+
+import runeM from "../../assets/greek decoration/rune m.png"
+
 
 export type OpinionProps = {
     text: string
@@ -14,13 +18,19 @@ export type OpinionProps = {
 export default function Opinion({text, img, owner}: OpinionProps) {
   return (
     <div className={styles.div__global}>
-        <img/>
+        <img 
+          className={styles.global__rune_icon}
+          src={runeM}
+        />
 
-        <div>
+        <div className={styles.global__div_info}>
             <img src={img}/>
-            <div>
+            <div className={styles.info__div_opinion}>
+                <hr/>
                 <p>{text}</p>
-                <span>{owner}</span>
+                <div className={styles.opinion__div_span}>
+                  <span>- {owner}</span>
+                </div>
             </div>
         </div>
     </div>

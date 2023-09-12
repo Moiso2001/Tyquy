@@ -17,11 +17,11 @@ import arrow from "../../assets/arrow.png";
 import { opinions } from "../../utils/constants";
 
 /* Definition */
-import { OpinionD } from '../../types/global';
+import { OpinionDef } from '../../types/global';
 
 export default function Head() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-    const [opinionsToShow, setOpinions] = useState<OpinionD[]>([])
+    const [opinionsToShow, setOpinions] = useState<OpinionDef[]>([])
 
     /* Catch the window width to be used on how many opinions will be displayed */
     useEffect(() => {
@@ -46,7 +46,7 @@ export default function Head() {
         }
     }, [windowWidth])
 
-    
+
   return (
     <div className={styles.div_global}>
         {/* Head */}

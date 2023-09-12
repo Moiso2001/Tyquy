@@ -1,20 +1,20 @@
 import { ImgHTMLAttributes } from "react"
 
-export type OpinionD = {
+export type OpinionDef = {
     text: string
     owner: string
     img: string
     id: number
 }
 
-export type BenefitD = {
+export type BenefitDef = {
     id: number
     title: string
     text: string
     icon: string
 }
 
-export type Serviced = {
+export type ServiceDef = {
     id: number
     title: string
     text: string
