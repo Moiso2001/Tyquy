@@ -10,6 +10,9 @@ import Card from "./Cards/Card";
 /* CSS */
 import styles from "./Why.module.css"
 
+/* Images */
+import  grassBG from "../../assets/grass.png";
+
 
 export default function Why() {
   const twoOpinions = opinions.filter(opinion => opinion.id > 2);
@@ -17,7 +20,10 @@ export default function Why() {
   return (
     <div className={styles.div_global}>
         {/* Title */}
-        <div className={styles.div_title}>
+        <div 
+          className={styles.div_title}
+          style={{backgroundImage: `url(${grassBG})`}}
+        >
           <h2> ¿Por qué Tyquy Bayara?</h2>
         </div>
 
@@ -36,7 +42,7 @@ export default function Why() {
           </div>
         </div>
 
-        {/* Opinions */}
+        {/* Opinions
         <div className={styles.div_opinion}>
           {twoOpinions.map(opinion => 
             <Opinion
@@ -44,7 +50,7 @@ export default function Why() {
               {...opinion}
             />)
           }
-        </div>       
+        </div>        */}
     </div>
   )
 }

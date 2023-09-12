@@ -1,0 +1,39 @@
+.div_global{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.div_title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 90px;
+    width: 100%;
+
+    background-size: 32rem;
+    background-repeat: no-repeat;
+    background-position-y: -120px;
+    background-position-x: -70px;
+}
+
+ .div_title::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.381);
+
+    z-index: 1;
+} 
+
+.div_title h2{
+    color: #FFFDF6;
+    font-size: 1.8rem;
+    z-index: 5;
+} 

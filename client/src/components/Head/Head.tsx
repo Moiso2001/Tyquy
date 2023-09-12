@@ -10,7 +10,7 @@ import Opinion from "../Opinion/Opinion";
 import styles from "./Head.module.css";
 
 /* Images */
-import greekPattern from "../../assets/greek decoration/Greek pattern horizontal.png"
+import greekPattern from "../../assets/tribu decoration/Greek pattern horizontal.png"
 import logoTyquyWhite from "../../assets/logo white.png"
 import homeDogs from "../../assets/homedogs.jpg"
 import arrow from "../../assets/arrow.png";

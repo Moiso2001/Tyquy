@@ -5,7 +5,7 @@ import styles from "./Opinion.module.css";
 
 /* Icons */
 
-import runeM from "../../assets/greek decoration/rune m.png"
+import runeM from "../../assets/tribu decoration/rune m.png"
 
 
 export type OpinionProps = {
