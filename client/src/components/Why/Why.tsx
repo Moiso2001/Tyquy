@@ -13,7 +13,7 @@ import styles from "./Why.module.css"
 /* Images */
 import  grassBG from "../../assets/grass.png";
 import muiscaMask from "../../assets/tribu decoration/muiscaMask.png"
-
+import greekPattern from "../../assets/tribu decoration/pngwing.com (1) (1).png"
 
 export default function Why() {
   const twoOpinions = opinions.filter(opinion => opinion.id > 2);
@@ -39,6 +39,7 @@ export default function Why() {
           </div>
 
           <div className={styles.benefits__div_cards}>
+            <img src={greekPattern} className={styles.benefit__pattern}/>
             {benefits.map(benefit => 
               <Card
                 key={benefit.id}
