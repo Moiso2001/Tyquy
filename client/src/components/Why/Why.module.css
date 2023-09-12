@@ -37,3 +37,30 @@
     font-size: 1.8rem;
     z-index: 5;
 } 
+
+.title__muiscaMask{
+    position: absolute;
+
+    width: 15%;
+
+    top: -46px;
+    bottom: 0;
+    left: 310px;
+    right: 0;
+}
+
+.benefits__div_title{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.benefits__div_title p{
+    width: 90%;
+    margin: 0 auto;
+
+    text-align: justify;
+    font-size: 0.9rem;
+
+    line-height: 1.4;
+}
+
