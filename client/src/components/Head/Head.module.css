@@ -153,3 +153,19 @@
     left: 50px;
     bottom: 0;
 }
+
+.div_opinion{
+    position: relative;
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.opinion__greekPattern{
+    width: 200%;
+    opacity: 30%;
+
+    z-index: 1;
+
+    margin-bottom: -160px;
+}
