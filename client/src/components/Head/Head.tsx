@@ -93,7 +93,11 @@ export default function Head() {
         <div className={styles.div_opinion}>
             {/* Greek Pattern */}
             <img 
-                className={styles.opinion__greekPattern} 
+                className={styles.opinion__greekPattern1} 
+                src={greekPattern}
+            />
+            <img 
+                className={styles.opinion__greekPattern2} 
                 src={greekPattern}
             />
 
