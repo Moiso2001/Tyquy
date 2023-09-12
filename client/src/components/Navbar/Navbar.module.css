@@ -1,10 +1,13 @@
 .div_global{
     background-color: #faf5e4;
     position: fixed;
-    width: 91%;
+    width: 91.5%;
 
+    top: 0;
     padding: 1rem;
     text-align: right;
+
+    z-index: 15;
 }
 
 .nav_desktop{
@@ -22,7 +25,7 @@
     transition: max-height 0.2s ease-in; /* Adjust the duration and easing as needed */
 }
   
-.mobile__open_nav{
+.mobile__open_nav {
   max-height: 200px; /* Set the maximum height based on your content */
   overflow: hidden;
   transition: max-height 0.2s ease-in; /* Adjust the duration and easing as needed */

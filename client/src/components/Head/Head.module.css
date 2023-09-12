@@ -1,0 +1,155 @@
+.div_global{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 3.688rem;
+}
+
+.div_head{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    background-size: 32rem;
+    background-repeat: no-repeat;
+    background-position-y: -180px;
+    background-position-x: -70px;
+
+    padding: 1.2rem 1.2rem 2rem 1.2rem;
+}
+
+.div_head::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.381);
+
+    z-index: 1;
+}
+
+.head__div_title{
+    display: flex;
+    z-index: 5;
+}
+
+.head__div_title img{
+    width: 20%;
+}
+
+.head__div_title span{
+    color: #FFFDF6;
+    font-size: 1.6rem;
+    margin: 1.2rem 0 0 1.8rem;
+
+    line-height: 1.4;
+
+}
+
+.head__div_body{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 2rem;
+
+    color: white;
+
+    z-index: 5;
+}
+
+.head__div_body p{
+    font-size: 0.75rem;
+    width: 80%;
+
+    text-align: justify;
+}
+
+.head_body__div_button{
+    display: flex;
+    justify-content: end;
+}
+
+.head_body__div_button button{
+    background-color: #FF808B;
+    color: white;
+
+    border: none;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+
+    margin-right: 10px;
+
+    border-radius: 2px;
+
+    font-size: 0.9rem;
+}
+
+/* Register Part */
+
+.div_register{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    align-items: center;
+
+    margin: 4rem 0rem 0rem 0rem;
+    width: 90%;
+}
+
+.div_register p{
+    display: none;
+}
+
+.register__div_title{
+    margin-bottom: 4rem;
+
+    text-align: center;
+}
+
+.register__div_title span{
+    line-height: 1.4;
+}
+
+.register__div_button{
+    position: relative;
+}
+
+.register__div_button button{
+    background-color: #FF808B;
+    color: white;
+
+    border: none;
+    border-radius: 2px;
+
+    padding: 0.6rem 1rem 0.6rem  1rem;
+
+    font-size: 0.8rem;
+}
+
+.register__arrow{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+
+    right: 0;
+    top: 40px;
+    left: -20px;
+    bottom: 0;
+}
+
+.register__dogAnimation{
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: 0;
+    top: -119px;
+    left: 50px;
+    bottom: 0;
+}
