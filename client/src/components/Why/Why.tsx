@@ -1,4 +1,4 @@
-// import React from 'react'
+import {useEffect, useState} from 'react'
 
 /* Utils */
 import { benefits, opinions } from "../../utils/constants"
@@ -15,8 +15,35 @@ import  grassBG from "../../assets/grass.png";
 import muiscaMask from "../../assets/tribu decoration/muiscaMask.png"
 import greekPattern from "../../assets/tribu decoration/pngwing.com (1) (1).png"
 
+/* Definitions */
+import { OpinionDef } from '../../types/global';
+
 export default function Why() {
-  const twoOpinions = opinions.filter(opinion => opinion.id > 2);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [opinionsToShow, setOpinions] = useState<OpinionDef[]>([])
+
+  /* Catch the window width to be used on how many opinions will be displayed */
+  useEffect(() => {
+      const handleWindowResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+  
+      window.addEventListener('resize', handleWindowResize);
+  
+      // Remove event listener when the component unmounts to avoid memory leaks
+      return () => {
+        window.removeEventListener('resize', handleWindowResize);
+      };
+  }, []);
+
+  /* Opinion effect handler */
+  useEffect(() => {
+      if(windowWidth < 600){
+          setOpinions(opinions.filter(e => e.id === 3));
+      } else {
+          setOpinions(opinions.filter(e => e.id > 2));
+      }
+  }, [windowWidth])
 
   return (
     <div className={styles.div_global}>
@@ -49,15 +76,14 @@ export default function Why() {
           </div>
         </div>
 
-        {/* Opinions
         <div className={styles.div_opinion}>
-          {twoOpinions.map(opinion => 
+          {opinionsToShow.map(opinion => 
             <Opinion
               key={opinion.id}
               {...opinion}
             />)
           }
-        </div>        */}
+        </div>   
     </div>
   )
 }

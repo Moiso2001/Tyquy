@@ -82,3 +82,10 @@
     left: -180px;
     right: 0;
 }   
+
+.div_opinion{
+    position: relative;
+    width: 100%;
+
+    overflow-x: hidden;
+}
