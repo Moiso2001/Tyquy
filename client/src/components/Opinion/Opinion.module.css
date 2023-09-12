@@ -46,11 +46,11 @@
 
     padding: 0.8rem;
 
-    width: 200px;
+    width: 180px;
     z-index: 5;
 
-    margin-top: -80px;
-    margin-left: -30px;
+    margin-top: -70px;
+    margin-left: -40px;
 }
 
 
@@ -67,6 +67,8 @@
 .info__div_opinion p{
     font-weight: 300;
     text-align: justify;
+
+    margin: 0.4rem 0 0.4rem 0;
 
     font-size: 0.9rem;
 
