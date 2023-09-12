@@ -1,4 +1,4 @@
-// import React from 'react'
+import {useState, useEffect} from 'react'
 
 /* Lottie */
 import Lottie from "lottie-react";
@@ -16,9 +16,37 @@ import arrow from "../../assets/arrow.png";
 /* UTILS */
 import { opinions } from "../../utils/constants";
 
-export default function Head() {
-    const twoOpinions = opinions.filter(e => e.id < 3);
+/* Definition */
+import { OpinionD } from '../../types/global';
 
+export default function Head() {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const [opinionsToShow, setOpinions] = useState<OpinionD[]>([])
+
+    /* Catch the window width to be used on how many opinions will be displayed */
+    useEffect(() => {
+        const handleWindowResize = () => {
+          setWindowWidth(window.innerWidth);
+        };
+    
+        window.addEventListener('resize', handleWindowResize);
+    
+        // Remove event listener when the component unmounts to avoid memory leaks
+        return () => {
+          window.removeEventListener('resize', handleWindowResize);
+        };
+    }, []);
+
+    /* Opinion effect handler */
+    useEffect(() => {
+        if(windowWidth < 600){
+            setOpinions(opinions.filter(e => e.id < 2));
+        } else {
+            setOpinions(opinions.filter(e => e.id < 3));
+        }
+    }, [windowWidth])
+
+    
   return (
     <div className={styles.div_global}>
         {/* Head */}
@@ -63,7 +91,7 @@ export default function Head() {
             {/* Greek Pattern */}
             <img/>
 
-            {twoOpinions.map(opinion => 
+            {opinionsToShow.map(opinion => 
             <Opinion
                 key={opinion.id}
                 {...opinion}
