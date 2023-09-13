@@ -13,7 +13,6 @@
 
     margin: 0 auto;
     width: 100%;
-    height: 200px;
 
     background-size: 375px;
 
@@ -42,7 +41,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 93.5%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.259);
 
     z-index: 1;

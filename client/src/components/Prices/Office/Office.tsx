@@ -3,25 +3,30 @@
 /* CSS */
 import styles from "./Office.module.css";
 
+/* Images and icons */
+import runeLine from "../../../assets/tribu decoration/Greek pattern horizontal.png"
+
 export default function Office() {
   return (
-    <div>
+    <div className={styles.div_global}>
         {/* Head */}
-        <div>
+        <div className={styles.div_title}>
+            <img src={runeLine} className={styles.title__runeIcon}/>
+
             <h3>Dog Office</h3>
-            <div>
+            <div className={styles.title__div_day}>
                 <span>Dia</span>
                 <span>$40.000</span>
             </div>
         </div>
 
         {/* Description */}
-        <div>
+        <div className={styles.div_description}>
             <span>Plan mensual</span>
         </div>
 
         {/* Prices Grid */}
-        <div>
+        <div className={styles.div_prices}>
             <table>
                 <thead>
                     <tr>

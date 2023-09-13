@@ -1,0 +1,61 @@
+.div_title{
+    position: relative;
+    display: flex;
+
+    overflow: hidden;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background-color: #698269;
+
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 1.2rem;
+}
+
+.div_title h3{
+    color: #FFFDF6;
+    
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin: 0;
+
+    z-index: 5;
+}
+
+.title__div_day{
+    display: flex;
+    flex-direction: column;
+
+    background-color: #94B494;
+
+    border-radius: 4px;
+    
+    padding: 0.5rem;
+    margin-right: 0.4rem;
+
+    font-size: 0.8rem;
+
+    color: #FFFDF6;
+}   
+
+.title__div_day{
+    z-index: 5;
+}
+
+.title__runeIcon{
+    position: absolute;
+
+    width: 280%;
+
+    opacity: 10%;
+    
+    top: 0;
+    bottom: 0;
+    right: 0;   
+    left: 0;
+
+    z-index: 1;
+}
