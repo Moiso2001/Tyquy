@@ -28,38 +28,60 @@ export default function Office() {
         {/* Prices Grid */}
         <div className={styles.div_prices}>
             <table>
-                <thead>
+                <thead className={styles.prices__grid_head}>            
                     <tr>
-                      <th>Tamaño</th>
-                      <th>2 Dias<br/>/semana</th>
-                      <th>3 Dias<br/>/semana</th>
-                      <th>5 Dias<br/>/semana</th>
+                      <th className={styles.prices__head_tamaño}>Tamaño</th>   
+                      <div className={styles.prices__div_head}>  
+                        <th className={styles.prices__head_dias}>2 Dias<br/><span>/semana</span></th>
+                        <th className={styles.prices__head_dias}>3 Dias<br/><span>/semana</span></th>
+                        <th className={styles.prices__head_dias}>5 Dias<br/><span>/semana</span></th>
+                      </div>
                     </tr>
+                    
                 </thead>
-                <tbody>
+                <tbody className={styles.prices__grid_body}>
                     <tr>
-                      <td>Pequeño<br/>(hasta 10KG)</td>
-                      <td>$270.000</td>
-                      <td>$290.000</td>
-                      <td>$320.000</td>
+                      <td className={styles.body__tamaño}>
+                        <div>Pequeño<br/><span className={styles.body__peso}>(hasta 10KG)</span></div>
+                      </td>
+                      <div className={styles.prices__div_numberPrice}>
+                        <td>$270.000</td>
+                        <td>$290.000</td>
+                        <td>$320.000</td>
+                      </div>
                     </tr>
+
                     <tr>
-                      <td>Mediano<br/>(hasta 10KG)</td>
-                      <td>$298.000</td>
-                      <td>$315.000</td>
-                      <td>$350.000</td>
+                      <td className={styles.body__tamaño}>
+                        <div>Mediano<br/><span className={styles.body__peso}>(10KG - 20KG)</span></div>
+                      </td>
+                      <div className={styles.prices__div_numberPrice}>
+                        <td>$298.000</td>
+                        <td>$315.000</td>
+                        <td>$350.000</td>
+                      </div>
                     </tr>
+
                     <tr>
-                      <td>Grande<br/>(hasta 10KG)</td>
-                      <td>$340.000</td>
-                      <td>$360.000</td>
-                      <td>$400.000</td>
+                      <td className={styles.body__tamaño}>
+                        <div>Grande<br/><span className={styles.body__peso}>(20KG - 30KG)</span></div>
+                      </td>
+                      <div className={styles.prices__div_numberPrice}>
+                        <td>$340.000</td>
+                        <td>$360.000</td>
+                        <td>$400.000</td>
+                      </div>
                     </tr>
+
                     <tr>
-                      <td>Enorme<br/>(hasta 10KG)</td>
-                      <td>$385.000</td>
-                      <td>$405.000</td>
-                      <td>$450.000</td>
+                      <td className={styles.body__tamaño}>
+                        <div>Enorme<br/><span className={styles.body__peso}>(30KG en adelante)</span></div>
+                      </td>
+                      <div className={styles.prices__div_numberPrice}>
+                        <td>$385.000</td>
+                        <td>$405.000</td>
+                        <td>$450.000</td>
+                      </div>
                     </tr>
                 </tbody>
             </table>
