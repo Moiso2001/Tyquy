@@ -17,14 +17,19 @@
 }
 
 .div_info{
+    position: relative;
     display: flex;
     flex-direction: column;
+
+    overflow: hidden;
 
     align-items: end;
 
     width: 280px;
 
     background-color: #698269;
+    
+    z-index: 5;
 }
 
 .info__div_text{
@@ -36,6 +41,8 @@
 
     font-size: 1.2rem;
     margin: 0;
+
+    z-index: 5;
 }
 
 .info__div_text p{
@@ -46,6 +53,8 @@
     margin-top: 0.5rem;
 
     text-align: justify;
+    
+    z-index: 5;
 }
 
 .info__div_button button{
@@ -59,4 +68,72 @@
     margin: 0 1rem 1rem 0;
 
     border-radius: 2px;
+}
+
+
+/* Rune Icons */
+.rune1{
+    position: absolute;
+
+    width: 40px;
+
+    opacity: 10%;
+
+    top: 10px;
+    bottom: 0;
+    right: 0;
+    left: 210px;
+
+    transform: rotate(15deg);
+
+    z-index: 1;
+
+}
+
+.rune2{
+    position: absolute;
+
+    width: 40px;
+
+    opacity: 10%;
+
+    top: 40px;
+    bottom: 0;
+    right: 0;
+    left: 70px;
+
+    transform: rotate(-15deg);
+
+    z-index: 1;
+
+}
+
+.runeCircle1{
+    position: absolute;
+
+    width: 250px;
+
+    opacity: 10%;
+
+    top: -150px;
+    bottom: 0;
+    right: 0;
+    left: 120px;
+
+    z-index: 1;
+}
+
+.runeCircle2{
+    position: absolute;
+
+    width: 180px;
+
+    opacity: 10%;
+
+    top: 100px;
+    bottom: 0;
+    right: 0;
+    left: 0px;
+
+    z-index: 1;
 }
