@@ -14,8 +14,39 @@
 }
 
 .div_cards{
+    position: relative;
     display: flex;
     flex-direction: column;
 
     margin: 0 auto;
+}
+
+.cards__greekLine1{
+   position: absolute;
+   width: 700px;
+   
+   opacity: 10%;   
+
+   top: 550px;
+   bottom: 0;
+   left: -97px;
+   
+   transform:rotate(90deg);
+
+   z-index: 1;
+}
+
+.cards__greekLine2{
+   position: absolute;
+   width: 700px;
+   
+   opacity: 10%;   
+
+   top: 550px;
+   bottom: 0;
+   left: -323px;
+   
+   transform:rotate(90deg);
+
+   z-index: 1;
 }

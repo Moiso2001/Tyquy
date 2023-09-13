@@ -1,4 +1,3 @@
-import {useEffect, useState} from 'react'
 
 /* CSS */
 import styles from "./Card.module.css"
