@@ -12,7 +12,7 @@ type CardProps = {
 
 export default function Card({title,text,img,id}: CardProps) {
   return (
-    <div className={styles.div__global}>
+    <div className={styles.div_global}>
         <img src={img}/>
 
         <div>

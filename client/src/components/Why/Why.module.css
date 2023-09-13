@@ -1,0 +1,109 @@
+.div_global{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.div_title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 90px;
+    width: 100%;
+
+    background-size: 32rem;
+    background-repeat: no-repeat;
+    background-position-y: -120px;
+    background-position-x: -70px;
+}
+
+ .div_title::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.381);
+
+    z-index: 1;
+} 
+
+.div_title h2{
+    color: #FFFDF6;
+    font-size: 1.8rem;
+    z-index: 5;
+} 
+
+.title__muiscaMask{
+    position: absolute;
+
+    width: 15%;
+
+    top: -46px;
+    bottom: 0;
+    left: 310px;
+    right: 0;
+}
+
+.benefits__div_title{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.benefits__div_title p{
+    width: 90%;
+    margin: 0 auto;
+
+    text-align: justify;
+    font-size: 0.9rem;
+
+    line-height: 1.4;
+}
+
+.benefits__div_cards{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.benefit__greek_pattern{
+    position: absolute;
+    width: 200%;
+
+    z-index: 1;
+    opacity: 10%;
+
+    top: 180px;
+    bottom: 0;
+    left: -187.5px;
+    right: 0;
+}   
+
+.div_opinion{
+    position: relative;
+    width: 100%;
+
+    overflow-x: hidden;
+}
+
+.opinion__greekPattern1{
+    width: 130%;
+    opacity: 10%;
+
+    z-index: 1;
+
+    margin-bottom: -160px;
+}
+
+.opinion__greekPattern2{
+    width: 130%;
+    opacity: 10%;
+
+    z-index: 1;
+
+    margin-bottom: -181px;
+}

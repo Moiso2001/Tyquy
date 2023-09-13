@@ -27,42 +27,42 @@ export const benefits: BenefitDef[] = [{
     id: 1,
     title: 'Ruta puerta a puerta',
     text: 'Nos encargamos de recoger a tu mascota desde tu puerta y llevarla de regreso después de un día lleno de diversión. Nuestra ruta se adapta a tu horario, garantizando la máxima conveniencia para ti.',
-    icon: ''
+    icon: 'https://i.ibb.co/rFMdd9m/bus-Benefit.png'
 }, {
     id: 2,
     title: 'Red de vigilancia 24 horas',
     text: 'Mantenemos un ojo en tus amigos peludos en todo momento gracias a nuestra red de vigilancia las 24 horas. ¡Puedes acceder a las cámaras desde tu celular para ver cómo se divierten!',
-    icon: ''
+    icon: 'https://i.ibb.co/NpR4DhQ/camera.png'
 }, {
     id: 3,
     title: 'Socializacion y Recreacion',
     text: 'Tu mascota disfrutará de tiempo de juego y socialización supervisados por nuestros expertos en cuidado canino. Promovemos un ambiente seguro y divertido para que hagan amigos y se ejerciten.',
-    icon: ''
+    icon: 'https://i.ibb.co/ZV1RzhT/perritos.png'
 }, {
     id: 4,
     title: 'Espacio cubierto e instalaciones',
     text: 'No importa el clima, nuestros amigos de cuatro patas pueden seguir divirtiéndose en nuestro espacio cubierto y nuestras instalaciones adecuadas. ¡La diversión nunca se detiene!',
-    icon: ''
+    icon: 'https://i.ibb.co/zN42BPR/home.png'
 }, {
     id: 5,
     title: 'Reportes por whatsapp',
     text: ' Te mantenemos informado en tiempo real con reportes y noticias importantes sobre tu mascota a través de WhatsApp. Así, estarás siempre al tanto de su bienestar y actividades.',
-    icon: ''
+    icon: 'https://i.ibb.co/cxdmHTt/whatsapp-2.png'
 }]
 
 export const services: ServiceDef[] =[{
     id: 1,
     title: 'Dog Office',
-    img: '',
+    img: 'https://i.ibb.co/j3HHhbf/doggis.png',
     text: 'Nuestra guardería canina ofrece un servicio puerta a puerta, cuidando de tu mascota mientras trabajas. Recogemos por la mañana y entregamos por la tarde-noche. ¡Comodidad y seguridad para tu peludo amigo!'
 }, {
     id: 2,
     title: 'Dog Hotel',
-    img: '',
+    img: 'https://i.ibb.co/kyqhgbP/dog-sleep.jpg',
     text: '¿Necesitas viajar o una noche fuera? Confía en nuestra guardería para el descanso seguro de tu mascota. Responsabilidad y cuidado en un entorno acogedor y tranquilo.'
 }, {
     id: 3,
     title: 'Dog Spa',
-    img: '',
+    img: 'https://i.ibb.co/p1tBsQg/dogspa.jpg',
     text: 'Permítenos cuidar el aseo y pelaje de tu mascota. Te entregamos a tu compañero limpio, radiante y perfumado para llenar tu hogar de un delicioso aroma',
 }]
