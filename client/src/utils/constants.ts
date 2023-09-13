@@ -53,16 +53,16 @@ export const benefits: BenefitDef[] = [{
 export const services: ServiceDef[] =[{
     id: 1,
     title: 'Dog Office',
-    img: '',
+    img: 'https://i.ibb.co/j3HHhbf/doggis.png',
     text: 'Nuestra guardería canina ofrece un servicio puerta a puerta, cuidando de tu mascota mientras trabajas. Recogemos por la mañana y entregamos por la tarde-noche. ¡Comodidad y seguridad para tu peludo amigo!'
 }, {
     id: 2,
     title: 'Dog Hotel',
-    img: '',
+    img: 'https://i.ibb.co/kyqhgbP/dog-sleep.jpg',
     text: '¿Necesitas viajar o una noche fuera? Confía en nuestra guardería para el descanso seguro de tu mascota. Responsabilidad y cuidado en un entorno acogedor y tranquilo.'
 }, {
     id: 3,
     title: 'Dog Spa',
-    img: '',
+    img: 'https://i.ibb.co/p1tBsQg/dogspa.jpg',
     text: 'Permítenos cuidar el aseo y pelaje de tu mascota. Te entregamos a tu compañero limpio, radiante y perfumado para llenar tu hogar de un delicioso aroma',
 }]

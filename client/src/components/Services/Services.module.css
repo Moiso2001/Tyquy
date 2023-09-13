@@ -1,0 +1,19 @@
+.div_global{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 2rem;
+}
+
+.div_title h2{
+    font-size: 1.3rem;
+}
+
+.div_cards{
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+}
