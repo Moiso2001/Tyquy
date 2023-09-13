@@ -1,3 +1,62 @@
 .div_global{
-    
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-bottom: 4rem;
+
+    color: #FAF5E4;
+}
+
+.global__image{
+    width: 280px;
+    height: 160px;
+
+    object-fit: cover;
+}
+
+.div_info{
+    display: flex;
+    flex-direction: column;
+
+    align-items: end;
+
+    width: 280px;
+
+    background-color: #698269;
+}
+
+.info__div_text{
+    padding: 0.6rem;
+}
+
+.info__div_text span{
+    font-weight: 500;
+
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.info__div_text p{
+    font-weight: 300;
+    font-size: 0.7rem;
+
+    margin: 0;
+    margin-top: 0.5rem;
+
+    text-align: justify;
+}
+
+.info__div_button button{
+    border: none;
+
+    color: #FAF5E4;
+    background-color: #FF808B;
+
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    margin: 0 1rem 1rem 0;
+
+    border-radius: 2px;
 }
