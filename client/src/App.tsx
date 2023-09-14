@@ -6,12 +6,12 @@
 import Home from './components/Home/Home'
 
 /* CSS */
-import './App.css'
+import styles from "./App.module.css"
 import Navbar from './components/Navbar/Navbar'
 
 function App() {
   return (
-    <div>
+    <div className={styles.thediv}>
       <Navbar/>
       <Home/>
     </div>
