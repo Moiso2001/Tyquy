@@ -29,10 +29,20 @@ export default function Spa() {
         <div>
           <p>El precio del spa variara dependiendo de la raza y tamaño del peludito. Escribenos para darte un precio especial!</p>
         </div>
-        <div className={styles.description__div_button}>
-          <PiWhatsappLogoDuotone className={styles.description__icon_whatsapp}/>
-          <button>Contactanos</button>
-        </div>
+        <a
+          href="https://wa.me/message/4AXJXK2W3FYFI1"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            textDecoration: 'none', 
+            color: 'inherit',
+          }}
+        >
+          <div className={styles.description__div_button}>
+            <PiWhatsappLogoDuotone className={styles.description__icon_whatsapp}/>
+            <button>Contactanos</button>
+          </div>
+        </a>
       </div>
     </div>
   )

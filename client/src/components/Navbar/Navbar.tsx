@@ -53,7 +53,17 @@ export default function Navbar() {
                 </Link>
                 <hr/>
                 <div>
-                    <IoLogoWhatsapp className={styles.mobile__icon__social}/>
+                <a
+                    href="https://wa.me/message/4AXJXK2W3FYFI1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      textDecoration: 'none', 
+                      color: 'inherit',
+                    }}
+                >
+                        <IoLogoWhatsapp className={styles.mobile__icon__social}/>
+                    </a>
                     <AiFillInstagram className={styles.mobile__icon__social}/>
                 </div>
             </div>
