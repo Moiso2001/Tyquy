@@ -15,7 +15,10 @@ import Spa from "./Spa/Spa";
 
 export default function Prices() {
   return (
-    <div className={styles.div_global}>
+    <div 
+      id="prices"
+      className={styles.div_global}
+    >
         {/* Title */}
         <div 
           style={{backgroundImage: `url(${dogPrice})`}}

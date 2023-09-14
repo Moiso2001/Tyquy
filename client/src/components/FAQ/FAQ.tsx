@@ -18,7 +18,10 @@ export default function FAQ () {
   };
 
   return (
-    <div className={styles.div_global}>
+    <div 
+      id='faq'
+      className={styles.div_global}
+    >
       <div className={styles.div_title}>
         <h3>FAQ</h3>
       </div>

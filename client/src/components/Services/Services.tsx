@@ -15,7 +15,10 @@ import runeLine from "../../assets/tribu decoration/Greek pattern horizontal.png
 
 export default function Services() {
   return (
-    <div className={styles.div_global}>
+    <div 
+      id="services"
+      className={styles.div_global}
+    >
       {/* Title */}
       <div className={styles.div_title}>
         <h2>Nuestros servicios</h2>

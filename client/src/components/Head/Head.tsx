@@ -1,5 +1,5 @@
 /* React */
-import {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 
 /* Lottie */
 import dogAnimation from "../../assets/lottie/animation_dog.json"
@@ -51,7 +51,10 @@ export default function Head() {
 
 
   return (
-    <div className={styles.div_global}>
+    <div 
+        className={styles.div_global} 
+        id='head'
+    >
         {/* Head */}
         <div 
             style={{ backgroundImage: `url(${homeDogs})` }}

@@ -9,6 +9,8 @@ import Rules from '../Rules/Rules';
 import FAQ from '../FAQ/FAQ';
 import Footer from '../Footer/Footer';
 
+
+
 export default function Home() {
   return (
     <div>
