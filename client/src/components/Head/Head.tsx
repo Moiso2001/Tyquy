@@ -1,5 +1,5 @@
 /* React */
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 
 /* Lottie */
 import dogAnimation from "../../assets/lottie/animation_dog.json"
