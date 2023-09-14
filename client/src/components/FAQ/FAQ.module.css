@@ -1,0 +1,69 @@
+.div_global{
+    background-color: white;
+
+    padding-bottom: 5rem;
+}
+
+.div_title{
+    padding: 0.5rem;
+}
+
+.div_title h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+
+    margin-left: 1rem;
+}
+
+
+.div_qa{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    
+    margin: 0 auto;
+    
+    gap: 2rem;
+}
+
+
+.faqItem span{
+    font-size: 0.7rem;
+
+    margin-left: 0.4rem;
+    text-align: center;
+    
+    font-weight: 300;
+}
+
+.icon_arrow{
+    font-size: 0.6rem;
+}
+
+.question__close{
+    text-align: justify;
+
+    margin-top: 1.5rem;
+
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in;
+}
+
+.question__close span{
+    font-size: 0.8rem;
+}
+
+.question__open{
+    text-align: justify;
+
+    margin-top: 1.5rem;
+
+    max-height: 200px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in;
+}
+
+.question__open span{
+    font-size: 0.8rem;
+}

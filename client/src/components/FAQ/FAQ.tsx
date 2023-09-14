@@ -1,32 +1,16 @@
+/* React */
 import { useState } from 'react';
+import {BiSolidDownArrow, BiSolidUpArrow} from "react-icons/bi"
+
+/* CSS */
 import styles from './FAQ.module.css';
 
 
+/* Utils */
+import { questionsAndAnswers } from '../../utils/constants';
+
 export default function FAQ () {
   const [isOpen, setIsOpen] = useState<boolean[]>([false, false, false, false, false]);
-
-  const questionsAndAnswers = [
-    {
-      question: 'Question 1',
-      answer: 'Answer to Question 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    },
-    {
-      question: 'Question 2',
-      answer: 'Answer to Question 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    },
-    {
-      question: 'Question 3',
-      answer: 'Answer to Question 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    },
-    {
-      question: 'Question 4',
-      answer: 'Answer to Question 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    },
-    {
-      question: 'Question 5',
-      answer: 'Answer to Question 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    },
-  ];
 
   const toggleAnswer = (index: number) => {
     const newIsOpen = [...isOpen];
@@ -35,24 +19,30 @@ export default function FAQ () {
   };
 
   return (
-    <div>
-      <div>
+    <div className={styles.div_global}>
+      <div className={styles.div_title}>
         <h3>FAQ</h3>
       </div>
 
-      <div>
+      <div className={styles.div_qa}>
         {questionsAndAnswers.map((qa, index) => (
           <div key={index}>
             <div
               className={styles.faqItem}
               onClick={() => toggleAnswer(index)}
             >
-              {qa.question}
+              {
+                isOpen[index]
+                ? <BiSolidUpArrow className={styles.icon_arrow}/>
+                : <BiSolidDownArrow className={styles.icon_arrow}/>
+              }
+              <span>{qa.question}</span>
             </div>
             <div
-              className={`${styles.answer} ${isOpen[index] ? styles.open : ''}`}
+              className={isOpen[index] ? styles.question__open : styles.question__close}
             >
-              {qa.answer}
+              <hr/>
+              <span>{qa.answer}</span>
             </div>
           </div>
         ))}
