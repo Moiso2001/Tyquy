@@ -9,12 +9,18 @@ import runeLine from "../../../assets/tribu decoration/Greek pattern horizontal.
 /* CSS */
 import styles from "./Spa.module.css";
 
+/* Lottie */
+import dogSpa from "../../../assets/lottie/dog_spa.json"
+import Lottie from "lottie-react";
+
+
 export default function Spa() {
   return (
     <div className={styles.div_global}>
       {/* Title */}
       <div className={styles.div_title}>
         <img src={runeLine} className={styles.title__runeIcon}/>
+        <Lottie animationData={dogSpa} className={styles.title__dogAnimation}/>
         <h3>Dog Spa</h3>
       </div>
 

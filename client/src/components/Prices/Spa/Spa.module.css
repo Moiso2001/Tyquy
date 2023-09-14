@@ -30,6 +30,20 @@
     z-index: 5;
 }
 
+.title__dogAnimation{
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    top: 0;
+    bottom: 0;
+    left: 240px;
+    right: 0;
+
+    z-index: 2;
+}
+
 .title__runeIcon{
     position: absolute;
 
