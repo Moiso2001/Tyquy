@@ -27,7 +27,6 @@ type IconsCardProps = {
 }
 
 export function IconsCard({number}: IconsCardProps) {
-    console.log(number)
     return(
         <>
             {number === 1
