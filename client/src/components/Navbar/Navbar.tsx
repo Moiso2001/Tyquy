@@ -31,22 +31,22 @@ export default function Navbar() {
             </div>
 
             <div className={`${isOpen ? styles.mobile__open_nav : styles.mobile__close_nav}`}>
-                <Link to="head" spy={true} smooth={true} offset={-60} duration={500}>                
+                <Link to="head" spy={true} smooth={true} offset={-60} duration={800}>                
                     <div className={styles.mobile__open_span}>
                         <span>Inicio</span>
                     </div>
                 </Link>
-                <Link to="services" spy={true} smooth={true} offset={-60} duration={500}>                
+                <Link to="services" spy={true} smooth={true} offset={-60} duration={800}>                
                     <div className={styles.mobile__open_span}>
                         <span>Nuestros servicios</span>
                     </div>
                 </Link>
-                <Link to="prices" spy={true} smooth={true} offset={-60} duration={500}>                
+                <Link to="prices" spy={true} smooth={true} offset={-60} duration={800}>                
                     <div className={styles.mobile__open_span}>
                         <span>Precios</span>
                     </div>
                 </Link>
-                <Link to="faq" spy={true} smooth={true} offset={-55} duration={500}>                
+                <Link to="faq" spy={true} smooth={true} offset={-55} duration={800}>                
                     <div className={styles.mobile__open_span}>
                         <span>FAQ</span>
                     </div>
