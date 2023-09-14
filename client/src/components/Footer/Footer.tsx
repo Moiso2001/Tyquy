@@ -1,32 +1,37 @@
-import React from 'react'
+// import React from 'react';
 
 /* Icons */
-import {ImMail4} from "react-icons/im";
 import {BsFillTelephoneFill, BsClock, BsInstagram, BsWhatsapp} from "react-icons/bs";
+import {ImMail4} from "react-icons/im";
+import logo from "../../assets/logo white.png"
+import linktreeQR from "../../assets/linktree qr.jpg"
+
+/* CSS */
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <div>
-        <div>
-            <img/>
+    <div className={styles.div_global}>
+        <div className={styles.div_logo}>
+            <img src={logo}/>
         </div>
 
-        <div>
+        <div className={styles.div_legalText}>
             <span>©2023  Tyquy Bayara</span>
             <span>Todos los derechos reservados</span>
         </div>
 
-        <div>
-            <div>
-                <ImMail4/>
+        <div className={styles.div_info}>
+            <div className={styles.info__section}>
+                <ImMail4 className={styles.info__icon}/>
                 <span>tyquybayarapet@gmail.com</span>
             </div>
-            <div>
-                <BsFillTelephoneFill/>
+            <div className={styles.info__section}>
+                <BsFillTelephoneFill className={styles.info__icon}/>
                 <span>+57 3002343569</span>
             </div>
-            <div>
-                <BsClock/>
+            <div className={styles.info__section}>
+                <BsClock className={styles.info__icon}/>
                 <div>
                     <div>
                         <span>Lunes - Sabados:</span>
@@ -40,14 +45,14 @@ export default function Footer() {
             </div>
         </div>
 
-        <div>
+        <div className={styles.div_social}>
             <div>
                 <h3>Siguenos en nuestras redes</h3>
             </div>
-            <div>
-                <BsInstagram/>
-                {/* Linktree */}
-                <BsWhatsapp/>
+            <div className={styles.social__div_icons}>
+                <BsInstagram className={styles.social__icon}/>
+                <img src={linktreeQR}/>
+                <BsWhatsapp className={styles.social__icon}/>
             </div>
         </div>
     </div>

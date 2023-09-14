@@ -66,3 +66,26 @@ export const services: ServiceDef[] =[{
     img: 'https://i.ibb.co/p1tBsQg/dogspa.jpg',
     text: 'Permítenos cuidar el aseo y pelaje de tu mascota. Te entregamos a tu compañero limpio, radiante y perfumado para llenar tu hogar de un delicioso aroma',
 }]
+
+export const questionsAndAnswers = [
+    {
+      question: '¿Cuáles son las tarifas y opciones de alojamiento disponibles para mi perro en su guardería y hotel canino?',
+      answer: 'En nuestra guardería y hotel canino ofrecemos varias opciones de alojamiento para adaptarnos a las necesidades de tu mascota. Las tarifas varían según el tamaño y las necesidades individuales de tu perro. Te invitamos a visitar nuestra sección de "Tarifas" en nuestro sitio web o contactarnos directamente para obtener información detallada sobre las opciones de alojamiento y sus precios.',
+    },
+    {
+      question: '¿Qué medidas de seguridad tienen en su guardería para garantizar la seguridad de mi perro?',
+      answer: 'La seguridad de tu perro es nuestra máxima prioridad. Nuestra guardería cuenta con personal capacitado las 24 horas del día y cámaras de seguridad para monitorear todas las áreas. Además, contamos con malla de seguridad que cubre todo el terreno para evitar que tu mascota se salga, tambien todos los perros que se alojan con nosotros deben estar al día con sus vacunas y ser evaluados para asegurarnos de que sean socialmente compatibles con otros perros.',
+    },
+    {
+      question: '¿Ofrecen servicios de spa para perros y qué incluyen?',
+      answer: 'Sí, ofrecemos servicios de spa para perros. Nuestros servicios de spa incluyen baños, cepillado, corte de uñas y tratamientos de belleza para mantener a tu perro limpio y saludable. También ofrecemos servicios adicionales, como masajes relajantes y tratamientos especiales de acondicionamiento para que tu mascota se sienta mimada y renovada durante su estancia.',
+    },
+    {
+      question: '¿Qué tipo de actividades y entretenimiento proporcionan para mantener a mi perro activo y feliz durante su estancia?',
+      answer: ' Durante la estancia de tu perro, organizamos una variedad de actividades para mantenerlos activos y entretenidos. Esto incluye tiempo de juego supervisado, paseos diarios por nuestros hermosos jardines y áreas de juego diseñadas para socializar con otros perros. Además, hacemos socializacion para perros con ansiedad o probblemas de conducta, tambien si tienes alguna preferencia específica o solicitud especial, haremos todo lo posible por acomodarlas.',
+    },
+    {
+      question: '¿Puedo visitar las instalaciones antes de reservar una estancia para mi perro?',
+      answer: '¡Por supuesto! Te invitamos a programar una visita a nuestras instalaciones. Estamos seguros de que te encantará ver el ambiente limpio y seguro en el que se alojará tu perro. Durante la visita, también podrás conocer a nuestro personal y hacer cualquier pregunta adicional que tengas sobre nuestros servicios y procedimientos. Contáctanos para programar una visita en un horario conveniente para ti.',
+    },
+  ];
