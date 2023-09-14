@@ -1,0 +1,83 @@
+.div_global{
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+}
+
+.div_title{
+    position: relative;
+    display: flex;
+
+    overflow: hidden;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background-color: #F8B400;
+
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 1.5rem 1.2rem 1.5rem 1.2rem;
+}
+
+.title__dogAnimation{
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    top: -30px;
+    bottom: 0;
+    left: 220px;
+    right: 0;
+
+    z-index: 5;
+}
+
+.div_title h3{
+    color: #FFFDF6;
+    
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin: 0;
+
+    z-index: 5;
+}
+
+.title__runeIcon{
+    position: absolute;
+
+    width: 280%;
+
+    opacity: 10%;
+    
+    top: 0;
+    bottom: 0;
+    right: 0;   
+    left: 0;
+
+    z-index: 1;
+}
+
+.div_description{
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #F8B400;
+
+    color: #FFFDF6;
+
+    width: 92%;
+
+    padding: 0.4rem;
+
+    border-radius: 4px;
+
+    margin: 0 auto;
+}
+
+.div_description span{
+    font-size: 0.85rem;
+}
