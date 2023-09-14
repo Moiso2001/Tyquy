@@ -1,18 +1,25 @@
 // import React from 'react'
 
-/* Icons */
+/* Icons and images */
 import {PiWhatsappLogoDuotone} from "react-icons/pi"
+import ruleImage from "../../assets/rulesImage.png"
+
+/* CSS */
+import styles from "./Rules.module.css";
 
 export default function Rules() {
   return (
-    <div>
+    <div className={styles.div_global}>
         {/* Head */}
-        <div>
+        <div 
+            style={{backgroundImage: `url(${ruleImage})`}}
+            className={styles.div_title}
+        >
             <h2>Reglas y Beneficios</h2>
         </div>
 
         {/* Body */}
-        <div>
+        <div className={styles.div_body}>
             <span>Requerimientos</span>
             <ul>
                 <li>Vacunas al día (incluidas: tos de las perreras, rabia, Parvo y moquillo)</li>
@@ -24,10 +31,6 @@ export default function Rules() {
                 <li>Mascota esterilizada</li>
                 <li>Edad mínima 6 meses</li>
             </ul>
-        </div>
-
-        <div>
-
         </div>
 
         <div>
