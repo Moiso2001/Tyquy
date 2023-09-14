@@ -8,7 +8,10 @@ import runeLine from "../../../assets/tribu decoration/Greek pattern horizontal.
 
 export default function Office() {
   return (
-    <div className={styles.div_global}>
+    <div 
+      id="Dog Office"
+      className={styles.div_global}
+    >
         {/* Head */}
         <div className={styles.div_title}>
             <img src={runeLine} className={styles.title__runeIcon}/>

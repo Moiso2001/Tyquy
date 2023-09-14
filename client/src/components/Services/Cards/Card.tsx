@@ -1,3 +1,5 @@
+/* React */
+import {Link} from 'react-scroll';
 
 /* CSS */
 import styles from "./Card.module.css"
@@ -71,9 +73,11 @@ export default function Card({title,text,img}: CardProps) {
                 <span>{title}</span>
                 <p>{text}</p>
             </div>
-            <div className={styles.info__div_button}>
-                <button>Ver precios</button>
-            </div>
+            <Link to={title} spy={true} smooth={true} offset={-55} duration={800}>                
+                <div className={styles.info__div_button}>
+                    <button>Ver precios</button>
+                </div>
+            </Link>
         </div>
     </div>
   )

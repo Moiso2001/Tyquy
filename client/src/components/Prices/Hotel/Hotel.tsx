@@ -13,7 +13,10 @@ import Lottie from "lottie-react";
 
 export default function Hotel() {
   return (
-    <div className={styles.div_global}>
+    <div 
+      id="Dog Hotel"
+      className={styles.div_global}
+    >
       {/* Title */}
       <div className={styles.div_title}>
         <img src={runeLine} className={styles.title__runeIcon}/>

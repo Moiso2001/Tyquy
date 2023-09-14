@@ -16,7 +16,10 @@ import Lottie from "lottie-react";
 
 export default function Spa() {
   return (
-    <div className={styles.div_global}>
+    <div 
+      id="Dog Spa"
+      className={styles.div_global} 
+    >
       {/* Title */}
       <div className={styles.div_title}>
         <img src={runeLine} className={styles.title__runeIcon}/>
