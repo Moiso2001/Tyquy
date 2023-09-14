@@ -1,0 +1,96 @@
+.div_global{
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
+
+    overflow: hidden;
+}
+
+.div_title{
+    position: relative;
+    display: flex;
+
+    padding: 1rem;
+
+    width: 100%;
+
+    background-size: 30rem;
+    background-position-x: -30px;
+    background-repeat: no-repeat;
+}
+
+.div_title h2{
+    color: #FFFDF6;
+
+    margin-left: 1rem;
+
+    z-index: 5;
+}
+
+.div_title::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.214);
+
+    z-index: 1;
+}
+
+.div_body{
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.div_body span{
+    font-size: 1.1rem;
+}
+
+.div_body ul{
+    padding-top: 1rem;
+}
+
+.div_body li{
+    font-size: 0.9rem;
+    font-weight: 300;
+
+    margin-left: -1rem;
+    margin-top: 0.5rem;
+
+    color: rgba(0, 0, 0, 0.76);
+}
+
+.div_button{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FF808B;
+
+    width: 220px;
+    height: 40px;
+
+    font-size: 0.9rem;
+
+    text-align: justify;
+    border-radius: 4px;
+
+    margin-top: 2rem;
+}
+
+.div_button button{
+    border: none;
+    background-color: transparent;
+
+    color: #FFFDF6;
+}
+
+.button__whatsappIcon{
+    color: #5a9055;
+
+    font-size: 1.5rem;
+}
