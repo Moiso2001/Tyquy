@@ -37,10 +37,20 @@ export default function Rules() {
                 </ul>
             </div>
 
-            <div className={styles.div_button}>
-                <PiWhatsappLogoDuotone className={styles.button__whatsappIcon}/>
-                <button>Reserva por Whatsapp</button>
-            </div>
+            <a
+                href="https://wa.me/message/4AXJXK2W3FYFI1"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: 'none', 
+                  color: 'inherit',
+                }}
+            >
+                <div className={styles.div_button}>
+                    <PiWhatsappLogoDuotone className={styles.button__whatsappIcon}/>
+                    <button>Reserva por Whatsapp</button>
+                </div>
+            </a>
         </div>
 
         <div>

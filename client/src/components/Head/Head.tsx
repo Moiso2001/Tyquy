@@ -1,5 +1,5 @@
 /* React */
-import {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 
 /* Lottie */
 import dogAnimation from "../../assets/lottie/animation_dog.json"
@@ -51,7 +51,10 @@ export default function Head() {
 
 
   return (
-    <div className={styles.div_global}>
+    <div 
+        className={styles.div_global} 
+        id='head'
+    >
         {/* Head */}
         <div 
             style={{ backgroundImage: `url(${homeDogs})` }}
@@ -69,7 +72,17 @@ export default function Head() {
                     </p>
                 </div>
                 <div className={styles.head_body__div_button}>
-                    <button>Contáctanos</button>
+                    <a
+                        href="https://wa.me/message/4AXJXK2W3FYFI1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none', 
+                          color: 'inherit',
+                        }}
+                    >
+                        <button>Contáctanos</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -83,10 +96,21 @@ export default function Head() {
 
             <img src={arrow} className={styles.register__arrow}/> 
 
-            <div className={styles.register__div_button}>
-                <Lottie animationData={dogAnimation} className={styles.register__dogAnimation}/>
-                <button>Registra a tu peludito</button>
-            </div>
+            <a
+                href="https://wa.me/message/4AXJXK2W3FYFI1"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: 'none', 
+                  color: 'inherit',
+                }}
+            >
+                <div className={styles.register__div_button}>
+                    <Lottie animationData={dogAnimation} className={styles.register__dogAnimation}/>
+
+                        <button>Registra a tu peludito</button>
+                </div>
+            </a>
         </div>
 
         {/* Opinions */}

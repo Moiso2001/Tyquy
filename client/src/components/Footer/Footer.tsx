@@ -50,9 +50,20 @@ export default function Footer() {
                 <h3>Siguenos en nuestras redes</h3>
             </div>
             <div className={styles.social__div_icons}>
+
                 <BsInstagram className={styles.social__icon}/>
                 <img src={linktreeQR}/>
-                <BsWhatsapp className={styles.social__icon}/>
+                <a
+                    href="https://wa.me/message/4AXJXK2W3FYFI1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      textDecoration: 'none', 
+                      color: 'inherit',
+                    }}
+                >    
+                    <BsWhatsapp className={styles.social__icon}/>
+                </a>
             </div>
         </div>
     </div>
