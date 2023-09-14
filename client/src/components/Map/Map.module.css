@@ -1,0 +1,58 @@
+.div_global{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 3rem;
+
+    width: 100%;
+
+    background-color: #f8b60080;
+
+    padding-bottom: 1rem;
+}
+
+.global__texture{
+    position: absolute;
+
+    height: 440px;
+    width: 100%;
+
+    opacity: 10%;
+
+    z-index: 1;
+}
+
+.global__mask{
+    position: absolute;
+
+    width: 70px;
+
+    top: -55px;
+    bottom: 0;
+    right: 0;
+    left: 290px;
+}
+
+.div_title{
+    z-index: 5;
+}
+
+
+.div_title h3{
+    color: #FFFDF6;
+
+    margin-left: 1rem;
+
+    font-size: 1.7rem;
+}
+
+.map{
+    width: 90%;
+    height: 340px;
+
+
+    margin: 0 auto;
+
+    z-index: 5;
+}
