@@ -10,7 +10,7 @@ type CardProps = {
     icon: string
 }
 
-export default function Card({id, title, text, icon}: CardProps) {
+export default function Card({title, text, icon}: CardProps) {
   return (
     <div className={styles.div_global}>
         <img src={icon}/>
