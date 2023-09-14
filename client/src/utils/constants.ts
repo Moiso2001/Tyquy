@@ -74,7 +74,7 @@ export const questionsAndAnswers = [
     },
     {
       question: '¿Qué medidas de seguridad tienen en su guardería para garantizar la seguridad de mi perro?',
-      answer: 'La seguridad de tu perro es nuestra máxima prioridad. Nuestra guardería cuenta con personal capacitado las 24 horas del día y cámaras de seguridad para monitorear todas las áreas. Además, todos los perros que se alojan con nosotros deben estar al día con sus vacunas y ser evaluados para asegurarnos de que sean socialmente compatibles con otros perros.',
+      answer: 'La seguridad de tu perro es nuestra máxima prioridad. Nuestra guardería cuenta con personal capacitado las 24 horas del día y cámaras de seguridad para monitorear todas las áreas. Además, contamos con malla de seguridad que cubre todo el terreno para evitar que tu mascota se salga, tambien todos los perros que se alojan con nosotros deben estar al día con sus vacunas y ser evaluados para asegurarnos de que sean socialmente compatibles con otros perros.',
     },
     {
       question: '¿Ofrecen servicios de spa para perros y qué incluyen?',
@@ -82,7 +82,7 @@ export const questionsAndAnswers = [
     },
     {
       question: '¿Qué tipo de actividades y entretenimiento proporcionan para mantener a mi perro activo y feliz durante su estancia?',
-      answer: ' Durante la estancia de tu perro, organizamos una variedad de actividades para mantenerlos activos y entretenidos. Esto incluye tiempo de juego supervisado, paseos diarios por nuestros hermosos jardines y áreas de juego diseñadas para socializar con otros perros. Además, si tienes alguna preferencia específica o solicitud especial, haremos todo lo posible por acomodarlas.',
+      answer: ' Durante la estancia de tu perro, organizamos una variedad de actividades para mantenerlos activos y entretenidos. Esto incluye tiempo de juego supervisado, paseos diarios por nuestros hermosos jardines y áreas de juego diseñadas para socializar con otros perros. Además, hacemos socializacion para perros con ansiedad o probblemas de conducta, tambien si tienes alguna preferencia específica o solicitud especial, haremos todo lo posible por acomodarlas.',
     },
     {
       question: '¿Puedo visitar las instalaciones antes de reservar una estancia para mi perro?',

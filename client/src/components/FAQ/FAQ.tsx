@@ -5,7 +5,6 @@ import {BiSolidDownArrow, BiSolidUpArrow} from "react-icons/bi"
 /* CSS */
 import styles from './FAQ.module.css';
 
-
 /* Utils */
 import { questionsAndAnswers } from '../../utils/constants';
 
