@@ -6,6 +6,10 @@ import styles from "./Hotel.module.css"
 /* Images and icons */
 import runeLine from "../../../assets/tribu decoration/Greek pattern horizontal.png"
 
+/* Lottie */
+import dogHotel from "../../../assets/lottie/dog_sleep.json"
+import Lottie from "lottie-react";
+
 
 export default function Hotel() {
   return (
@@ -13,7 +17,7 @@ export default function Hotel() {
       {/* Title */}
       <div className={styles.div_title}>
         <img src={runeLine} className={styles.title__runeIcon}/>
-
+        <Lottie animationData={dogHotel} className={styles.title__dogAnimation}/>
         <h3>Dog Hotel</h3>
       </div>
 
