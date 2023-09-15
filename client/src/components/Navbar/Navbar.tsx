@@ -64,7 +64,17 @@ export default function Navbar() {
                 >
                         <IoLogoWhatsapp className={styles.mobile__icon__social}/>
                     </a>
+                <a
+                    href="https://instagram.com/tyquy_bayara?utm_source=qr&igshid=OGU0MmVlOWVjOQ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      textDecoration: 'none', 
+                      color: 'inherit',
+                    }}
+                >
                     <AiFillInstagram className={styles.mobile__icon__social}/>
+                </a>
                 </div>
             </div>
         </nav>

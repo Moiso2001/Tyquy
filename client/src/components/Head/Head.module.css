@@ -13,10 +13,10 @@
     display: flex;
     flex-direction: column;
 
-    background-size: 32rem;
+    background-size: 120%;
     background-repeat: no-repeat;
     background-position-y: -180px;
-    background-position-x: -70px;
+    background-position-x: -30px;
 
     padding: 1.2rem 1.2rem 2rem 1.2rem;
 }
@@ -179,5 +179,21 @@
 
     z-index: 1;
 
-    margin-bottom: -181px;
+    margin-bottom: -186px;
+}
+
+@media (max-width: 350px) {
+    .div_head{   
+        background-size: 120%;
+        background-position-y: -150px;
+        background-position-x: -30px;   
+    }
+}
+
+@media (min-width: 420px) {
+    .div_head{   
+        background-size: 120%;
+        background-position-y: -190px;
+        background-position-x: -30px;   
+    }
 }
