@@ -50,8 +50,17 @@ export default function Footer() {
                 <h3>Siguenos en nuestras redes</h3>
             </div>
             <div className={styles.social__div_icons}>
-
-                <BsInstagram className={styles.social__icon}/>
+                <a
+                    href="https://instagram.com/tyquy_bayara?utm_source=qr&igshid=OGU0MmVlOWVjOQ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      textDecoration: 'none', 
+                      color: 'inherit',
+                    }}
+                >
+                    <BsInstagram className={styles.social__icon}/>
+                </a>
                 <img src={linktreeQR}/>
                 <a
                     href="https://wa.me/message/4AXJXK2W3FYFI1"

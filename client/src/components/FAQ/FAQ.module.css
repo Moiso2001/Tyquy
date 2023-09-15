@@ -28,7 +28,7 @@
 
 
 .faqItem span{
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 
     margin-left: 0.4rem;
     text-align: center;
@@ -52,6 +52,7 @@
 
 .question__close span{
     font-size: 0.8rem;
+    font-weight: 300;
 }
 
 .question__open{
@@ -66,4 +67,5 @@
 
 .question__open span{
     font-size: 0.8rem;
+    font-weight: 300;
 }
