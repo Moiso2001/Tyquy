@@ -81,18 +81,26 @@ export default function Navbar() {
 
         {/* Desktop UI */}
         <nav className={styles.nav_desktop}>
-            <div>
-                <span>Inicio</span>
-            </div>
-            <div>
-                <span>Nuestros servicios</span>
-            </div>
-            <div>
-                <span>Precios</span>
-            </div>
-            <div>
-                <span>FAQ</span>
-            </div>
+            <Link to="head" spy={true} smooth={true} offset={-60} duration={800}>                
+                <div>
+                    <span>Inicio</span>
+                </div>
+            </Link>
+            <Link to="services" spy={true} smooth={true} offset={-60} duration={800}>                
+                <div>
+                    <span>Nuestros servicios</span>
+                </div>
+            </Link>
+            <Link to="prices" spy={true} smooth={true} offset={-60} duration={800}>                
+                <div>
+                    <span>Precios</span>
+                </div>
+            </Link>
+            <Link to="faq" spy={true} smooth={true} offset={-55} duration={800}>                
+                <div>
+                    <span>FAQ</span>
+                </div>
+            </Link>
         </nav>
     </div>
   )

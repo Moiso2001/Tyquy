@@ -185,7 +185,7 @@
 @media (max-width: 350px) {
     .div_head{   
         background-size: 120%;
-        background-position-y: -150px;
+        background-position-y: -190px;
         background-position-x: -30px;   
     }
 }
@@ -195,5 +195,267 @@
         background-size: 120%;
         background-position-y: -190px;
         background-position-x: -30px;   
+    }
+}
+
+/* Desktop and tablet screen */
+
+@media (width > 650px) {
+    .div_global{
+        margin-top: 0;
+    }
+
+    .div_head{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: -300px;
+        background-position-x: 0;
+
+       padding: 1.2rem 1.2rem 2rem 2.2rem;
+    }
+
+    .head__div_title{
+        flex-direction: column;
+    }
+    
+    .head__div_title img{
+        width: 15%;
+    }
+
+    .head__div_title span{
+        font-size: 2.2rem;
+        margin: 1.2rem 0 0 0;
+    }
+
+    .head__div_body{
+        margin-top: 0rem;
+    }
+    
+    .head__div_body p{
+        font-size: 1.2rem;
+        width: 95%;
+    }
+    
+    .head_body__div_button button{    
+        padding: 0.8rem 1.3rem 0.8rem 1.3rem;
+    
+        margin-right: 1rem;
+    
+        font-size: 1.2rem;
+
+        transition: background-color 0.25s;
+        cursor: pointer;
+    }
+
+    .head_body__div_button button:hover{   
+        background-color: #ff808bbe;
+    } 
+
+    /* Register */
+    .div_register{
+        margin: 6rem 0rem 2rem 0rem;
+        width: 90%;
+    }
+    
+    .div_register p{
+        display: inline;
+
+        font-size: 0.9rem;
+        
+        width: 90%;
+
+        margin: 0 auto;
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .register__div_title{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .register__div_title span{
+        font-size: 1.2rem;
+    }
+
+    .register__div_button button{
+        transition: background-color 0.25s;
+        cursor: pointer;
+    }
+
+    .register__div_button button:hover{
+        background-color: #ff808bbe;
+    }
+
+    .register__arrow{
+        width: 140px;
+        height: 140px;
+    
+        top: 70px;
+        left: 120px;
+    }
+
+    /* Opinion */
+    .div_opinion{
+        display: flex;
+    }
+
+    .opinion__greekPattern1{
+        position: absolute;
+        width: 100%;
+    
+        top: 90px;
+    }
+    
+    .opinion__greekPattern2{
+        position: absolute;
+        width: 100%;
+    
+        top: 160px;
+    }
+}
+
+@media (width > 850px) {
+    .div_global{
+        margin-bottom: 4rem;
+    }
+
+    .div_head{
+        background-position-y: -400px;
+    }
+
+    .head__div_title span{
+        font-size: 2.7rem;
+    }
+
+    .head__div_body p{
+        font-size: 1.6rem;
+    }
+
+    .head_body__div_button button{    
+        padding: 1rem 1.6rem 1rem 1.6rem;
+    
+        font-size: 1.6rem;
+    }
+
+    .register__div_title span{
+        font-size: 1.4rem;
+    }
+
+    .div_register p{
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .register__arrow{ 
+        left: 170px;
+    }
+
+    .div_opinion{
+        margin-top: 4rem;
+    }
+
+    .opinion__greekPattern2{
+        display: none;
+    }
+}
+
+@media (width > 1050px) {
+    .div_head{
+        background-position-y: -450px;
+    }
+
+    .div_register{
+        margin: 7rem 0rem 2rem 0rem;
+    }
+
+    .register__div_title{
+        margin-bottom: 6rem;
+    }
+
+    .register__div_title span{
+        font-size: 1.6rem;
+    }
+
+    .div_register p{
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .register__div_button button{
+        padding: 1.2rem 1.5rem 1.2rem  1.5rem;
+    
+        font-size: 1.2rem;
+    }
+
+    .register__dogAnimation{
+        position: absolute;
+    
+        width: 200px;
+        height: 200px;
+    
+        right: 0;
+        top: -158px;
+        left: 90px;
+        bottom: 0;
+    }
+
+    .register__arrow{
+        width: 170px;
+        height: 170px;
+    
+        top: 100px;
+        left: 170px;
+    }
+
+    
+    .opinion__greekPattern1{
+        position: absolute;
+        width: 100%;
+    
+        top: 110px;
+    }
+}
+
+@media (width > 1200px) {
+    .div_register{
+        margin: 9rem 0rem 2rem 0rem;
+    }
+
+    .div_head{
+        background-position-y: -650px;
+
+       padding: 1.6rem 1.8rem 2rem 2.8rem;
+    }
+
+    .head_body__div_button button{        
+        margin-right: 4rem;
+    }
+
+    .register__div_title{
+        margin-bottom: 9rem;
+    }
+
+    .register__div_title span{
+        font-size: 1.9rem;
+    }
+
+
+    .div_register p{
+        font-size: 1.3rem;
+    }
+
+    .register__div_button button{
+        font-size: 1.4rem;
+    }
+
+    .register__dogAnimation{
+        top: -158px;
+        left: 120px;
+    }
+
+    .register__arrow{
+        top: 120px;
+        left: 300px;
     }
 }
