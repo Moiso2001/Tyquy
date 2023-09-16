@@ -185,7 +185,7 @@
 @media (max-width: 350px) {
     .div_head{   
         background-size: 120%;
-        background-position-y: -150px;
+        background-position-y: -190px;
         background-position-x: -30px;   
     }
 }
@@ -195,5 +195,97 @@
         background-size: 120%;
         background-position-y: -190px;
         background-position-x: -30px;   
+    }
+}
+
+/* Desktop and tablet screen */
+
+@media (width > 650px) {
+    .div_global{
+        margin-top: 0;
+    }
+
+    .div_head{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: -300px;
+        background-position-x: 0;
+
+       padding: 1.2rem 1.2rem 2rem 2.2rem;
+    }
+
+    .head__div_title{
+        flex-direction: column;
+    }
+    
+    .head__div_title img{
+        width: 15%;
+    }
+
+    .head__div_title span{
+        font-size: 2.2rem;
+        margin: 1.2rem 0 0 0;
+    }
+
+    .head__div_body{
+        margin-top: 0rem;
+    }
+    
+    .head__div_body p{
+        font-size: 1.2rem;
+        width: 95%;
+    }
+    
+    .head_body__div_button button{    
+        padding: 0.8rem 1.3rem 0.8rem 1.3rem;
+    
+        margin-right: 1rem;
+    
+        font-size: 1.2rem;
+
+        transition: background-color 0.25s;
+        cursor: pointer;
+    }
+
+    .head_body__div_button button:hover{   
+        background-color: #ff808bbe;
+    } 
+}
+
+@media (width > 850px) {
+    .div_head{
+        background-position-y: -400px;
+    }
+
+    .head__div_title span{
+        font-size: 2.7rem;
+    }
+
+    .head__div_body p{
+        font-size: 1.6rem;
+    }
+
+    .head_body__div_button button{    
+        padding: 1rem 1.6rem 1rem 1.6rem;
+    
+        font-size: 1.6rem;
+    }
+}
+
+@media (width > 1050px) {
+    .div_head{
+        background-position-y: -450px;
+    }
+}
+
+@media (width > 1200px) {
+    .div_head{
+        background-position-y: -650px;
+
+       padding: 1.6rem 1.8rem 2rem 2.8rem;
+    }
+
+    .head_body__div_button button{        
+        margin-right: 4rem;
     }
 }
