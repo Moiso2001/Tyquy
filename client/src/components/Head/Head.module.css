@@ -294,9 +294,32 @@
         top: 70px;
         left: 120px;
     }
+
+    /* Opinion */
+    .div_opinion{
+        display: flex;
+    }
+
+    .opinion__greekPattern1{
+        position: absolute;
+        width: 100%;
+    
+        top: 90px;
+    }
+    
+    .opinion__greekPattern2{
+        position: absolute;
+        width: 100%;
+    
+        top: 160px;
+    }
 }
 
 @media (width > 850px) {
+    .div_global{
+        margin-bottom: 4rem;
+    }
+
     .div_head{
         background-position-y: -400px;
     }
@@ -324,9 +347,16 @@
         width: 100%;
     }
 
-    .register__arrow{
-   
+    .register__arrow{ 
         left: 170px;
+    }
+
+    .div_opinion{
+        margin-top: 4rem;
+    }
+
+    .opinion__greekPattern2{
+        display: none;
     }
 }
 
@@ -376,6 +406,14 @@
     
         top: 100px;
         left: 170px;
+    }
+
+    
+    .opinion__greekPattern1{
+        position: absolute;
+        width: 100%;
+    
+        top: 110px;
     }
 }
 

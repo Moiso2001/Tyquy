@@ -72,7 +72,7 @@ export default function Head() {
                         cuidado excepcional, cerca de las afueras de la ciudad.
                     </p>
                 </div>
-                
+
                 <div className={styles.head_body__div_button}>
                     <a
                         href="https://wa.me/message/4AXJXK2W3FYFI1"
@@ -133,7 +133,6 @@ export default function Head() {
                 {...opinion}
             />)}
         </div>
-
     </div>
   )
 }
