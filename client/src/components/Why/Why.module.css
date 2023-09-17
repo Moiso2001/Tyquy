@@ -118,10 +118,24 @@
 
     .div_title h2{
         font-size: 2.3rem;
-    } 
+    }
 
     .div_opinion{
         display: flex;
+    }
+
+    .opinion__greekPattern1{
+        position: absolute;
+        width: 100%;
+    
+        top: 90px;
+    }
+    
+    .opinion__greekPattern2{
+        position: absolute;
+        width: 100%;
+    
+        top: 160px;
     }
 }
 
@@ -135,6 +149,24 @@
     .div_title h2{
         font-size: 2.6rem;
     } 
+
+    .opinion__greekPattern1{
+        display: none;
+    }
+
+    .opinion__greekPattern2{
+        display: none;
+    }
+
+    .benefits__div_cards {
+        display: grid;
+        grid-template: "a a .";
+
+    }
+
+    .benefits__div_title p{
+        font-size: 1.1rem;
+    }
 }
 
 @media (width > 1100px){
@@ -157,5 +189,9 @@
         
         top: -90px;
         left: 92%;
+    }
+
+    .benefits__div_title p{
+        font-size: 1.3rem;
     }
 }

@@ -79,14 +79,14 @@ export default function Why() {
         </div>
 
         <div className={styles.div_opinion}>
-            {/* <img 
+            <img 
                 className={styles.opinion__greekPattern1} 
                 src={greekPatternVertical}
             />
             <img 
                 className={styles.opinion__greekPattern2} 
                 src={greekPatternVertical}
-            /> */}
+            />
 
           {opinionsToShow.map(opinion => 
             <Opinion
