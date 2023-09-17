@@ -54,7 +54,7 @@ export default function Why() {
           className={styles.div_title}
           style={{backgroundImage: `url(${grassBG})`}}
         >
-          <img 
+          <img
             src={muiscaMask}
             className={styles.title__muiscaMask}
           />

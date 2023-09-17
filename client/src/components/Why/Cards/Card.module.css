@@ -36,3 +36,25 @@
     z-index: 10;
 
 }
+
+@media (width > 900px){
+    .div_global{
+        cursor: default;
+        border-radius: 4px;
+
+        transition: box-shadow 0.25s;
+        
+    }
+
+    .div_global:hover{
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+}
+
+@media (width > 1200px){
+    .div_info p{
+        width: 70%;
+
+        font-size: 1rem;
+    }
+}
