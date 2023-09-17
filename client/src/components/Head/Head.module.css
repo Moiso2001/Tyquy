@@ -18,6 +18,7 @@
     background-position-y: -180px;
     background-position-x: -30px;
 
+
     padding: 1.2rem 1.2rem 2rem 1.2rem;
 }
 
@@ -355,6 +356,10 @@
         margin-top: 4rem;
     }
 
+    .opinion__greekPattern1{
+        display: none;
+    }
+
     .opinion__greekPattern2{
         display: none;
     }
@@ -406,14 +411,6 @@
     
         top: 100px;
         left: 170px;
-    }
-
-    
-    .opinion__greekPattern1{
-        position: absolute;
-        width: 100%;
-    
-        top: 110px;
     }
 }
 
