@@ -30,7 +30,7 @@ export default function Prices() {
         {/* Cards of prices */}
         <div className={styles.div_cards}>
             <Office/>
-            <div>
+            <div className={styles.cards__div_secondary}>
               <Hotel/>
               <Spa/>
             </div>

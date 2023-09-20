@@ -72,11 +72,23 @@
 }
 
 @media (width > 1000px){ 
+
+    .div_global{
+        margin-top: 10rem;
+    }
+
     .div_title{
         height: 300px;
     }
 
     .div_title h2{
         font-size: 5rem;
+    }
+
+    .cards__div_secondary{
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        margin-top: 5rem;
     }
 }
