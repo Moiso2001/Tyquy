@@ -12,15 +12,16 @@ import styles from "./Rules.module.css";
 
 export default function Rules() {
   return (
-    <div>
+    <div className={styles.div_god}>
+        {/* Head */}
+        <div 
+            style={{backgroundImage: `url(${ruleImage})`}}
+            className={styles.div_title}
+        >
+            <h2>Reglas y Beneficios</h2>
+        </div>
+
         <div className={styles.div_global}>
-            {/* Head */}
-            <div 
-                style={{backgroundImage: `url(${ruleImage})`}}
-                className={styles.div_title}
-            >
-                <h2>Reglas y Beneficios</h2>
-            </div>
 
             {/* Body */}
             <div className={styles.div_body}>
@@ -35,27 +36,30 @@ export default function Rules() {
                     <li>Mascota esterilizada</li>
                     <li>Edad mínima 6 meses</li>
                 </ul>
+                <div className={styles.body__div_button}>
+                    <a
+                        href="https://wa.me/message/4AXJXK2W3FYFI1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                        textDecoration: 'none', 
+                        color: 'inherit',
+                        }}
+                    >
+                        <div className={styles.div_button}>
+                            <PiWhatsappLogoDuotone className={styles.button__whatsappIcon}/>
+                            <button>Reserva por Whatsapp</button>
+                        </div>
+                    </a>
+                </div>
             </div>
 
-            <a
-                href="https://wa.me/message/4AXJXK2W3FYFI1"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  textDecoration: 'none', 
-                  color: 'inherit',
-                }}
-            >
-                <div className={styles.div_button}>
-                    <PiWhatsappLogoDuotone className={styles.button__whatsappIcon}/>
-                    <button>Reserva por Whatsapp</button>
-                </div>
-            </a>
+
+            <div className={styles.div_maps}>
+                <Map/>
+            </div>
         </div>
 
-        <div>
-          <Map/>
-        </div>
     </div>
   )
 }

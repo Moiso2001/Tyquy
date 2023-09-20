@@ -1,3 +1,7 @@
+.div_god{
+    overflow: hidden;
+}
+
 .div_global{
     display: flex;
 
@@ -93,4 +97,23 @@
     color: #5a9055;
 
     font-size: 1.5rem;
+}
+
+.body__div_button{
+    display: flex;
+    justify-content: center;
+}
+
+.div_maps{
+    width: 100%;
+}
+
+@media (width >= 1000px) {
+    .div_global{
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        padding: 2rem;
+
+    }
 }
