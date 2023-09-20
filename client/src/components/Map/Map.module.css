@@ -56,3 +56,16 @@
 
     z-index: 5;
 }
+
+@media (width >= 700px){
+    .global__mask{
+        position: absolute;
+    
+        width: 70px;
+    
+        top: -55px;
+        bottom: 0;
+        right: 0;
+        left: 90%;
+    }
+}

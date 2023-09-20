@@ -1,3 +1,7 @@
+.div_god{
+    overflow: hidden;
+}
+
 .div_global{
     display: flex;
 
@@ -16,7 +20,7 @@
 
     width: 100%;
 
-    background-size: 30rem;
+    background-size: 100%;
     background-position-x: -30px;
     background-repeat: no-repeat;
 }
@@ -93,4 +97,66 @@
     color: #5a9055;
 
     font-size: 1.5rem;
+}
+
+.body__div_button{
+    display: flex;
+    justify-content: center;
+}
+
+.div_maps{
+    width: 100%;
+}
+
+@media (width >= 700px) {
+    .div_title{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .div_title h2{
+        font-size: 2rem;
+        margin-left: 0;
+    }
+}
+
+@media (width >= 1000px) {
+    .div_god{
+        margin-top: 8rem;
+    }
+
+    .div_global{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 2rem 2rem 6rem 2rem;
+    }
+
+    .div_body span{
+        font-size: 1.3rem;
+    }
+
+    .div_body li{
+        font-size: 1.1rem;
+    }
+    
+    .div_title h2{
+        font-size: 3rem;
+        margin-left: 0;
+    }
+}
+
+@media (width >= 1200px) {
+    .div_global{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 2rem 2rem 4rem 2rem;
+    }
+
+    .div_body span{
+        font-size: 1.3rem;
+    }
+
+    .div_body li{
+        font-size: 1.1rem;
+    }
 }
