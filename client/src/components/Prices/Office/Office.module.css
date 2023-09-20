@@ -149,3 +149,90 @@
 
     font-size: 0.8rem;
 }
+
+
+@media (min-width: 768px) {
+    .div_title {
+      padding: 1.5rem; /* Increase padding for tablets */
+    }
+  
+    .title__div_day {
+      font-size: 1rem; /* Increase font size for tablets */
+    }
+  
+    .prices__head_tamaño {
+      width: 15%; /* Restore original column width for tablets */
+    }
+  
+    .prices__div_head th {
+      font-size: 1rem; /* Increase font size for table header on tablets */
+    }
+  
+    .prices__div_head span {
+      font-size: 0.8rem; /* Increase font size for subtext on tablets */
+    }
+  
+    .body__tamaño {
+      font-size: 0.9rem; /* Increase font size for table body on tablets */
+    }
+  
+    .body__peso {
+      font-size: 0.7rem; /* Adjust subtext font size on tablets */
+    }
+  
+    .prices__div_numberPrice {
+      font-size: 0.9rem; /* Increase font size for prices on tablets */
+    }
+  }
+  
+  /* Desktop Styles (for screens with width >= 1024px) */
+  @media (min-width: 1024px) {
+    .div_title {
+      padding: 2rem; /* Increase padding for desktop */
+    }
+  
+    .title__div_day {
+      font-size: 1.2rem; /* Increase font size for desktop */
+    }
+  
+    .prices__head_tamaño {
+      font-size: 1.3rem;
+      width: 10%; /* Adjust column width for desktop */
+    }
+  
+    .prices__div_head th {
+      font-size: 1.3rem; /* Increase font size for table header on desktop */
+    }
+  
+    .prices__div_head span {
+      font-size: 0.9rem; /* Increase font size for subtext on desktop */
+    }
+  
+    .body__tamaño {
+      font-size: 1rem; /* Increase font size for table body on desktop */
+    }
+  
+    .body__peso {
+      margin-left: 0.6rem;
+      font-size: 0.8rem; /* Adjust subtext font size on desktop */
+    }
+  
+    .prices__div_numberPrice {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem; /* Increase font size for prices on desktop */
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .div_prices{
+        margin-left: 5%;
+    }
+
+    .div_description{
+        margin: 2rem
+    }
+    
+    .div_description span{
+        font-size: 1.4rem;
+    }
+  }

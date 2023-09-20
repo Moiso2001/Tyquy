@@ -118,3 +118,25 @@
 
     font-size: 1.5rem;
 }
+
+@media (width >= 1024px){
+    .div_global{
+        margin-top: 3rem;
+
+        padding: 1rem;
+    }
+
+    .div_description p {
+        font-size: 1.1rem;
+    }
+
+    .title__dogAnimation{
+        left: 75%;
+    }
+}
+
+@media (width >= 1200px){
+    .title__dogAnimation{
+        left: 82%;
+    }
+}

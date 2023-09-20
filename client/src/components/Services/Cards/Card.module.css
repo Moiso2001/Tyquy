@@ -29,6 +29,8 @@
 
     width: 280px;
 
+    min-height: 180px;
+
     background-color: #698269;
     
     z-index: 5;
@@ -60,14 +62,23 @@
 }
 
 .info__div_button button{
+    position: absolute;
     border: none;
 
     color: #FAF5E4;
     background-color: #FF808B;
 
     font-size: 0.7rem;
+    
+
+    top: 130px;
+    bottom: 20px;
+    left: 150px;
+    right: 20px;
+
     padding: 0.4rem 0.8rem 0.4rem 0.8rem;
-    margin: 0 1rem 1rem 0;
+
+    z-index: 5;
 
     border-radius: 2px;
 }
@@ -138,4 +149,37 @@
     left: 0px;
 
     z-index: 1;
+}
+
+
+@media (width > 900px) {
+    .div_global{
+        margin-bottom: 7px;
+    }
+
+    .info__div_text p{
+        font-size: 0.8rem;
+    }
+}
+
+@media (width > 1100px) {
+    .div_info{
+        width: 320px;
+    }
+
+    .global__image{
+        width: 320px;
+    }
+
+    .info__div_text span{
+        font-size: 1.4rem;
+    }
+
+    .info__div_text p{
+        font-size: 0.8rem;
+    }
+}
+
+@media (width > 1200px) {
+    
 }

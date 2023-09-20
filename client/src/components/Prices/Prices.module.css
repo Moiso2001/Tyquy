@@ -45,4 +45,50 @@
     background-color: rgba(0, 0, 0, 0.259);
 
     z-index: 1;
+}
+
+.div_cards{
+    width: 100%;
+}
+
+@media (width > 700px){ 
+    
+    .div_title h2{    
+        width: 100%;
+        font-size: 3rem;
+
+        margin-left: 0px;
+
+        text-align: center;
+    }
 } 
+
+@media (width > 800px){ 
+    .div_title{
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+    }
+}
+
+@media (width > 1000px){ 
+
+    .div_global{
+        margin-top: 10rem;
+    }
+
+    .div_title{
+        height: 300px;
+    }
+
+    .div_title h2{
+        font-size: 5rem;
+    }
+
+    .cards__div_secondary{
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        margin-top: 5rem;
+    }
+}

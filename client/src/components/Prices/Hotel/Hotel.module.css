@@ -81,3 +81,28 @@
 .div_description span{
     font-size: 0.85rem;
 }
+
+@media (width >= 1024px){
+    .div_global{
+        margin-top: 3rem;
+
+        padding: 1rem;
+    }
+
+    .div_description span{
+        font-size: 1.1rem;
+    }
+
+    .title__dogAnimation{
+        width: 200px;
+        height: 200px;
+    
+        top: -58px; 
+    }
+}
+
+@media (width >= 1200px){
+    .title__dogAnimation{
+        left: 75%; 
+    }
+}
