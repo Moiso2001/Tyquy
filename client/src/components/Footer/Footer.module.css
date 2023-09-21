@@ -75,3 +75,54 @@
 .social__icon{
     font-size: 3rem;
 }
+
+@media (width >= 1024px){
+    .div_logo{
+        padding: 2.8rem;
+    }
+    
+    .div_logo img{
+        width: 140px;
+    }
+    
+    .div_legalText{     
+        padding: 0 0 3rem 2.8rem;
+    }
+    
+    .div_legalText span{
+        font-size: 1rem;
+    }
+
+    .div_info{   
+        flex-direction: row; 
+        justify-content: left;
+
+        gap: 5rem;
+        padding: 0 0 5rem 2.8rem;
+    }
+
+    .info__section span{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    
+    .info__icon{
+        font-size: 2.5rem;
+    }
+
+    .div_social h3{
+        font-size: 1.6rem;
+    }
+
+    .social__div_icons{
+        gap: 4rem;
+    }
+
+    .social__div_icons img{
+        width: 80px;
+    }
+    
+    .social__icon{
+        font-size: 5rem;
+    }
+}
