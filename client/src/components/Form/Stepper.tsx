@@ -8,6 +8,8 @@ export default function Stepper() {
   const [step , setStep] = useState(1);
   const [helpWindow, setHelpWindow] = useState(true);
 
+  const [names,setNames] = useState([{id: 0, name: ''}])
+
 
   /* This validation will be used to return the correct step depending of the status of the "step" react state */
   const validation = (step: number) => {
@@ -36,7 +38,32 @@ export default function Stepper() {
 
   return (  
     <div className={styles.divGlobal}>
+      {/* Steps */}
+      <div>
+        <div>
 
+        </div>
+
+        <div>
+          <div/>
+          <div/>
+          <div/>
+          <div/>
+        </div>
+      </div>
+
+      {/* Form */}
+      <div>
+        <div>
+
+        </div>
+
+        <div>
+          <div>
+
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
