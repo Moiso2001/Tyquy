@@ -1,22 +1,24 @@
 /* React */
 import {useState, useEffect} from 'react'
 
+
+
 /* CSS */
 import styles from "./Stepper.module.css"
+import First from './Steps/First/First';
 
 export default function Stepper() {
   const [step , setStep] = useState(1);
   const [helpWindow, setHelpWindow] = useState(true);
 
-  const [names,setNames] = useState([{id: 0, name: ''}])
 
 
   /* This validation will be used to return the correct step depending of the status of the "step" react state */
   const validation = (step: number) => {
     if(step === 1){
-    //   return (
-    //     // <First setStep={setStep} setResponse={handleResponse} inputExisted={response.first}/>
-    //   )
+      return (
+        <First/>
+      )
     }
     if(step === 2){
     //   return(
@@ -54,16 +56,9 @@ export default function Stepper() {
 
       {/* Form */}
       <div>
-        <div>
-
-        </div>
-
-        <div>
-          <div>
-
-          </div>
-        </div>
+        {validation(step)}
       </div>
+
     </div>
   )
 }
