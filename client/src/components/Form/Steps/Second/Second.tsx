@@ -6,6 +6,8 @@ type SecondProps = {
 
 export default function Second({setStep}: SecondProps) {
   return (
-    <div>Second</div>
+    <div>
+        
+    </div>
   )
 }
