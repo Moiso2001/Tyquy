@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 /* Icons */
 import {AiOutlinePlusCircle, AiOutlineCloseCircle} from "react-icons/ai";
-
+import {BsArrowLeftCircle} from "react-icons/bs"
 
 type SecondProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
@@ -11,6 +11,24 @@ type SecondProps = {
 export default function Second({setStep}: SecondProps) {
   const [names,setNames] = useState([{id: 0, name: '', raza: '', edad: 0, peso: 0}])
 
+  function updateNames(e: React.ChangeEvent<HTMLInputElement>, id: number) {
+    const updatedNames = names.map((item) => {
+      if (item.id === id) {
+        return {...item, [e.target.name]: e.target.value };
+      }
+      return item;
+    });
+
+    setNames(updatedNames);
+  }
+
+  function deleteName(id: number) {
+    const updatedNames = names.filter(name => name.id !== id);
+
+    setNames(updatedNames)
+  }
+
+
   return (
     <div>
         <div>
@@ -18,27 +36,45 @@ export default function Second({setStep}: SecondProps) {
                 <div>
                     <div>
                         <span>Nombre del perrit@</span>
-                        <input value={name.name}/>
+                        <input 
+                            onChange={e => updateNames(e, name.id)} 
+                            name='name' 
+                            value={name.name}
+                        />
                     </div>
 
                     <div>
                         <span>Raza</span>
-                        <input value={name.raza}/>
+                        <input 
+                            onChange={e => updateNames(e, name.id)} 
+                            name='raza' 
+                            value={name.raza}
+                        />
                     </div>
 
                     <div>
                         <span>Edad</span>
-                        <input value={name.edad}/>
+                        <input 
+                            onChange={e => updateNames(e, name.id)} 
+                            type='number'
+                            name='edad' 
+                            value={name.edad}
+                        />
                     </div>
 
                     <div>
                         <span>Peso</span>
-                        <input value={name.peso}/>
+                        <input
+                            onChange={e => updateNames(e, name.id)}
+                            type='number' 
+                            name='peso' 
+                            value={name.peso}
+                        />
                     </div>
 
                     {name.id > 0
-                     ? <AiOutlineCloseCircle/>
-                     : <AiOutlinePlusCircle/>
+                     ? <AiOutlineCloseCircle onClick={() => deleteName(name.id)}/>
+                     : <AiOutlinePlusCircle onClick={() => setNames([...names, {id: names.length, name: '', raza: '', edad: 0, peso: 0}])}/>
                     }
                 </div>
             )}
@@ -49,7 +85,8 @@ export default function Second({setStep}: SecondProps) {
         </div>
 
         <div>
-
+            <BsArrowLeftCircle/>
+            <span>Continuar</span>
         </div>
     </div>
   )
