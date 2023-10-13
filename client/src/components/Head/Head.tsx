@@ -1,5 +1,6 @@
 /* React */
 import {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom';
 
 /* Lottie */
 import dogAnimation from "../../assets/lottie/animation_dog.json"
@@ -98,21 +99,13 @@ export default function Head() {
 
             <img src={arrow} className={styles.register__arrow}/> 
 
-            <a
-                href="https://wa.me/message/4AXJXK2W3FYFI1"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  textDecoration: 'none', 
-                  color: 'inherit',
-                }}
-            >
-                <div className={styles.register__div_button}>
+            <div className={styles.register__div_button}>
+                <Link to='/formulario'>
                     <Lottie animationData={dogAnimation} className={styles.register__dogAnimation}/>
-
-                        <button>Registra a tu peludito</button>
-                </div>
-            </a>
+                    <button>Registra a tu peludito</button>
+                </Link>
+            </div>
+            
         </div>
 
         {/* Opinions */}
