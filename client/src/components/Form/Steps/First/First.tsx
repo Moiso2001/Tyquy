@@ -1,9 +1,13 @@
 import {useState} from 'react'
 
 /* Icons */
-import {AiOutlinePlusCircle, AiOutlineCloseCircle} from "react-icons/ai"
+import {AiOutlinePlusCircle, AiOutlineCloseCircle, AiOutlineHome} from "react-icons/ai";
 
-export default function First() {
+type FirstProps = {
+    setStep: React.Dispatch<React.SetStateAction<number>>
+}
+
+export default function First({setStep}: FirstProps) {
   const [names,setNames] = useState([{id: 0, name: ''}])
 
   function handleOnChange(e: React.ChangeEvent<HTMLInputElement>, id: number) {
@@ -48,6 +52,28 @@ export default function First() {
                
               </div>
             )}
+          </div>
+
+          <div>
+            <div>
+                <span>Celular</span>
+                <input/>
+            </div>
+
+            <div>
+                <span>Correo</span>
+                <input/>
+            </div>
+          </div>
+
+          <div>
+            <span>Direccion</span>
+            <input/>
+          </div>
+
+          <div>
+            <AiOutlineHome/>
+            <span onClick={() => setStep(step => step + 1)}>Continuar</span>
           </div>
         </div>
       </div>

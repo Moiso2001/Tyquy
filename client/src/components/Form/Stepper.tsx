@@ -1,11 +1,11 @@
 /* React */
 import {useState, useEffect} from 'react'
 
-
-
 /* CSS */
 import styles from "./Stepper.module.css"
 import First from './Steps/First/First';
+import Second from './Steps/Second/Second';
+
 
 export default function Stepper() {
   const [step , setStep] = useState(1);
@@ -17,13 +17,13 @@ export default function Stepper() {
   const validation = (step: number) => {
     if(step === 1){
       return (
-        <First/>
+        <First setStep={setStep}/>
       )
     }
     if(step === 2){
-    //   return(
-    //     // <Second setStep={setStep} setResponse={handleResponse} inputExisted={response.second}/>
-    //   )
+    return(
+      <Second setStep={setStep}/>
+    )
     }
     if(step === 3){
     //   return(
