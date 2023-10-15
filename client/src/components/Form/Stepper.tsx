@@ -5,6 +5,8 @@ import {useState, useEffect} from 'react'
 import styles from "./Stepper.module.css"
 import First from './Steps/First/First';
 import Second from './Steps/Second/Second';
+import Third from './Steps/Third/Third';
+import Payment from './Steps/Payment/Payment';
 
 
 export default function Stepper() {
@@ -26,14 +28,14 @@ export default function Stepper() {
     )
     }
     if(step === 3){
-    //   return(
-    //     // <Third setStep={setStep} setResponse={handleResponse} inputExisted={response.third}/>
-    //   )
+    return(
+      <Third setStep={setStep}/>
+    )
     }
     if(step === 4){
-    //   return(
-    //     // <Payment setStep={setStep} sendResponse={sendResponse}/>
-    //   )
+    return(
+      <Payment setStep={setStep}/>
+    )
     }
   }
 
