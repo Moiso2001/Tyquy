@@ -80,13 +80,14 @@ export default function Second({setStep}: SecondProps) {
             )}
         </div>  
 
+        {/* Upload Images */}
         <div>
 
         </div>
 
         <div>
-            <BsArrowLeftCircle/>
-            <span>Continuar</span>
+            <BsArrowLeftCircle onClick={() => setStep(step => step - 1)}/>
+            <span onClick={() => setStep(step => step + 1)}>Continuar</span>
         </div>
     </div>
   )

@@ -2,6 +2,7 @@ import {useState} from 'react'
 
 /* Icons */
 import {AiOutlinePlusCircle, AiOutlineCloseCircle, AiOutlineHome} from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 type FirstProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
@@ -72,7 +73,12 @@ export default function First({setStep}: FirstProps) {
           </div>
 
           <div>
-            <AiOutlineHome/>
+            <Link 
+              style={{color: "black"}} 
+              to='/'
+            >
+              <AiOutlineHome/>
+            </Link>
             <span onClick={() => setStep(step => step + 1)}>Continuar</span>
           </div>
         </div>
