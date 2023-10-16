@@ -1,5 +1,8 @@
 import React from 'react'
 
+import {BsArrowLeftCircle} from "react-icons/bs"
+import {RiWhatsappFill} from "react-icons/ri"
+
 type PaymentProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
 }
@@ -61,7 +64,12 @@ export default function Payment({setStep}: PaymentProps) {
           </div>
 
           <div>
+            <BsArrowLeftCircle onClick={() => setStep(step => step - 1)}/>
             
+            <div>
+              <span>Tambien puedes pagar escribiendonos</span>
+              <RiWhatsappFill/>
+            </div>
           </div>
         </div>
       </div>
