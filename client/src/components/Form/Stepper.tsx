@@ -7,6 +7,7 @@ import First from './Steps/First/First';
 import Second from './Steps/Second/Second';
 import Third from './Steps/Third/Third';
 import Payment from './Steps/Payment/Payment';
+import Final from './Steps/Final/Final';
 
 
 export default function Stepper() {
@@ -23,19 +24,24 @@ export default function Stepper() {
       )
     }
     if(step === 2){
-    return(
-      <Second setStep={setStep}/>
-    )
+      return(
+        <Second setStep={setStep}/>
+      )
     }
     if(step === 3){
-    return(
-      <Third setStep={setStep}/>
-    )
+      return(
+        <Third setStep={setStep}/>
+      )
     }
     if(step === 4){
-    return(
-      <Payment setStep={setStep}/>
-    )
+      return(
+        <Payment setStep={setStep}/>
+      )
+    }
+    if(step === 5){
+      return(
+        <Final/>
+      )
     }
   }
 
