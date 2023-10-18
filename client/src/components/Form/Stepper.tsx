@@ -10,6 +10,8 @@ import Payment from './Steps/Payment/Payment';
 import Final from './Steps/Final/Final';
 import HelpWindow from './Steps/HelpWindow/HelpWindow';
 
+export type FormType = {}
+
 
 export default function Stepper() {
   const [helpWindowHidden, setHelpWindowHidden] = useState(true);
@@ -27,17 +29,15 @@ export default function Stepper() {
       photos: []
     },
     third: {
-      plan: {name: '', price: 0}
+      plan: [{name: '', price: 0}]
     }
   })
-
-
 
   /* This validation will be used to return the correct step depending of the status of the "step" react state */
   const validation = (step: number) => {
     if(step === 1){
       return (
-        <First setStep={setStep}/>
+        <First setStep={setStep} form={form.first}/>
       )
     }
     if(step === 2){

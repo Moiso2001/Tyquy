@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react'
 
 import {BsArrowLeftCircle} from "react-icons/bs"
 
@@ -8,8 +8,9 @@ type ThirdProps = {
 
 export default function Third({setStep}: ThirdProps) {
 
+    const [plan, setPlan] = useState({})
 
-    
+
   return (
     <div>
         <div>

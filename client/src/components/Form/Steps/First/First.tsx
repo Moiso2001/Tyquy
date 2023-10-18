@@ -6,26 +6,35 @@ import { Link } from 'react-router-dom';
 
 type FirstProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
+    form: {
+      nombre: {
+          id: number;
+          name: string;
+      }[];
+      celular: string;
+      correo: string;
+      direccion: string;
+  }
 }
 
-export default function First({setStep}: FirstProps) {
-  const [names,setNames] = useState([{id: 0, name: ''}])
+export default function First({setStep, form}: FirstProps) {
+  const [formInfo,setFormInfo] = useState(form)
 
   function handleOnChange(e: React.ChangeEvent<HTMLInputElement>, id: number) {
-    const updatedNames = names.map((item) => {
+    const updatedNames = formInfo.nombre.map((item) => {
       if (item.id === id) {
         return { id: item.id, name: e.target.value };
       }
       return item;
     });
 
-    setNames(updatedNames);
+    setFormInfo(prevForm => ({...prevForm, nombre: updatedNames}));
   }
 
   function deleteName(id: number){
-    const updatedNames = names.filter(name => name.id !== id)
+    const updatedNames = formInfo.nombre.filter(name => name.id !== id)
 
-    setNames(updatedNames)
+    setFormInfo(prevForm => ({...prevForm, nombre: updatedNames}));
   }
 
 
@@ -39,7 +48,7 @@ export default function First({setStep}: FirstProps) {
         <div>
           <div>
             <span>Nombre completo (Dueñ@s)</span>
-            {names.map(e => 
+            {formInfo.nombre.map(e => 
               <div key={e.id}>
                 <input value={e.name} onChange={event => handleOnChange(event, e.id)}/>
 
@@ -47,7 +56,7 @@ export default function First({setStep}: FirstProps) {
                     ?<div onClick={() => deleteName(e.id)}>
                         <AiOutlineCloseCircle/>
                      </div>
-                    :<div onClick={() => setNames([...names, {id: names.length, name: ''}])}>
+                    :<div onClick={() => setFormInfo(prevForm => ({...prevForm, nombre: [...prevForm.nombre, {id: formInfo.nombre.length, name: ''}]}))}>
                         <AiOutlinePlusCircle/>
                      </div>
                 }
