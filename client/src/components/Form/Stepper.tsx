@@ -8,11 +8,18 @@ import Second from './Steps/Second/Second';
 import Third from './Steps/Third/Third';
 import Payment from './Steps/Payment/Payment';
 import Final from './Steps/Final/Final';
+import HelpWindow from './Steps/HelpWindow/HelpWindow';
 
 
 export default function Stepper() {
+  const [helpWindowHidden, setHelpWindowHidden] = useState(true);
   const [step , setStep] = useState(1);
-  const [helpWindow, setHelpWindow] = useState(true);
+
+  const [form, setForm] = useState({
+    first: {
+      
+    }
+  })
 
 
 
@@ -61,6 +68,9 @@ export default function Stepper() {
           <div/>
         </div>
       </div>
+
+      {/* HelpWindow */}
+      <HelpWindow hidden={helpWindowHidden}/>
 
       {/* Form */}
       <div>
