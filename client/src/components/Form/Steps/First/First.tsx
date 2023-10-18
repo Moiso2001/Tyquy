@@ -28,9 +28,9 @@ export default function First({setStep}: FirstProps) {
     setNames(updatedNames)
   }
 
-  
-  return (
 
+  return (
+ 
       <div>
         <div>
 
