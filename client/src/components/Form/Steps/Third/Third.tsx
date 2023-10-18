@@ -7,6 +7,9 @@ type ThirdProps = {
 }
 
 export default function Third({setStep}: ThirdProps) {
+
+
+    
   return (
     <div>
         <div>

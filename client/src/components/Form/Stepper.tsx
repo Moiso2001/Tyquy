@@ -17,7 +17,17 @@ export default function Stepper() {
 
   const [form, setForm] = useState({
     first: {
-      
+      nombre: [{id: 0, name: ''}],
+      celular: '',
+      correo: '',
+      direccion: ''
+    },
+    second: {
+      info: [{id: 0, name: '', raza: '', edad: 0, peso: 0}],
+      photos: []
+    },
+    third: {
+      plan: {name: '', price: 0}
     }
   })
 
