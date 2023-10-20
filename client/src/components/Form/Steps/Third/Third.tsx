@@ -7,8 +7,7 @@ type ThirdProps = {
 }
 
 export default function Third({setStep}: ThirdProps) {
-
-    const [plan, setPlan] = useState({})
+    const [plan, setPlan] = useState({});
 
 
   return (

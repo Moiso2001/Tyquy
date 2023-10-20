@@ -20,15 +20,22 @@ type FirstProps = {
 export default function First({setStep, form}: FirstProps) {
   const [formInfo,setFormInfo] = useState(form)
 
-  function handleOnChange(e: React.ChangeEvent<HTMLInputElement>, id: number) {
-    const updatedNames = formInfo.nombre.map((item) => {
-      if (item.id === id) {
-        return { id: item.id, name: e.target.value };
-      }
-      return item;
-    });
-
-    setFormInfo(prevForm => ({...prevForm, nombre: updatedNames}));
+  function handleOnChange(e: React.ChangeEvent<HTMLInputElement>, id: number | undefined, name: boolean) {
+    if(name){
+      const updatedNames = formInfo.nombre.map((item) => {
+        if (item.id === id && name) {
+          return { id: item.id, name: e.target.value };
+        } else if(item.id === id && !name){
+  
+        }
+  
+        return item;
+      });
+  
+      setFormInfo(prevForm => ({...prevForm, nombre: updatedNames}));
+    } else {
+      setFormInfo(prevForm => ({...prevForm, [e.target.name]: e.target.value}))
+    }
   }
 
   function deleteName(id: number){
@@ -50,7 +57,7 @@ export default function First({setStep, form}: FirstProps) {
             <span>Nombre completo (Dueñ@s)</span>
             {formInfo.nombre.map(e => 
               <div key={e.id}>
-                <input value={e.name} onChange={event => handleOnChange(event, e.id)}/>
+                <input value={e.name} onChange={event => handleOnChange(event, e.id, true)}/>
 
                 {e.id > 0
                     ?<div onClick={() => deleteName(e.id)}>
@@ -68,18 +75,31 @@ export default function First({setStep, form}: FirstProps) {
           <div>
             <div>
                 <span>Celular</span>
-                <input/>
+                <input 
+                  name='celular' 
+                  value={formInfo.celular}
+                  onChange={e => handleOnChange(e, undefined, false)}
+                />
             </div>
 
             <div>
                 <span>Correo</span>
-                <input/>
+                <input 
+                  name='correo' 
+                  value={formInfo.correo}
+                  onChange={e => handleOnChange(e, undefined, false)}
+                />
             </div>
           </div>
 
           <div>
+
             <span>Direccion</span>
-            <input/>
+            <input 
+              name='direccion' 
+              value={formInfo.direccion}
+              onChange={e => handleOnChange(e, undefined, false)}
+            />
           </div>
 
           <div>
