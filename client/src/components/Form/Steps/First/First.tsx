@@ -1,8 +1,12 @@
+import { Link } from 'react-router-dom';
 import {useState} from 'react'
 
 /* Icons */
 import {AiOutlinePlusCircle, AiOutlineCloseCircle, AiOutlineHome} from "react-icons/ai";
-import { Link } from 'react-router-dom';
+
+/* Definitions */
+import { FormType } from '../../Stepper';
+
 
 type FirstProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
@@ -15,9 +19,11 @@ type FirstProps = {
       correo: string;
       direccion: string;
   }
+  setForm: React.Dispatch<React.SetStateAction<FormType>>
+
 }
 
-export default function First({setStep, form}: FirstProps) {
+export default function First({setStep, form, setForm}: FirstProps) {
   const [formInfo,setFormInfo] = useState(form)
 
   function handleOnChange(e: React.ChangeEvent<HTMLInputElement>, id: number | undefined, name: boolean) {
@@ -42,6 +48,10 @@ export default function First({setStep, form}: FirstProps) {
     const updatedNames = formInfo.nombre.filter(name => name.id !== id)
 
     setFormInfo(prevForm => ({...prevForm, nombre: updatedNames}));
+  }
+
+  function updateForm() {
+    setForm(prevForm => ({...prevForm, first: formInfo}))
   }
 
 

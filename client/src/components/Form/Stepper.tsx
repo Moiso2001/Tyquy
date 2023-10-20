@@ -10,14 +10,37 @@ import Payment from './Steps/Payment/Payment';
 import Final from './Steps/Final/Final';
 import HelpWindow from './Steps/HelpWindow/HelpWindow';
 
-export type FormType = {}
+export type FormType = {
+  first: {
+    nombre: {
+        id: number;
+        name: string;
+    }[];
+    celular: string;
+    correo: string;
+    direccion: string;
+  }
+  second: {
+    info: {
+        id: number;
+        name: string;
+        raza: string;
+        edad: number;
+        peso: number;
+    }[];
+    photos: never[];
+  }
+  third: {
+    plan: {name:string, price: number}[]
+  }
+}
 
 
 export default function Stepper() {
   const [helpWindowHidden, setHelpWindowHidden] = useState(true);
   const [step , setStep] = useState(1);
 
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<FormType>({
     first: {
       nombre: [{id: 0, name: ''}],
       celular: '',
@@ -37,17 +60,17 @@ export default function Stepper() {
   const validation = (step: number) => {
     if(step === 1){
       return (
-        <First setStep={setStep} form={form.first}/>
+        <First setStep={setStep} form={form.first} setForm={setForm}/>
       )
     }
     if(step === 2){
       return(
-        <Second setStep={setStep}/>
+        <Second setStep={setStep} setForm={setForm}/>
       )
     }
     if(step === 3){
       return(
-        <Third setStep={setStep}/>
+        <Third setStep={setStep} setForm={setForm}/>
       )
     }
     if(step === 4){
