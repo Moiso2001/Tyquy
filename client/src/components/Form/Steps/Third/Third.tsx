@@ -1,12 +1,20 @@
-import React from 'react'
+import {useState} from 'react'
 
+/* Icons */
 import {BsArrowLeftCircle} from "react-icons/bs"
+
+/* Definitions */
+import { FormType } from '../../Stepper'
 
 type ThirdProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
+    setForm: React.Dispatch<React.SetStateAction<FormType>>
 }
 
 export default function Third({setStep}: ThirdProps) {
+    const [plan, setPlan] = useState({});
+
+
   return (
     <div>
         <div>

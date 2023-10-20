@@ -1,35 +1,62 @@
+import { Link } from 'react-router-dom';
 import {useState} from 'react'
 
 /* Icons */
 import {AiOutlinePlusCircle, AiOutlineCloseCircle, AiOutlineHome} from "react-icons/ai";
-import { Link } from 'react-router-dom';
+
+/* Definitions */
+import { FormType } from '../../Stepper';
+
 
 type FirstProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
+    form: {
+      nombre: {
+          id: number;
+          name: string;
+      }[];
+      celular: string;
+      correo: string;
+      direccion: string;
+  }
+  setForm: React.Dispatch<React.SetStateAction<FormType>>
+
 }
 
-export default function First({setStep}: FirstProps) {
-  const [names,setNames] = useState([{id: 0, name: ''}])
+export default function First({setStep, form, setForm}: FirstProps) {
+  const [formInfo,setFormInfo] = useState(form)
 
-  function handleOnChange(e: React.ChangeEvent<HTMLInputElement>, id: number) {
-    const updatedNames = names.map((item) => {
-      if (item.id === id) {
-        return { id: item.id, name: e.target.value };
-      }
-      return item;
-    });
-
-    setNames(updatedNames);
+  function handleOnChange(e: React.ChangeEvent<HTMLInputElement>, id: number | undefined, name: boolean) {
+    if(name){
+      const updatedNames = formInfo.nombre.map((item) => {
+        if (item.id === id && name) {
+          return { id: item.id, name: e.target.value };
+        } else if(item.id === id && !name){
+  
+        }
+  
+        return item;
+      });
+  
+      setFormInfo(prevForm => ({...prevForm, nombre: updatedNames}));
+    } else {
+      setFormInfo(prevForm => ({...prevForm, [e.target.name]: e.target.value}))
+    }
   }
 
   function deleteName(id: number){
-    const updatedNames = names.filter(name => name.id !== id)
+    const updatedNames = formInfo.nombre.filter(name => name.id !== id)
 
-    setNames(updatedNames)
+    setFormInfo(prevForm => ({...prevForm, nombre: updatedNames}));
   }
 
-  return (
+  function updateForm() {
+    setForm(prevForm => ({...prevForm, first: formInfo}))
+  }
 
+
+  return (
+ 
       <div>
         <div>
 
@@ -38,15 +65,15 @@ export default function First({setStep}: FirstProps) {
         <div>
           <div>
             <span>Nombre completo (Dueñ@s)</span>
-            {names.map(e => 
+            {formInfo.nombre.map(e => 
               <div key={e.id}>
-                <input value={e.name} onChange={event => handleOnChange(event, e.id)}/>
+                <input value={e.name} onChange={event => handleOnChange(event, e.id, true)}/>
 
                 {e.id > 0
                     ?<div onClick={() => deleteName(e.id)}>
                         <AiOutlineCloseCircle/>
                      </div>
-                    :<div onClick={() => setNames([...names, {id: names.length, name: ''}])}>
+                    :<div onClick={() => setFormInfo(prevForm => ({...prevForm, nombre: [...prevForm.nombre, {id: formInfo.nombre.length, name: ''}]}))}>
                         <AiOutlinePlusCircle/>
                      </div>
                 }
@@ -58,18 +85,31 @@ export default function First({setStep}: FirstProps) {
           <div>
             <div>
                 <span>Celular</span>
-                <input/>
+                <input 
+                  name='celular' 
+                  value={formInfo.celular}
+                  onChange={e => handleOnChange(e, undefined, false)}
+                />
             </div>
 
             <div>
                 <span>Correo</span>
-                <input/>
+                <input 
+                  name='correo' 
+                  value={formInfo.correo}
+                  onChange={e => handleOnChange(e, undefined, false)}
+                />
             </div>
           </div>
 
           <div>
+
             <span>Direccion</span>
-            <input/>
+            <input 
+              name='direccion' 
+              value={formInfo.direccion}
+              onChange={e => handleOnChange(e, undefined, false)}
+            />
           </div>
 
           <div>

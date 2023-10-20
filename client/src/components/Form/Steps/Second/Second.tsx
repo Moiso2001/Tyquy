@@ -4,8 +4,12 @@ import {useState} from 'react'
 import {AiOutlinePlusCircle, AiOutlineCloseCircle} from "react-icons/ai";
 import {BsArrowLeftCircle} from "react-icons/bs"
 
+/* Definitions */
+import { FormType } from '../../Stepper';
+
 type SecondProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
+    setForm: React.Dispatch<React.SetStateAction<FormType>>
 }
 
 export default function Second({setStep}: SecondProps) {
