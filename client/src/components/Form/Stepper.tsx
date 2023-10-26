@@ -30,9 +30,7 @@ export type FormType = {
     }[];
     photos: never[];
   }
-  third: {
-    plan: {name:string, price: number}[]
-  }
+  third: {nombre:string, tipo: string}
 }
 
 
@@ -51,9 +49,7 @@ export default function Stepper() {
       info: [{id: 0, name: '', raza: '', edad: 0, peso: 0}],
       photos: []
     },
-    third: {
-      plan: [{name: '', price: 0}]
-    }
+    third: {nombre: '', tipo: ''},
   })
 
   console.log(form)
@@ -72,12 +68,12 @@ export default function Stepper() {
     }
     if(step === 3){
       return(
-        <Third setStep={setStep} setForm={setForm} form={form}/>
+        <Third setStep={setStep} setForm={setForm} form={form.third}/>
       )
     }
     if(step === 4){
       return(
-        <Payment setStep={setStep}/>
+        <Payment setStep={setStep}setForm={setForm} form={form}/>
       )
     }
     if(step === 5){
