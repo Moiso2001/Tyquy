@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react'
 
 import {BsArrowLeftCircle} from "react-icons/bs"
 import {RiWhatsappFill} from "react-icons/ri"
@@ -11,6 +11,7 @@ type PaymentProps = {
 }
 
 export default function Payment({setStep, setForm, form}: PaymentProps) {
+  const prices = useState({})
 
   function getPlanPrices () {
     const prices = []
