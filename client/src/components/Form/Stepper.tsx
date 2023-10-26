@@ -67,12 +67,12 @@ export default function Stepper() {
     }
     if(step === 2){
       return(
-        <Second setStep={setStep} setForm={setForm} form={form.second }/>
+        <Second setStep={setStep} setForm={setForm} form={form.second}/>
       )
     }
     if(step === 3){
       return(
-        <Third setStep={setStep} setForm={setForm}/>
+        <Third setStep={setStep} setForm={setForm} form={form}/>
       )
     }
     if(step === 4){

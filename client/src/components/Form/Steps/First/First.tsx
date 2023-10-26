@@ -13,7 +13,7 @@ type FirstProps = {
     form: {
       nombre: {
           id: number;
-          name: string;
+          name: string; 
       }[];
       celular: string;
       correo: string;
@@ -49,7 +49,7 @@ export default function First({setStep, form, setForm}: FirstProps) {
 
     setFormInfo(prevForm => ({...prevForm, nombre: updatedNames}));
   }
-
+ 
   function updateForm() {
     setForm(prevForm => ({...prevForm, first: formInfo}))
   }
