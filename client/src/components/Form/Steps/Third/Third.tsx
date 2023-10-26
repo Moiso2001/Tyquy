@@ -2,6 +2,8 @@ import {useState} from 'react'
 
 /* Icons */
 import {BsArrowLeftCircle} from "react-icons/bs"
+import {RiWhatsappFill} from "react-icons/ri"
+
 
 /* Definitions */
 import { FormType } from '../../Stepper'
@@ -9,16 +11,13 @@ import { FormType } from '../../Stepper'
 type ThirdProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
     setForm: React.Dispatch<React.SetStateAction<FormType>>
-    form: FormType
+    form: {nombre:string, tipo: string}
 }
 
 export default function Third({setStep, setForm, form}: ThirdProps) {
-    const [plan, setPlan] = useState({});
+    const [plan, setPlan] = useState(form);
 
-    function getPlanPrices () {
-
-    }
-
+   
   return (
     <div>
         <div>
@@ -27,19 +26,19 @@ export default function Third({setStep, setForm, form}: ThirdProps) {
 
         <div>
             <div>
-                <div>
+                <div onClick={() => setPlan(plan => ({...plan, nombre: 'office'}))}>
                     <span>Office</span>
                 </div>
-                <div>
+                <div onClick={() => setPlan(plan => ({...plan, nombre: 'spa'}))}>
                     <span>Spa</span>
                 </div>
-                <div>
+                <div onClick={() => setPlan(plan => ({...plan, nombre: 'hotel'}))}>
                     <span>Hotel</span>
                 </div>
             </div>
 
             <div>
-                <div>
+                <div onClick={() => setPlan(plan => ({...plan, tipo: 'esencial'}))}>
                     <img/>
                     <div>
                         <div>
@@ -54,7 +53,7 @@ export default function Third({setStep, setForm, form}: ThirdProps) {
                         </p>
                     </div>                    
                 </div>
-                <div>
+                <div onClick={() => setPlan(plan => ({...plan, tipo: 'estandard'}))}>
                     <img/>
                     <div>
                         <div>
@@ -69,7 +68,7 @@ export default function Third({setStep, setForm, form}: ThirdProps) {
                         </p>
                     </div>
                 </div>
-                <div>
+                <div onClick={() => setPlan(plan => ({...plan, tipo: 'premium'}))}>
                     <img/>
                     <div>
                         <div>
@@ -89,7 +88,13 @@ export default function Third({setStep, setForm, form}: ThirdProps) {
 
         <div>
             <BsArrowLeftCircle onClick={() => setStep(step => step - 1)}/>
-            <span onClick={() => setStep(step => step + 1)}>Continuar</span>
+            {plan.nombre === 'Office' || !plan.nombre
+             ? <span onClick={() => setStep(step => step + 1)}>Continuar</span>
+             : <div>            
+                <span>Finaliza tu pago escribiendonos</span>
+                <RiWhatsappFill/>
+               </div>
+            }
         </div>
     </div>
   )

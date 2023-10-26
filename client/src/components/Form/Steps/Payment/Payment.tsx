@@ -2,12 +2,20 @@ import React from 'react'
 
 import {BsArrowLeftCircle} from "react-icons/bs"
 import {RiWhatsappFill} from "react-icons/ri"
+import { FormType } from '../../Stepper'
 
 type PaymentProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
+    setForm: React.Dispatch<React.SetStateAction<FormType>>
+    form: FormType
 }
 
-export default function Payment({setStep}: PaymentProps) {
+export default function Payment({setStep, setForm, form}: PaymentProps) {
+
+  function getPlanPrices () {
+    const prices = []
+  }
+
   return (
     <div>
       <div>
