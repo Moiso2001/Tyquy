@@ -9,11 +9,15 @@ import { FormType } from '../../Stepper'
 type ThirdProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
     setForm: React.Dispatch<React.SetStateAction<FormType>>
+    form: FormType
 }
 
-export default function Third({setStep}: ThirdProps) {
+export default function Third({setStep, setForm, form}: ThirdProps) {
     const [plan, setPlan] = useState({});
 
+    function getPlanPrices () {
+
+    }
 
   return (
     <div>

@@ -56,6 +56,8 @@ export default function Stepper() {
     }
   })
 
+  console.log(form)
+
   /* This validation will be used to return the correct step depending of the status of the "step" react state */
   const validation = (step: number) => {
     if(step === 1){
@@ -65,12 +67,12 @@ export default function Stepper() {
     }
     if(step === 2){
       return(
-        <Second setStep={setStep} setForm={setForm}/>
+        <Second setStep={setStep} setForm={setForm} form={form.second}/>
       )
     }
     if(step === 3){
       return(
-        <Third setStep={setStep} setForm={setForm}/>
+        <Third setStep={setStep} setForm={setForm} form={form}/>
       )
     }
     if(step === 4){

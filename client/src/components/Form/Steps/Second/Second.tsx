@@ -8,12 +8,23 @@ import {BsArrowLeftCircle} from "react-icons/bs"
 import { FormType } from '../../Stepper';
 
 type SecondProps = {
+    form: {
+        info: {
+            id: number;
+            name: string;
+            raza: string;
+            edad: number;
+            peso: number;
+        }[];
+        photos: never[];
+    }
     setStep: React.Dispatch<React.SetStateAction<number>>
     setForm: React.Dispatch<React.SetStateAction<FormType>>
 }
 
-export default function Second({setStep}: SecondProps) {
-  const [names,setNames] = useState([{id: 0, name: '', raza: '', edad: 0, peso: 0}])
+export default function Second({setStep, setForm, form}: SecondProps) {
+  const [names,setNames] = useState(form.info)
+//   const [photos, setPhotos] = useState(form.photos)
 
   function updateNames(e: React.ChangeEvent<HTMLInputElement>, id: number) {
     const updatedNames = names.map((item) => {
@@ -30,6 +41,10 @@ export default function Second({setStep}: SecondProps) {
     const updatedNames = names.filter(name => name.id !== id);
 
     setNames(updatedNames)
+  }
+
+  function updateForm() {
+    setForm(prevForm => ({...prevForm, second: {info: names, photos: []}}))
   }
 
 
@@ -91,7 +106,7 @@ export default function Second({setStep}: SecondProps) {
 
         <div>
             <BsArrowLeftCircle onClick={() => setStep(step => step - 1)}/>
-            <span onClick={() => setStep(step => step + 1)}>Continuar</span>
+            <span onClick={() => {setStep(step => step + 1); updateForm()}}>Continuar</span>
         </div>
     </div>
   )

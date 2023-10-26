@@ -13,7 +13,7 @@ type FirstProps = {
     form: {
       nombre: {
           id: number;
-          name: string;
+          name: string; 
       }[];
       celular: string;
       correo: string;
@@ -49,14 +49,13 @@ export default function First({setStep, form, setForm}: FirstProps) {
 
     setFormInfo(prevForm => ({...prevForm, nombre: updatedNames}));
   }
-
+ 
   function updateForm() {
     setForm(prevForm => ({...prevForm, first: formInfo}))
   }
 
 
   return (
- 
       <div>
         <div>
 
@@ -103,7 +102,6 @@ export default function First({setStep, form, setForm}: FirstProps) {
           </div>
 
           <div>
-
             <span>Direccion</span>
             <input 
               name='direccion' 
@@ -119,7 +117,7 @@ export default function First({setStep, form, setForm}: FirstProps) {
             >
               <AiOutlineHome/>
             </Link>
-            <span onClick={() => setStep(step => step + 1)}>Continuar</span>
+            <span onClick={() => {setStep(step => step + 1); updateForm()}}>Continuar</span>
           </div>
         </div>
       </div>
