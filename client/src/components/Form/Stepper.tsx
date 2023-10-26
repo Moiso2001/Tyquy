@@ -49,7 +49,7 @@ export default function Stepper() {
       info: [{id: 0, name: '', raza: '', edad: 0, peso: 0}],
       photos: []
     },
-    third: {nombre: '', tipo: ''}
+    third: {nombre: '', tipo: ''},
   })
 
   console.log(form)
@@ -73,7 +73,7 @@ export default function Stepper() {
     }
     if(step === 4){
       return(
-        <Payment setStep={setStep}/>
+        <Payment setStep={setStep}setForm={setForm} form={form}/>
       )
     }
     if(step === 5){

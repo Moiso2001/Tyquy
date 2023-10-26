@@ -17,6 +17,9 @@ type ThirdProps = {
 export default function Third({setStep, setForm, form}: ThirdProps) {
     const [plan, setPlan] = useState(form);
 
+    function updateForm () {
+        setForm(form => ({...form, third: plan}))
+    }
    
   return (
     <div>
@@ -89,7 +92,7 @@ export default function Third({setStep, setForm, form}: ThirdProps) {
         <div>
             <BsArrowLeftCircle onClick={() => setStep(step => step - 1)}/>
             {plan.nombre === 'Office' || !plan.nombre
-             ? <span onClick={() => setStep(step => step + 1)}>Continuar</span>
+             ? <span onClick={() => {setStep(step => step + 1); updateForm()}}>Continuar</span>
              : <div>            
                 <span>Finaliza tu pago escribiendonos</span>
                 <RiWhatsappFill/>
