@@ -15,6 +15,8 @@ export default function Payment({setStep, setForm, form}: PaymentProps) {
 
   function getPlanPrices () {
     const prices = []
+
+    
   }
 
   return (
