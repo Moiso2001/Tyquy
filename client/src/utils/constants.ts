@@ -89,3 +89,23 @@ export const questionsAndAnswers = [
       answer: '¡Por supuesto! Te invitamos a programar una visita a nuestras instalaciones. Estamos seguros de que te encantará ver el ambiente limpio y seguro en el que se alojará tu perro. Durante la visita, también podrás conocer a nuestro personal y hacer cualquier pregunta adicional que tengas sobre nuestros servicios y procedimientos. Contáctanos para programar una visita en un horario conveniente para ti.',
     },
   ];
+
+export const prices = [{
+    tipo: '2 dias',
+    pequeño: 270,
+    mediano: 298,
+    grande: 340,
+    enorme: 385
+}, {
+    tipo: '3 dias',
+    pequeño: 290,
+    mediano: 315,
+    grande: 360,
+    enorme: 405
+}, {
+    tipo: '5 dias',
+    pequeño: 320,
+    mediano: 350,
+    grande: 400,
+    enorme: 450
+}]

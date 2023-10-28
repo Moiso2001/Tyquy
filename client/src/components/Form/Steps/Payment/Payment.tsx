@@ -3,6 +3,7 @@ import {useState} from 'react'
 import {BsArrowLeftCircle} from "react-icons/bs"
 import {RiWhatsappFill} from "react-icons/ri"
 import { FormType } from '../../Stepper'
+import { prices } from '../../../../utils/constants'
 
 type PaymentProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
@@ -11,12 +12,12 @@ type PaymentProps = {
 }
 
 export default function Payment({setStep, setForm, form}: PaymentProps) {
-  const prices = useState({})
+  const recipe = useState({})
 
   function getPlanPrices () {
-    const prices = []
+    const prices = {total: 0, dogs: [{}]};
 
-    
+
   }
 
   return (
