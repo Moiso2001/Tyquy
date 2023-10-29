@@ -1,8 +1,14 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
+/* Icons */
 import {BsArrowLeftCircle} from "react-icons/bs"
 import {RiWhatsappFill} from "react-icons/ri"
+
+/* Types */
 import { FormType } from '../../Stepper'
+
+/* Utils */
+import { prices } from '../../../../utils/constants'
 
 type PaymentProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
@@ -10,15 +16,80 @@ type PaymentProps = {
     form: FormType
 }
 
+type Receipt = {
+    total: number;
+    title: string;
+    dogs: {
+      line: string;
+      price: number;
+    }[];
+}
+
+
 export default function Payment({setStep, setForm, form}: PaymentProps) {
-  const prices = useState({})
+  const [receipt, setReceipt] = useState<Receipt>({total: 0, title: '', dogs: []})
 
-  function getPlanPrices () {
-    const prices = []
+  function getPlanReceipt () {
+    let dogs = form.second.info;
+    const tipoDePlan = form.third.tipo
 
-    
+    let planInfo = {index: 0, name: ''}
+
+    if(tipoDePlan === 'esencial'){
+      planInfo = {index: 0, name: 'Plan Esencial - 2dias/semana'}
+    }else if(tipoDePlan === 'estandard'){
+      planInfo = {index: 1, name: 'Plan Estandard - 3dias/semana'}
+    }else if(tipoDePlan === 'premium'){
+      planInfo = {index: 2, name: 'Plan Premium - 5dias/semana'}
+    }
+
+   
+    const dogsLine = dogs.map(dog => getDogLine(dog, planInfo.index)) 
+    const receiptTotal = getTotal(dogsLine)
+
+    setReceipt({total: receiptTotal, title: planInfo.name, dogs: dogsLine})
+
+    function getTotal (dogs: {line: string; price: number;}[]) {
+      let total = 0;
+  
+      dogs.map(dog => total = total + dog.price)
+      
+      return total
+    }
+  
+    function getDogLine (dog: { id: number; name: string; raza: string; edad: number; peso: number;}, index: number) {
+      const planPrices = prices[index];
+  
+      let tamaño = ''
+      let price = 0
+  
+       if(dog.peso <= 10) {
+        tamaño = 'Pequeño'
+        price = planPrices.pequeño 
+       } else if(dog.peso > 10 && dog.peso <= 20){
+        tamaño = 'Mediano'
+        price = planPrices.mediano
+       } else if(dog.peso > 20 && dog.peso <= 30){
+        tamaño = 'Grande'
+        price = planPrices.grande
+       } else if(dog.peso > 30){
+        tamaño = 'Enorme'
+        price = planPrices.enorme
+       }
+  
+       return {
+        line: `${dog.name} (${dog.raza} - ${dog.peso}KG) - ${tamaño}`,
+        price: price
+      } 
+    }
   }
 
+
+  useEffect(() => {
+    getPlanReceipt()
+  },[])
+
+  console.log(receipt)
   return (
     <div>
       <div>

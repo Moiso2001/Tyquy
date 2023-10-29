@@ -91,7 +91,7 @@ export default function Third({setStep, setForm, form}: ThirdProps) {
 
         <div>
             <BsArrowLeftCircle onClick={() => setStep(step => step - 1)}/>
-            {plan.nombre === 'Office' || !plan.nombre
+            {plan.nombre === 'office' || !plan.nombre
              ? <span onClick={() => {setStep(step => step + 1); updateForm()}}>Continuar</span>
              : <div>            
                 <span>Finaliza tu pago escribiendonos</span>
