@@ -48,7 +48,7 @@ export default function Payment({setStep, setForm, form}: PaymentProps) {
     const receiptTotal = getTotal(dogsLine)
 
     setReceipt({total: receiptTotal, title: planInfo.name, dogs: dogsLine})
-    
+
     function getTotal (dogs: {line: string; price: number;}[]) {
       let total = 0;
   
@@ -89,6 +89,7 @@ export default function Payment({setStep, setForm, form}: PaymentProps) {
     getPlanReceipt()
   },[])
 
+  console.log(receipt)
   return (
     <div>
       <div>
