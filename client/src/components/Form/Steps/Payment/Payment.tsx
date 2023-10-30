@@ -89,7 +89,6 @@ export default function Payment({setStep, setForm, form}: PaymentProps) {
     getPlanReceipt()
   },[])
 
-  console.log(receipt)
   return (
     <div>
       <div>

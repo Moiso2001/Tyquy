@@ -52,8 +52,6 @@ export default function Stepper() {
     third: {nombre: '', tipo: ''},
   })
 
-  console.log(form)
-
   /* This validation will be used to return the correct step depending of the status of the "step" react state */
   const validation = (step: number) => {
     if(step === 1){
