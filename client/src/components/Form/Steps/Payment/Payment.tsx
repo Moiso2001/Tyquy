@@ -9,6 +9,7 @@ import { FormType } from '../../Stepper'
 
 /* Utils */
 import { prices } from '../../../../utils/constants'
+import { convertNumberToPrice } from '../../../../utils/controller'
 
 type PaymentProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
@@ -84,7 +85,6 @@ export default function Payment({setStep, setForm, form}: PaymentProps) {
     }
   }
 
-
   useEffect(() => {
     getPlanReceipt()
   },[])
@@ -98,17 +98,27 @@ export default function Payment({setStep, setForm, form}: PaymentProps) {
       <div>
         <div>
           <div>
-            <span></span>
+            <div>
+              <span>1 {receipt.title}</span>
+              <span>${convertNumberToPrice(receipt.total)} COP/mes</span>
+            </div>
             <hr/>
           </div>
 
           <div>
-
+            <ul>
+              {receipt.dogs.map(dog => 
+                <li>
+                  <span>{dog.line}</span>
+                  <span>${convertNumberToPrice(dog.price)} COP/mes</span>
+                </li>
+              )}
+            </ul>
           </div>
 
           <div>
             <span>Total a pagar</span>
-            <span></span>
+            <span>${convertNumberToPrice(receipt.total)} COP/mes</span>
           </div>
         </div>
 
