@@ -100,8 +100,18 @@ export default function Second({setStep, setForm, form}: SecondProps) {
         </div>  
 
         {/* Upload Images */}
-        <div>
-
+        <div> 
+            {names.map(dog => 
+              <div>
+                <label>{dog.name} foto (opcional)</label>
+                <input 
+                  name={`${dog.name}_photo`} 
+                  type='file' 
+                  accept='.jpg, .jpeg, .png'
+                  onChange={e => {}}
+                />
+              </div>
+            )}
         </div>
 
         <div>
