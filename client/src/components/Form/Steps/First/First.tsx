@@ -35,11 +35,16 @@ export default function First({setStep, form, setForm}: FirstProps) {
   }
 
   const validationForm = useCallback(() => {
-    let newError: ErrorType = {}
+    const emailValidateRegex: RegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+    const newError: ErrorType = {}
 
-    if(formInfo.nombre.length === 0){
-      newError.nombre = 'El nombre no puede estar vacio'
-    }
+    if(formInfo.nombre.length === 0) newError.nombre = 'El nombre no puede estar vacio';
+
+    if(formInfo.celular.length === 0) newError.celular = 'Agrega un numero de celular';
+    if(formInfo.direccion.length === 0) newError.direccion = 'Agrega una direccion valida';
+    
+    if(formInfo.correo.length === 0) newError.correo = 'Agrega un correo electronico';
+    if(!emailValidateRegex.test(formInfo.correo)) newError.correo = 'El correo electronico no es valido';
 
     setError(newError)
   },[formInfo])
@@ -98,7 +103,12 @@ export default function First({setStep, form, setForm}: FirstProps) {
             >
               <AiOutlineHome/>
             </Link>
-            <span onClick={() => {setStep(step => step + 1); setForm(prevForm => ({...prevForm, first: formInfo}))}}>Continuar</span>
+            <button 
+              onClick={() => {setStep(step => step + 1); setForm(prevForm => ({...prevForm, first: formInfo}))}}
+              disabled={Object.keys(error).length > 0}
+            >
+              Continuar
+            </button>
           </div>
         </div>
       </div>
