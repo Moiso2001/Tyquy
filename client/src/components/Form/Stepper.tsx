@@ -12,10 +12,7 @@ import HelpWindow from './Steps/HelpWindow/HelpWindow';
 
 export type FormType = {
   first: {
-    nombre: {
-        id: number;
-        name: string;
-    }[];
+    nombre: string;
     celular: string;
     correo: string;
     direccion: string;
@@ -40,7 +37,7 @@ export default function Stepper() {
 
   const [form, setForm] = useState<FormType>({
     first: {
-      nombre: [{id: 0, name: ''}],
+      nombre: '',
       celular: '',
       correo: '',
       direccion: ''
