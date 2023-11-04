@@ -1,6 +1,8 @@
 /* React */
 import {useState, useEffect} from 'react'
 
+import { v4 as uuidv4 } from 'uuid';
+
 /* CSS */
 import styles from "./Stepper.module.css"
 import First from './Steps/First/First';
@@ -19,11 +21,11 @@ export type FormType = {
   }
   second: {
     info: {
-        id: number;
+        id: string;
         name: string;
         raza: string;
-        edad: number;
-        peso: number;
+        edad: string;
+        peso: string;
     }[];
     photos: never[];
   }
@@ -43,7 +45,7 @@ export default function Stepper() {
       direccion: ''
     },
     second: {
-      info: [{id: 0, name: '', raza: '', edad: 0, peso: 0}],
+      info: [{id: uuidv4(), name: '', raza: '', edad: 0, peso: 0}],
       photos: []
     },
     third: {nombre: '', tipo: ''},
