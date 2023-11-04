@@ -34,7 +34,6 @@ export type FormType = {
 
 
 export default function Stepper() {
-  const [helpWindowHidden, setHelpWindowHidden] = useState(true);
   const [step , setStep] = useState(1);
 
   const [form, setForm] = useState<FormType>({
@@ -98,7 +97,7 @@ export default function Stepper() {
       </div>
 
       {/* HelpWindow */}
-      <HelpWindow hidden={helpWindowHidden}/>
+      <HelpWindow/>
 
       {/* Form */}
       <div>

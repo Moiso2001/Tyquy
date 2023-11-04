@@ -1,13 +1,12 @@
-import React from 'react'
+import {useState} from 'react'
 
 /* Icon */
 import {BsArrowRightCircle, BsArrowLeftCircle} from "react-icons/bs"
 
-type HelpWindowProps = {
-    hidden: boolean
-}
 
-export default function HelpWindow({hidden}: HelpWindowProps) {
+export default function HelpWindow() {
+  const [isHidden, setHidden] = useState(true)
+
   return (
     <div>
         <div>
@@ -19,9 +18,9 @@ export default function HelpWindow({hidden}: HelpWindowProps) {
         </div>
 
         <div>
-            {hidden
-              ?<BsArrowRightCircle/>
-              :<BsArrowLeftCircle/>
+            {isHidden
+              ?<BsArrowRightCircle onClick={setHidden(status => !status)}/>
+              :<BsArrowLeftCircle onClick={setHidden(status => !status)}/>
             }
         </div>
     </div>
