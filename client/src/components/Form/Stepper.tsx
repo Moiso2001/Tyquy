@@ -45,7 +45,7 @@ export default function Stepper() {
       direccion: ''
     },
     second: {
-      info: [{id: uuidv4(), name: '', raza: '', edad: 0, peso: 0}],
+      info: [{id: uuidv4(), name: '', raza: '', edad: "0", peso: "0"}],
       photos: []
     },
     third: {nombre: '', tipo: ''},
