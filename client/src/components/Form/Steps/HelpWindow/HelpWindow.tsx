@@ -19,8 +19,8 @@ export default function HelpWindow() {
 
         <div>
             {isHidden
-              ?<BsArrowRightCircle onClick={setHidden(status => !status)}/>
-              :<BsArrowLeftCircle onClick={setHidden(status => !status)}/>
+              ?<BsArrowRightCircle onClick={() => setHidden(status => !status)}/>
+              :<BsArrowLeftCircle onClick={() => setHidden(status => !status)}/>
             }
         </div>
     </div>

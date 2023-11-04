@@ -1,10 +1,12 @@
 /* React */
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 
 import { v4 as uuidv4 } from 'uuid';
 
 /* CSS */
 import styles from "./Stepper.module.css"
+
+/* Components */
 import First from './Steps/First/First';
 import Second from './Steps/Second/Second';
 import Third from './Steps/Third/Third';
@@ -97,7 +99,9 @@ export default function Stepper() {
       </div>
 
       {/* HelpWindow */}
-      <HelpWindow/>
+      <div>
+        <HelpWindow/>
+      </div>
 
       {/* Form */}
       <div>

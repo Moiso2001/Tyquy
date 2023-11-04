@@ -33,7 +33,7 @@ type ErrorForm = {
 }
 
 export default function Second({setStep, setForm, form}: SecondProps) {
-  const [photos, setPhotos] = useState(form.photos)
+  // const [photos, setPhotos] = useState(form.photos)
   const [names,setNames] = useState(form.info)
 
   const [error, setError] = useState<ErrorForm[]>([])
@@ -167,7 +167,7 @@ export default function Second({setStep, setForm, form}: SecondProps) {
                   name={`${dog.name}_photo`} 
                   type='file' 
                   accept='.jpg, .jpeg, .png'
-                  onChange={e => {}}
+                  // onChange={e => {}}
                 />
               </div>
             )}

@@ -2,7 +2,7 @@ import {useCallback, useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
 
 /* Icons */
-import {AiOutlinePlusCircle, AiOutlineCloseCircle, AiOutlineHome} from "react-icons/ai";
+import {AiOutlineHome} from "react-icons/ai";
 
 /* Definitions */
 import { FormType } from '../../Stepper';
