@@ -1,8 +1,8 @@
+import {useCallback, useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
-import {useState} from 'react'
 
 /* Icons */
-import {AiOutlinePlusCircle, AiOutlineCloseCircle, AiOutlineHome} from "react-icons/ai";
+import {AiOutlineHome} from "react-icons/ai";
 
 /* Definitions */
 import { FormType } from '../../Stepper';
@@ -11,50 +11,49 @@ import { FormType } from '../../Stepper';
 type FirstProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
     form: {
-      nombre: {
-          id: number;
-          name: string; 
-      }[];
+      nombre: string
       celular: string;
       correo: string;
       direccion: string;
   }
   setForm: React.Dispatch<React.SetStateAction<FormType>>
+}
 
+type ErrorType = {
+  nombre?: string
+  celular?: string;
+  correo?: string;
+  direccion?: string;
 }
 
 export default function First({setStep, form, setForm}: FirstProps) {
   const [formInfo,setFormInfo] = useState(form)
+  const [error, setError] = useState<ErrorType>({})
 
-  function handleOnChange(e: React.ChangeEvent<HTMLInputElement>, id: number | undefined, name: boolean) {
-    if(name){
-      const updatedNames = formInfo.nombre.map((item) => {
-        if (item.id === id && name) {
-          return { id: item.id, name: e.target.value };
-        } else if(item.id === id && !name){
-  
-        }
-  
-        return item;
-      });
-  
-      setFormInfo(prevForm => ({...prevForm, nombre: updatedNames}));
-    } else {
+  function handleOnChange(e: React.ChangeEvent<HTMLInputElement>) {
       setFormInfo(prevForm => ({...prevForm, [e.target.name]: e.target.value}))
-    }
   }
 
-  function deleteName(id: number){
-    const updatedNames = formInfo.nombre.filter(name => name.id !== id)
+  const validationForm = useCallback(() => {
+    const emailValidateRegex: RegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+    const newError: ErrorType = {}
 
-    setFormInfo(prevForm => ({...prevForm, nombre: updatedNames}));
-  }
- 
-  function updateForm() {
-    setForm(prevForm => ({...prevForm, first: formInfo}))
-  }
+    if(formInfo.nombre.length === 0) newError.nombre = 'El nombre no puede estar vacio';
 
+    if(formInfo.celular.length === 0) newError.celular = 'Agrega un numero de celular';
+    if(formInfo.direccion.length === 0) newError.direccion = 'Agrega una direccion valida';
+    
+    if(formInfo.correo.length === 0) newError.correo = 'Agrega un correo electronico';
+    if(!emailValidateRegex.test(formInfo.correo)) newError.correo = 'El correo electronico no es valido';
 
+    setError(newError)
+  },[formInfo])
+
+  useEffect(() => {
+    validationForm()
+  }, [validationForm])
+
+  console.log(error)
   return (
       <div>
         <div>
@@ -63,50 +62,37 @@ export default function First({setStep, form, setForm}: FirstProps) {
 
         <div>
           <div>
-            <span>Nombre completo (Dueñ@s)</span>
-            {formInfo.nombre.map(e => 
-              <div key={e.id}>
-                <input value={e.name} onChange={event => handleOnChange(event, e.id, true)}/>
-
-                {e.id > 0
-                    ?<div onClick={() => deleteName(e.id)}>
-                        <AiOutlineCloseCircle/>
-                     </div>
-                    :<div onClick={() => setFormInfo(prevForm => ({...prevForm, nombre: [...prevForm.nombre, {id: formInfo.nombre.length, name: ''}]}))}>
-                        <AiOutlinePlusCircle/>
-                     </div>
-                }
-               
-              </div>
-            )}
-          </div>
-
+            <span>Nombre completo</span>
+            <input 
+              name='nombre'
+              value={formInfo.nombre} 
+              onChange={event => handleOnChange(event)}
+            />
+          </div>     
           <div>
-            <div>
-                <span>Celular</span>
-                <input 
-                  name='celular' 
-                  value={formInfo.celular}
-                  onChange={e => handleOnChange(e, undefined, false)}
-                />
-            </div>
-
-            <div>
-                <span>Correo</span>
-                <input 
-                  name='correo' 
-                  value={formInfo.correo}
-                  onChange={e => handleOnChange(e, undefined, false)}
-                />
-            </div>
+              <span>Celular</span>
+              <input 
+                name='celular' 
+                value={formInfo.celular}
+                onChange={e => handleOnChange(e)}
+              />
           </div>
+          <div>
+              <span>Correo</span>
+              <input 
+                name='correo' 
+                value={formInfo.correo}
+                onChange={e => handleOnChange(e)}
+              />
+          </div>
+          
 
           <div>
             <span>Direccion</span>
             <input 
               name='direccion' 
               value={formInfo.direccion}
-              onChange={e => handleOnChange(e, undefined, false)}
+              onChange={e => handleOnChange(e)}
             />
           </div>
 
@@ -117,7 +103,12 @@ export default function First({setStep, form, setForm}: FirstProps) {
             >
               <AiOutlineHome/>
             </Link>
-            <span onClick={() => {setStep(step => step + 1); updateForm()}}>Continuar</span>
+            <button 
+              onClick={() => {setStep(step => step + 1); setForm(prevForm => ({...prevForm, first: formInfo}))}}
+              disabled={Object.keys(error).length > 0}
+            >
+              Continuar
+            </button>
           </div>
         </div>
       </div>

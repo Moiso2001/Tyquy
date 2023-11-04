@@ -15,7 +15,13 @@ type ThirdProps = {
 }
 
 export default function Third({setStep, setForm, form}: ThirdProps) {
+    const [disableContinue, setDisableContinue] = useState(true)
     const [plan, setPlan] = useState(form);
+
+    function handlePlanSelect (tipo: string) {
+        setDisableContinue(false)
+        setPlan(plan => ({...plan, tipo}))
+    }
 
     function updateForm () {
         setForm(form => ({...form, third: plan}))
@@ -41,7 +47,7 @@ export default function Third({setStep, setForm, form}: ThirdProps) {
             </div>
 
             <div>
-                <div onClick={() => setPlan(plan => ({...plan, tipo: 'esencial'}))}>
+                <div onClick={() => handlePlanSelect('esencial')}>
                     <img/>
                     <div>
                         <div>
@@ -56,7 +62,7 @@ export default function Third({setStep, setForm, form}: ThirdProps) {
                         </p>
                     </div>                    
                 </div>
-                <div onClick={() => setPlan(plan => ({...plan, tipo: 'estandard'}))}>
+                <div onClick={() => handlePlanSelect('estandard')}>
                     <img/>
                     <div>
                         <div>
@@ -71,7 +77,7 @@ export default function Third({setStep, setForm, form}: ThirdProps) {
                         </p>
                     </div>
                 </div>
-                <div onClick={() => setPlan(plan => ({...plan, tipo: 'premium'}))}>
+                <div onClick={() => handlePlanSelect('premium')}>
                     <img/>
                     <div>
                         <div>
@@ -92,7 +98,12 @@ export default function Third({setStep, setForm, form}: ThirdProps) {
         <div>
             <BsArrowLeftCircle onClick={() => setStep(step => step - 1)}/>
             {plan.nombre === 'office' || !plan.nombre
-             ? <span onClick={() => {setStep(step => step + 1); updateForm()}}>Continuar</span>
+             ? <button 
+                onClick={() => {setStep(step => step + 1); updateForm()}}
+                disabled={disableContinue}
+               >
+                Continuar
+               </button>
              : <div>            
                 <span>Finaliza tu pago escribiendonos</span>
                 <RiWhatsappFill/>

@@ -1,8 +1,12 @@
 /* React */
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
+
+import { v4 as uuidv4 } from 'uuid';
 
 /* CSS */
 import styles from "./Stepper.module.css"
+
+/* Components */
 import First from './Steps/First/First';
 import Second from './Steps/Second/Second';
 import Third from './Steps/Third/Third';
@@ -12,21 +16,18 @@ import HelpWindow from './Steps/HelpWindow/HelpWindow';
 
 export type FormType = {
   first: {
-    nombre: {
-        id: number;
-        name: string;
-    }[];
+    nombre: string;
     celular: string;
     correo: string;
     direccion: string;
   }
   second: {
     info: {
-        id: number;
+        id: string;
         name: string;
         raza: string;
-        edad: number;
-        peso: number;
+        edad: string;
+        peso: string;
     }[];
     photos: never[];
   }
@@ -35,18 +36,17 @@ export type FormType = {
 
 
 export default function Stepper() {
-  const [helpWindowHidden, setHelpWindowHidden] = useState(true);
   const [step , setStep] = useState(1);
 
   const [form, setForm] = useState<FormType>({
     first: {
-      nombre: [{id: 0, name: ''}],
+      nombre: '',
       celular: '',
       correo: '',
       direccion: ''
     },
     second: {
-      info: [{id: 0, name: '', raza: '', edad: 0, peso: 0}],
+      info: [{id: uuidv4(), name: '', raza: '', edad: "0", peso: "0"}],
       photos: []
     },
     third: {nombre: '', tipo: ''},
@@ -99,7 +99,9 @@ export default function Stepper() {
       </div>
 
       {/* HelpWindow */}
-      <HelpWindow hidden={helpWindowHidden}/>
+      <div>
+        <HelpWindow/>
+      </div>
 
       {/* Form */}
       <div>
