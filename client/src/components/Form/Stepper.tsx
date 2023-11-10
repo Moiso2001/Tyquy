@@ -91,17 +91,24 @@ export default function Stepper() {
   return (  
     <div className={styles.div_global}>
       {/* Steps */}
-      <div>
-        <div>
-          <Lottie animationData={dogWalking}/>
-          <Lottie animationData={trees}/>
+      <div className={styles.div_steps}>
+        <div className={styles.steps__div_animations}>
+          <Lottie 
+            animationData={dogWalking} 
+            className={styles.animation__dog}
+          />
+          <Lottie 
+            animationData={trees} 
+            loop={false} 
+            className={styles.animation__tree}
+          />
         </div>
 
-        <div>
-          <div/>
-          <div/>
-          <div/>
-          <div/>
+        <div className={styles.steps__div_bar}>
+          <div className={styles.bar}/>
+          <div className={styles.bar}/>
+          <div className={styles.bar}/>
+          <div className={styles.bar}/>
         </div>
       </div>
 
