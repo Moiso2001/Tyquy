@@ -14,6 +14,12 @@ import Third from './Steps/Third/Third';
 import First from './Steps/First/First';
 import Final from './Steps/Final/Final';
 
+/* Lottie */
+import Lottie from "lottie-react";
+
+import dogWalking from "../../assets/lottie/dog_walking_step.json";
+import trees from "../../assets/lottie/trees.json";
+
 export type FormType = {
   first: {
     nombre: string;
@@ -83,11 +89,12 @@ export default function Stepper() {
 
 
   return (  
-    <div className={styles.divGlobal}>
+    <div className={styles.div_global}>
       {/* Steps */}
       <div>
         <div>
-
+          <Lottie animationData={dogWalking}/>
+          <Lottie animationData={trees}/>
         </div>
 
         <div>
@@ -100,7 +107,7 @@ export default function Stepper() {
 
       {/* HelpWindow */}
       <div>
-        <HelpWindow/>
+        {/* <HelpWindow/> */}
       </div>
 
       {/* Form */}
