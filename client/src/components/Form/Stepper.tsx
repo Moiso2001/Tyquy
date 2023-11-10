@@ -7,12 +7,18 @@ import { v4 as uuidv4 } from 'uuid';
 import styles from "./Stepper.module.css"
 
 /* Components */
-import First from './Steps/First/First';
+import HelpWindow from './Steps/HelpWindow/HelpWindow';
+import Payment from './Steps/Payment/Payment';
 import Second from './Steps/Second/Second';
 import Third from './Steps/Third/Third';
-import Payment from './Steps/Payment/Payment';
+import First from './Steps/First/First';
 import Final from './Steps/Final/Final';
-import HelpWindow from './Steps/HelpWindow/HelpWindow';
+
+/* Lottie */
+import Lottie from "lottie-react";
+
+import dogWalking from "../../assets/lottie/dog_walking_step.json";
+import trees from "../../assets/lottie/trees.json";
 
 export type FormType = {
   first: {
@@ -49,7 +55,7 @@ export default function Stepper() {
       info: [{id: uuidv4(), name: '', raza: '', edad: "0", peso: "0"}],
       photos: []
     },
-    third: {nombre: '', tipo: ''},
+    third: {nombre: 'office', tipo: ''},
   })
 
   /* This validation will be used to return the correct step depending of the status of the "step" react state */
@@ -83,11 +89,12 @@ export default function Stepper() {
 
 
   return (  
-    <div className={styles.divGlobal}>
+    <div className={styles.div_global}>
       {/* Steps */}
       <div>
         <div>
-
+          <Lottie animationData={dogWalking}/>
+          <Lottie animationData={trees}/>
         </div>
 
         <div>
@@ -100,7 +107,7 @@ export default function Stepper() {
 
       {/* HelpWindow */}
       <div>
-        <HelpWindow/>
+        {/* <HelpWindow/> */}
       </div>
 
       {/* Form */}

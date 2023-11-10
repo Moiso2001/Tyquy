@@ -9,12 +9,12 @@ import { FormType } from '../../Stepper';
 
 
 type FirstProps = {
-    setStep: React.Dispatch<React.SetStateAction<number>>
-    form: {
-      nombre: string
-      celular: string;
-      correo: string;
-      direccion: string;
+  setStep: React.Dispatch<React.SetStateAction<number>>
+  form: {
+    nombre: string
+    celular: string;
+    correo: string;
+    direccion: string;
   }
   setForm: React.Dispatch<React.SetStateAction<FormType>>
 }
@@ -53,7 +53,6 @@ export default function First({setStep, form, setForm}: FirstProps) {
     validationForm()
   }, [validationForm])
 
-  console.log(error)
   return (
       <div>
         <div>
