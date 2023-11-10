@@ -1,1 +1,64 @@
 /* GLOBAL STEPPER */
+.div_global{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.steps__div_animations{
+    display: flex;
+}
+
+.div_steps{
+    position: relative;
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.steps__div_animations{
+    position: relative;
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.animation__dog{
+    width: 90px;
+    
+}
+
+.animation__tree{
+    width: 60px;
+}
+
+.steps__div_bar{
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+.bar{
+    border-radius: 2px;
+
+    height: 2px;
+    width: 24%;
+
+    
+    background-color: #1F2021;
+}
