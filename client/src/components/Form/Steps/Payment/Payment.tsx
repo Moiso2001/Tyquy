@@ -58,22 +58,23 @@ export default function Payment({setStep, setForm, form}: PaymentProps) {
       return total
     }
   
-    function getDogLine (dog: { id: number; name: string; raza: string; edad: number; peso: number;}, index: number) {
+    function getDogLine (dog: { id: string; name: string; raza: string; edad: string; peso: string;}, index: number) {
       const planPrices = prices[index];
+      const pesoInNumber = Number(dog.peso)
   
       let tamaño = ''
       let price = 0
   
-       if(dog.peso <= 10) {
+       if(pesoInNumber <= 10) {
         tamaño = 'Pequeño'
         price = planPrices.pequeño 
-       } else if(dog.peso > 10 && dog.peso <= 20){
+       } else if(pesoInNumber > 10 && pesoInNumber <= 20){
         tamaño = 'Mediano'
         price = planPrices.mediano
-       } else if(dog.peso > 20 && dog.peso <= 30){
+       } else if(pesoInNumber > 20 && pesoInNumber <= 30){
         tamaño = 'Grande'
         price = planPrices.grande
-       } else if(dog.peso > 30){
+       } else if(pesoInNumber > 30){
         tamaño = 'Enorme'
         price = planPrices.enorme
        }
@@ -157,7 +158,7 @@ export default function Payment({setStep, setForm, form}: PaymentProps) {
           <div>
             <BsArrowLeftCircle onClick={() => setStep(step => step - 1)}/>
             
-            <div>
+            <div onClick={() => setStep(step => step + 1)}>
               <span>Tambien puedes pagar escribiendonos</span>
               <RiWhatsappFill/>
             </div>
