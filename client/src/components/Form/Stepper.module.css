@@ -11,10 +11,13 @@
     display: flex;
 }
 
+/* Steps (animation and movement)*/
+
 .div_steps{
     position: relative;
     display: flex;
     margin-top: 3rem;
+    margin-bottom: 6rem;
     flex-direction: column;
 
     width: 100%;
@@ -24,41 +27,69 @@
     position: relative;
     display: flex;
 
-    width: 100%;
+    width: 97%;
 
     align-items: center;
     justify-content: space-between;
 }
 
 .animation__dog{
+    position: absolute;
     width: 90px;
-    
+
+    top: 0px;
+
+    z-index: 5;
 }
 
 .animation__tree{
+    position: absolute;
     width: 60px;
+
+    top: 5px;
+
+    right: 0;
+    
+    z-index: 1;
 }
 
 .steps__div_bar{
     position: absolute;
 
-    top: 0;
+    top: 66px;
     right: 0;
     bottom: 0;
     left: 0;
+
+    width: 96%;
+
+    margin: 0 auto;
     
     display: flex;
 
-    justify-content: space-between;
+    justify-content: space-around;
 
+    z-index: 10;
 }
 
 .bar{
     border-radius: 2px;
 
     height: 2px;
-    width: 24%;
+    width: 23%;
 
     
     background-color: #1F2021;
 }
+
+.bar_active{
+    border-radius: 2px;
+
+    height: 2px;
+    width: 23%;
+
+    
+    background-color: #FF808B;
+}
+
+/**/

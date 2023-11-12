@@ -87,6 +87,15 @@ export default function Stepper() {
     }
   }
 
+  function dogPositionStyle (): string {
+    if(step === 1) return "3%";
+    if(step === 2) return "29%";
+    if(step === 3) return "53%";
+    if(step === 4) return "75%";
+    else{
+      return "5%"
+    }
+  }
 
   return (  
     <div className={styles.div_global}>
@@ -95,7 +104,8 @@ export default function Stepper() {
         <div className={styles.steps__div_animations}>
           <Lottie 
             animationData={dogWalking} 
-            className={styles.animation__dog}
+            className={`${styles.animation__dog} dog${step}`}
+            style={{marginLeft: dogPositionStyle()}}
           />
           <Lottie 
             animationData={trees} 
@@ -105,10 +115,10 @@ export default function Stepper() {
         </div>
 
         <div className={styles.steps__div_bar}>
-          <div className={styles.bar}/>
-          <div className={styles.bar}/>
-          <div className={styles.bar}/>
-          <div className={styles.bar}/>
+          <div className={step >= 1 ? styles.bar_active : styles.bar}/>
+          <div className={step >= 2 ? styles.bar_active : styles.bar}/>
+          <div className={step >= 3 ? styles.bar_active : styles.bar}/>
+          <div className={step >= 4 ? styles.bar_active : styles.bar}/>
         </div>
       </div>
 
