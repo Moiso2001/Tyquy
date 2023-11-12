@@ -92,4 +92,14 @@
     background-color: #FF808B;
 }
 
+.bar_active__complete{
+    border-radius: 2px;
+
+    height: 2px;
+    width: 100%;
+
+    
+    background-color: #FF808B; 
+}
+
 /**/

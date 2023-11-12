@@ -87,13 +87,26 @@ export default function Stepper() {
     }
   }
 
-  function dogPositionStyle (): string {
-    if(step === 1) return "3%";
-    if(step === 2) return "29%";
-    if(step === 3) return "53%";
-    if(step === 4) return "75%";
-    else{
-      return "5%"
+  function lottiePositionStyle (type: string): string {
+    if(type === 'dog'){
+      if(step === 1) return "3%";
+      if(step === 2) return "29%";
+      if(step === 3) return "53%";
+      if(step === 4) return "75%";
+      if(step === 5) return "40%"
+      else{
+        return "5%"
+      }
+    } else if(type === 'tree'){
+      if(step < 5){
+        return "0"
+      } else if(step >= 5){
+        return "35%"
+      } else {
+        return "0"
+      }
+    } else {
+      return "0"
     }
   }
 
@@ -105,21 +118,31 @@ export default function Stepper() {
           <Lottie 
             animationData={dogWalking} 
             className={`${styles.animation__dog} dog${step}`}
-            style={{marginLeft: dogPositionStyle()}}
+            style={{marginLeft: lottiePositionStyle('dog')}}
           />
           <Lottie 
             animationData={trees} 
             loop={false} 
             className={styles.animation__tree}
+            style={{marginRight: lottiePositionStyle('tree')}}
           />
         </div>
 
-        <div className={styles.steps__div_bar}>
-          <div className={step >= 1 ? styles.bar_active : styles.bar}/>
-          <div className={step >= 2 ? styles.bar_active : styles.bar}/>
-          <div className={step >= 3 ? styles.bar_active : styles.bar}/>
-          <div className={step >= 4 ? styles.bar_active : styles.bar}/>
-        </div>
+        {step < 5 && 
+          <div className={styles.steps__div_bar}>
+            <div className={step >= 1 ? styles.bar_active : styles.bar}/>
+            <div className={step >= 2 ? styles.bar_active : styles.bar}/>
+            <div className={step >= 3 ? styles.bar_active : styles.bar}/>
+            <div className={step >= 4 ? styles.bar_active : styles.bar}/>
+          </div>
+        }
+        {step >= 5 && 
+          <div className={styles.steps__div_bar}>
+            <div className={styles.bar_active__complete}/>
+          </div>
+        }
+
+
       </div>
 
       {/* HelpWindow */}
