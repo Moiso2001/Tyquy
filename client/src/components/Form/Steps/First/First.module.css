@@ -1,0 +1,91 @@
+.div_form span{
+    font-weight: 600;
+    font-size: 0.95rem;
+
+    line-height: 162%;
+}
+
+.div_form input{
+    height: 30px;
+
+    border: none;
+    outline: none;
+
+    box-shadow: 2px 2px 1px 0px black;
+}
+
+.form__div_nombre{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 9.4%;
+}
+
+
+.form__div_contacto{
+    display: flex;
+
+    justify-content: space-between;
+    gap: 4%;
+    margin-bottom: 9.4%;
+}
+
+.form__div_contacto input{
+    width: 97%;
+}
+
+.contacto__div_celular{
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto__div_correo{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__div_direccion{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20%;
+}
+
+.form__div_page{
+    display: flex;
+
+    justify-content: right;
+    gap: 7%;
+}
+
+.form__div_page__button{
+    border: none;
+
+    background-color: #FF808B;
+    padding: 0 3rem 0 3rem;
+
+    color: white;
+
+    font-weight: 300;
+}
+
+.form__div_page__button__disabled{
+    border: none;
+
+    background-color: #cab4b6;
+    padding: 0 3rem 0 3rem;
+
+    color: white;
+
+    font-weight: 300;
+}
+
+.page__homeIcon{
+    color: white;
+    font-size: 1.6rem;
+
+    height: 71.2%;
+
+    background-color: #FF808B;
+    padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+}
