@@ -7,6 +7,9 @@ import {AiOutlineHome} from "react-icons/ai";
 /* Definitions */
 import { FormType } from '../../Stepper';
 
+/* CSS */
+import styles from "./First.module.css";
+
 
 type FirstProps = {
   setStep: React.Dispatch<React.SetStateAction<number>>
@@ -54,39 +57,42 @@ export default function First({setStep, form, setForm}: FirstProps) {
   }, [validationForm])
 
   return (
-      <div>
+      <div className={styles.div_global}>
         <div>
 
         </div>
 
-        <div>
-          <div>
-            <span>Nombre completo</span>
+        <div className={styles.div_form}>
+          <div className={styles.form__div_nombre}>
+            <span>Nombre completo (Dueñ@)</span>
             <input 
               name='nombre'
               value={formInfo.nombre} 
               onChange={event => handleOnChange(event)}
             />
-          </div>     
-          <div>
-              <span>Celular</span>
-              <input 
-                name='celular' 
-                value={formInfo.celular}
-                onChange={e => handleOnChange(e)}
-              />
-          </div>
-          <div>
-              <span>Correo</span>
-              <input 
-                name='correo' 
-                value={formInfo.correo}
-                onChange={e => handleOnChange(e)}
-              />
-          </div>
+          </div> 
+
+          <div className={styles.form__div_contacto}>  
+            <div className={styles.contacto__div_celular}>
+                <span>Celular</span>
+                <input 
+                  name='celular' 
+                  value={formInfo.celular}
+                  onChange={e => handleOnChange(e)}
+                />
+            </div>
+            <div className={styles.contacto__div_correo}>
+                <span>Correo</span>
+                <input 
+                  name='correo' 
+                  value={formInfo.correo}
+                  onChange={e => handleOnChange(e)}
+                />
+            </div>
+          </div>    
           
 
-          <div>
+          <div className={styles.form__div_direccion}>
             <span>Direccion</span>
             <input 
               name='direccion' 
@@ -95,16 +101,17 @@ export default function First({setStep, form, setForm}: FirstProps) {
             />
           </div>
 
-          <div>
+          <div className={styles.form__div_page}>
             <Link 
               style={{color: "black"}} 
               to='/'
             >
-              <AiOutlineHome/>
+              <AiOutlineHome className={styles.page__homeIcon}/>
             </Link>
             <button 
               onClick={() => {setStep(step => step + 1); setForm(prevForm => ({...prevForm, first: formInfo}))}}
               disabled={Object.keys(error).length > 0}
+              className={Object.keys(error).length > 0 ?  styles.form__div_page__button__disabled : styles.form__div_page__button}
             >
               Continuar
             </button>
