@@ -10,6 +10,7 @@ import Home from './components/Home/Home'
 
 /* CSS */
 import styles from "./App.module.css"
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/formulario' element={<Stepper/>}/>
         </Routes>
+        <Footer/>
       </div>
     </BrowserRouter>
   )

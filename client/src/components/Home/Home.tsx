@@ -2,12 +2,11 @@
 
 /* Componetns */
 import Services from '../Services/Services';
-import Head from '../Head/Head';
-import Why from '../Why/Why';
 import Prices from '../Prices/Prices';
 import Rules from '../Rules/Rules';
+import Head from '../Head/Head';
+import Why from '../Why/Why';
 import FAQ from '../FAQ/FAQ';
-import Footer from '../Footer/Footer';
 
 
 
@@ -20,7 +19,6 @@ export default function Home() {
       <Prices/>
       <Rules/>
       <FAQ/>
-      <Footer/>
     </div>
   )
 }
