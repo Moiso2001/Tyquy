@@ -69,6 +69,7 @@ export default function First({setStep, form, setForm}: FirstProps) {
               name='nombre'
               value={formInfo.nombre} 
               onChange={event => handleOnChange(event)}
+              className={error.nombre ? styles.error_input : ''}
             />
           </div> 
 
@@ -79,6 +80,7 @@ export default function First({setStep, form, setForm}: FirstProps) {
                   name='celular' 
                   value={formInfo.celular}
                   onChange={e => handleOnChange(e)}
+                  className={error.celular ? styles.error_input : ''}
                 />
             </div>
             <div className={styles.contacto__div_correo}>
@@ -87,6 +89,7 @@ export default function First({setStep, form, setForm}: FirstProps) {
                   name='correo' 
                   value={formInfo.correo}
                   onChange={e => handleOnChange(e)}
+                  className={error.correo ? styles.error_input : ''}
                 />
             </div>
           </div>    
@@ -98,6 +101,7 @@ export default function First({setStep, form, setForm}: FirstProps) {
               name='direccion' 
               value={formInfo.direccion}
               onChange={e => handleOnChange(e)}
+              className={error.direccion ? styles.error_input : ''}
             />
           </div>
 

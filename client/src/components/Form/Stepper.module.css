@@ -5,6 +5,9 @@
 
     justify-content: center;
     align-items: center;
+
+    margin-bottom: 6rem;
+    margin-top: 1rem;
 }
 
 .steps__div_animations{

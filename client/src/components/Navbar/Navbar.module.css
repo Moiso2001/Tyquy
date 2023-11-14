@@ -1,5 +1,5 @@
 .div_global{
-    background-color: #faf5e4;
+    background-color: #1F2021;
     position: fixed;
 
     top: 0;
@@ -17,7 +17,7 @@
 
 .mobile__icon{
     font-size: 1.4rem;
-    color: #000000d8;
+    color: #FAF5E4;
 
     margin-right: 1rem;
 }
@@ -26,9 +26,12 @@
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.2s ease-in; /* Adjust the duration and easing as needed */
+
+    color: #F1F1F1;
 }
   
 .mobile__open_nav {
+  color: #F1F1F1;
 
   max-height: 200px; /* Set the maximum height based on your content */
   overflow: hidden;

@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 import styles from "./Stepper.module.css"
 
 /* Components */
-import HelpWindow from './Steps/HelpWindow/HelpWindow';
+// import HelpWindow from './Steps/HelpWindow/HelpWindow';
 import Payment from './Steps/Payment/Payment';
 import Second from './Steps/Second/Second';
 import Third from './Steps/Third/Third';
