@@ -89,3 +89,7 @@
     background-color: #FF808B;
     padding: 0.4rem 0.6rem 0.4rem 0.6rem;
 }
+
+.error_input{
+    background-color: #feb6bb4b;
+}

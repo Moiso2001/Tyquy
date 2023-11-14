@@ -1,0 +1,116 @@
+.div_dog{
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 2rem;
+}
+
+.div_dog span{
+    font-weight: 600;
+    font-size: 0.95rem;
+
+    line-height: 162%;
+}
+
+.div_info1 input{
+    height: 30px;
+
+    border: none;
+    outline: none;
+
+    box-shadow: 2px 2px 1px 0px black;
+
+    margin-bottom: 0.8rem;
+}
+
+.div_info2 input{
+    height: 30px;
+    width: 40px;
+
+    border: none;
+    outline: none;
+
+    box-shadow: 2px 2px 1px 0px black;
+    margin-bottom: 0.8rem;
+}
+
+.info__div_data{
+    display: flex;
+    flex-direction: column;
+}
+
+.div_functions{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 4%;
+
+    gap: 1rem;
+}
+
+.functions__icon{
+    background-color: #FF808B;
+
+    padding: 0.4rem 0.9rem 0.4rem 0.9rem;
+
+    color: white;
+
+    font-size: 2rem;
+
+    border-radius: 2px;
+}
+
+.form__div_page{
+    display: flex;
+
+    justify-content: right;
+    gap: 7%;
+}
+
+.page__afterIcon{
+    color: white;
+    font-size: 1.6rem;
+
+    height: 71.2%;
+
+    background-color: #FF808B;
+    padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+}
+
+.form__div_page__button{
+    border: none;
+
+    background-color: #FF808B;
+    padding: 0 3rem 0 3rem;
+
+    color: white;
+
+    font-weight: 300;
+}
+
+.form__div_page__button__disabled{
+    border: none;
+
+    background-color: #cab4b6;
+    padding: 0 3rem 0 3rem;
+
+    color: white;
+
+    font-weight: 300;
+}
+
+.error_input{
+    background-color: #feb6bb4b;
+}
+
+@media (width <= 600px) {
+    .div__upload_images_desktop{
+        display: none;
+    }
+}
