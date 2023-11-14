@@ -9,6 +9,9 @@ import {RiWhatsappFill} from "react-icons/ri"
 import { FormType } from '../../Stepper'
 import Plan from './Cards/Plan'
 
+/* Styles */
+import styles from "./Third.module.css";
+
 type ThirdProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
     setForm: React.Dispatch<React.SetStateAction<FormType>>
@@ -27,31 +30,46 @@ export default function Third({setStep, setForm, form}: ThirdProps) {
     function updateForm () {
         setForm(form => ({...form, third: plan}))
     }
+
+    function isFocused(name: string){
+        if(plan.nombre === name){
+            return true
+        } else {
+            return false
+        }
+    }
    
   return (
-    <div>
-        <div>
+    <div className={styles.div_global}>
+        <div className={styles.div_title}>
             <h3>Escoge tu plan</h3>
         </div>
 
-        <div>
-            <div>
-                <div onClick={() => setPlan(plan => ({...plan, nombre: 'office'}))}>
-                    <span>Office</span>
-                </div>
-                <div onClick={() => setPlan(plan => ({...plan, nombre: 'spa'}))}>
-                    <span>Spa</span>
-                </div>
-                <div onClick={() => setPlan(plan => ({...plan, nombre: 'hotel'}))}>
-                    <span>Hotel</span>
-                </div>
+        <div className={styles.div_plan__options}>
+            <div
+                className={isFocused('office') ? styles.plan__div_office__focus :styles.plan__div_office} 
+                onClick={() => setPlan(plan => ({...plan, nombre: 'office'}))}
+            >
+                <span>Office</span>
+            </div>
+            <div 
+                className={isFocused('spa') ? styles.plan__div_spa__focus : styles.plan__div_spa}
+                onClick={() => setPlan(plan => ({...plan, nombre: 'spa'}))}
+            >
+                <span>Spa</span>
+            </div>
+            <div
+                className={isFocused('hotel') ? styles.plan__div_hotel__focus : styles.plan__div_hotel} 
+                onClick={() => setPlan(plan => ({...plan, nombre: 'hotel'}))}
+            >
+                <span>Hotel</span>
             </div>
         </div>
 
         {/* Plan */}
         <Plan planName={plan.nombre} handlePlan={handlePlanSelect}/>
 
-        <div>
+        <div className={styles.form__div_page}>
             <BsArrowLeftCircle onClick={() => setStep(step => step - 1)}/>
             {plan.nombre === 'office' || !plan.nombre
              ? <button 
