@@ -163,3 +163,23 @@
     background-color: #FF808B;
     padding: 0.4rem 0.6rem 0.4rem 0.6rem;
 }
+
+.form__div_button_social{
+    display: flex;
+
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 1rem;
+
+    height: 100%;
+
+    background-color: #FF808B;
+    padding: 0.5rem 0.6rem 0.5rem 0.6rem;
+}
+
+.form__social_whatsapp_icon{
+    font-size: 1.5rem;
+    margin-right: 0.2rem;
+}

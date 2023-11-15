@@ -82,9 +82,9 @@ export default function Third({setStep, setForm, form}: ThirdProps) {
                >
                 Continuar
                </button>
-             : <div>            
+             : <div className={styles.form__div_button_social}>            
                 <span>Finaliza tu pago escribiendonos</span>
-                <RiWhatsappFill/>
+                <RiWhatsappFill className={styles.form__social_whatsapp_icon}/>
                </div>
             }
         </div>
