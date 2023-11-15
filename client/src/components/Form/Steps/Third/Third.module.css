@@ -1,0 +1,165 @@
+.div_global{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.div_plan__options{
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 0.5rem 0 2rem 0;
+}
+
+.plan__div_office{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 2px;
+
+    background-color: #698269;
+
+    width: 32%;
+    height: 30px;
+
+    color: white;
+
+    box-shadow: 2px 2px 1px 0px black;
+}
+
+.plan__div_spa{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 2px;
+    
+    background-color: #FF808B;
+
+    width: 32%;
+    height: 30px;
+
+    color: white;
+
+    box-shadow: 2px 2px 1px 0px black;
+}
+
+.plan__div_hotel{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 2px;
+    
+    background-color: #F8B400;
+
+    width: 32%;
+    height: 30px;
+
+    color: white;
+
+    box-shadow: 2px 2px 1px 0px black;
+}
+
+.plan__div_office__focus{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 2px;
+
+    background-color: #698269;
+
+    width: 32%;
+    height: 30px;
+
+    color: white;
+
+    box-shadow: 2px 2px 1px 0px black;
+    border: solid 2px white
+}
+
+.plan__div_spa__focus{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 2px;
+    
+    background-color: #FF808B;
+
+    width: 32%;
+    height: 30px;
+
+    color: white;
+
+    box-shadow: 2px 2px 1px 0px black;
+    border: solid 2px white
+}
+
+.plan__div_hotel__focus{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 2px;
+    
+    background-color: #F8B400;
+
+    width: 32%;
+    height: 30px;
+
+    color: white;
+
+    box-shadow: 2px 2px 1px 0px black;
+    border: solid 2px white;
+}
+
+
+.form__div_page{
+    display: flex;
+
+    justify-content: right;
+    gap: 7%;
+}
+
+.form__div_page__button{
+    border: none;
+
+    background-color: #FF808B;
+    padding: 0 3rem 0 3rem;
+
+    color: white;
+
+    font-weight: 300;
+}
+
+.form__div_page__button__disabled{
+    border: none;
+
+    background-color: #cab4b6;
+    padding: 0 3rem 0 3rem;
+
+    color: white;
+
+    font-weight: 300;
+}
+
+.page__leftIcon{
+    color: white;
+    font-size: 1.6rem;
+
+    height: 71.2%;
+
+    background-color: #FF808B;
+    padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+}
