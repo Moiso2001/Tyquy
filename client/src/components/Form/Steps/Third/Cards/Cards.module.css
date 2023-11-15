@@ -1,0 +1,8 @@
+/* Office */
+.office__div_global{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}

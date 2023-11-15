@@ -1,14 +1,22 @@
 // import React from 'react'
 
+/* Styles */
+import styles from "./Cards.module.css"
+
+/* Images */
+import estandardPhoto from "../assets/standard2.jpg";
+import esencialPhoto from "../assets/standard.jpeg";
+import premiumPhoto from "../assets/standard3.jpg";
+
 type OfficeProps = {
     handlePlanSelect: Function
 }
 
 export default function Office({handlePlanSelect}: OfficeProps) {
   return (
-    <div>
+    <div className={styles.office__div_global}>
         <div onClick={() => handlePlanSelect('esencial')}>
-            <img/>
+            <img src={esencialPhoto}/>
             <div>
                 <div>
                     <span>Plan Esencial</span>
@@ -24,7 +32,7 @@ export default function Office({handlePlanSelect}: OfficeProps) {
         </div>
 
         <div onClick={() => handlePlanSelect('estandard')}>
-            <img/>
+            <img src={estandardPhoto}/>
             <div>
                 <div>
                     <span>Plan Estandar</span>
@@ -40,7 +48,7 @@ export default function Office({handlePlanSelect}: OfficeProps) {
         </div>
 
         <div onClick={() => handlePlanSelect('premium')}>
-            <img/>
+            <img src={premiumPhoto}/>
             <div>
                 <div>
                     <span>Plan Premium</span>
