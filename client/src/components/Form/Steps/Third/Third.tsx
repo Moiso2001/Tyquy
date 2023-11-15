@@ -70,9 +70,13 @@ export default function Third({setStep, setForm, form}: ThirdProps) {
         <Plan planName={plan.nombre} handlePlan={handlePlanSelect}/>
 
         <div className={styles.form__div_page}>
-            <BsArrowLeftCircle onClick={() => setStep(step => step - 1)}/>
+            <BsArrowLeftCircle 
+                className={styles.page__leftIcon}
+                onClick={() => setStep(step => step - 1)}
+            />
             {plan.nombre === 'office' || !plan.nombre
              ? <button 
+                className={disableContinue ? styles.form__div_page__button__disabled : styles.form__div_page__button}
                 onClick={() => {setStep(step => step + 1); updateForm()}}
                 disabled={disableContinue}
                >
