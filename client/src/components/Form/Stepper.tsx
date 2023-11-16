@@ -142,9 +142,13 @@ export default function Stepper() {
           </div>
         }
 
-        <div className={styles.steps__div_span}>
-          <span>{`Paso ${step} de 4`}</span>
-        </div>
+        {step < 5
+          ? <div className={styles.steps__div_span}>
+              <span>{`Paso ${step} de 4`}</span>
+            </div>
+          : <></>
+        }
+        
       </div>
 
       {/* HelpWindow */}

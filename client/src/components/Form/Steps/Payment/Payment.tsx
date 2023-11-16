@@ -130,8 +130,8 @@ export default function Payment({setStep, setForm, form}: PaymentProps) {
 
         <div className={styles.info__div_footer}>
           <div className={styles.footer__div_checkbox}>
-            <input type='checkbox'/>
-            <span>Acepta terminos y condiciones del servicio</span>
+            <input type='checkbox' checked={true}/>
+            <span>Al enviar la informacion se aceptan terminos y condiciones del servicio</span>
           </div>
 
           <div className={styles.footer__div_buttons}>
