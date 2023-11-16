@@ -1,19 +1,24 @@
 // import React from 'react'
 
+/* Images and styles */
+import styles from "./Cards.module.css"
+
+import dogHotelPicture from "../assets/dog-sleep.jpeg"
+
 export default function Hotel() {
   return (
-    <div>
+    <div className={styles.hotel__div_global}>
         <div>
-
+            <img src={dogHotelPicture}/>
         </div>
     
-        <div>
-            <div>
+        <div className={styles.hotel__div_info}>
+            <div className={styles.hotel__info_div_header}>
                 <h3>Dog Hotel</h3>
                 <span>Tu hogar temporal para tu amigo peludo</span>
             </div>
 
-            <div>
+            <div className={styles.hotel__info_div_body}>
                 <p>
                     Ofrecemos alojamiento seguro y cómodo para perros de todas las razas y 
                     tamaños. Incluye alimentación de calidad, paseos diarios, atención 

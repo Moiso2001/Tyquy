@@ -124,3 +124,56 @@
     text-align: justify;
 
 }
+
+/* Spa */
+.spa__div_global{
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 3px 0px rgba(0, 0, 0, 0.686);
+}
+
+.spa__div_global img{
+    width: 100%;
+}
+
+.spa__div_info{
+    background-color: #FF808B;
+
+    padding: 1rem;
+    margin-top: -1.5rem;
+
+    color: white;
+}
+
+.spa__info_div_body p{
+    font-size: 15px;
+    font-weight: 200;
+
+    text-align: justify;
+}
+
+/* Hotel */
+
+.hotel__div_global{
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 3px 0px rgba(0, 0, 0, 0.686);
+}
+
+.hotel__div_global img{
+    width: 100%;
+}
+
+.hotel__div_info{
+    background-color: #F8B400;
+
+    padding: 1rem;
+    margin-top: -1.5rem;
+
+    color: white;
+}
+
+.hotel__info_div_body p{
+    font-size: 15px;
+    font-weight: 200;
+
+    text-align: justify;
+}

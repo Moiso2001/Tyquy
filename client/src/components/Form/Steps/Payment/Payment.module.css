@@ -1,0 +1,130 @@
+.div_global h3{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.info__div_header{
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__span1{
+    font-size: 16px;
+
+    width: 100%;
+}
+
+.header__span2{
+    font-size: 14px;
+    font-weight: 600;
+
+    width: 100%;
+
+    text-align: end;
+}
+
+.info__hr{
+    background-color: black;
+
+
+    height: 1px;
+    width: 100%;
+    border: none;
+}
+
+.body__ul{
+    padding: 0 0 0 1.5rem;
+
+    margin-bottom: 1rem;
+}
+
+.body__li{
+    margin-bottom: 1rem;
+
+    color: rgba(0, 0, 0, 0.742);
+}
+
+.body__div_span{
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+}
+
+.li__span1{
+    text-align: left;
+
+    font-size: 14px ;
+}
+
+.li__span2{
+    text-align: end;
+
+    font-size: 14px ;
+}
+
+
+.info__div_total{
+    display: flex;
+
+    justify-content: space-between;
+
+    background-color: white;
+
+    padding: 1rem;
+    margin: 4rem 0 1rem 0;
+
+    border-radius: 4px;
+
+}
+
+.total__span{
+    font-weight: bold;
+}
+
+.footer__div_checkbox{
+    display: flex;
+    gap: 0.5rem;
+
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+
+.footer__div_checkbox span{
+    font-size: 0.8rem;
+}
+
+.footer__div_buttons{
+    display: flex;
+
+    justify-content: right;
+    gap: 7%;
+}
+
+.page__leftIcon{
+    color: white;
+    font-size: 1.6rem;
+
+    height: 71.2%;
+
+    background-color: #FF808B;
+    padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+}
+
+.form__div_page__button{
+    display: flex;
+
+    align-items: center;
+    border: none;
+
+    background-color: #FF808B;
+    padding: 0 3rem 0 3rem;
+
+    color: white;
+
+    font-weight: 300;
+}
