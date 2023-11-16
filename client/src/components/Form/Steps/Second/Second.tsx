@@ -147,7 +147,7 @@ export default function Second({setStep, setForm, form}: SecondProps) {
 
                   <div className={styles.div_info2}>
                     <div className={styles.info__div_data}>
-                        <span>Edad</span>
+                        <span>Edad <b className={styles.kg__span}>(años)</b></span>
                         <input 
                             onChange={e => updateNames(e, name.id)} 
                             type='number'
@@ -158,7 +158,7 @@ export default function Second({setStep, setForm, form}: SecondProps) {
                     </div>
 
                     <div className={styles.info__div_data}>
-                        <span>Peso</span>
+                        <span>Peso <b className={styles.kg__span}>(kg)</b></span>
                         <input
                             onChange={e => updateNames(e, name.id)}
                             type='number' 
