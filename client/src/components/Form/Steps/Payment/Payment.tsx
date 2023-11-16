@@ -4,12 +4,15 @@ import {useState, useEffect} from 'react'
 import {BsArrowLeftCircle} from "react-icons/bs"
 import {RiWhatsappFill} from "react-icons/ri"
 
+/* Styles */
+import styles from "./Payment.module.css"
+
 /* Types */
 import { FormType } from '../../Stepper'
 
 /* Utils */
-import { prices } from '../../../../utils/constants'
 import { convertNumberToPrice } from '../../../../utils/controller'
+import { prices } from '../../../../utils/constants'
 
 type PaymentProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
@@ -91,76 +94,57 @@ export default function Payment({setStep, setForm, form}: PaymentProps) {
   },[])
 
   return (
-    <div>
+    <div className={styles.div_global}>
       <div>
         <h3>Checkout</h3>
       </div>
 
-      <div>
+      <div className={styles.div_info}>
         <div>
           <div>
-            <div>
-              <span>1 {receipt.title}</span>
-              <span>${convertNumberToPrice(receipt.total)} COP/mes</span>
+            <div className={styles.info__div_header}>
+              <span className={styles.header__span1}>1 {receipt.title}</span>
+              <span className={styles.header__span2}>${convertNumberToPrice(receipt.total)} COP/mes</span>
             </div>
-            <hr/>
+            <hr className={styles.info__hr}/>
           </div>
 
-          <div>
-            <ul>
+          <div className={styles.info__div_body}>
+            <ul className={styles.body__ul}>
               {receipt.dogs.map(dog => 
-                <li>
-                  <span>{dog.line}</span>
-                  <span>${convertNumberToPrice(dog.price)} COP/mes</span>
+                <li className={styles.body__li}>
+                  <div className={styles.body__div_span}>
+                    <span className={styles.li__span1}>{dog.line}</span>
+                    <span className={styles.li__span2}>${convertNumberToPrice(dog.price)} COP/mes</span>
+                  </div>
                 </li>
               )}
             </ul>
           </div>
 
-          <div>
-            <span>Total a pagar</span>
-            <span>${convertNumberToPrice(receipt.total)} COP/mes</span>
+          <div className={styles.info__div_total}>
+            <span className={styles.total__span}>Total a pagar</span>
+            <span className={styles.total__span}>${convertNumberToPrice(receipt.total)} COP/mes</span>
           </div>
         </div>
 
-        <div>
-          <div>
-            <span>Nombre Completo</span>
-            <input/>
-          </div>
-
-          <div>
-            <span>Email</span>
-            <input/>
-          </div>
-
-          <div>
-            <span>Telefono</span>
-            <input/>
-          </div>
-
-          <div>
-            <span>Direccion</span>
-            <input/>
-          </div>
-
-          <div>
-
-          </div>
-        </div>
-
-        <div>
-          <div>
+        <div className={styles.info__div_footer}>
+          <div className={styles.footer__div_checkbox}>
             <input type='checkbox'/>
             <span>Acepta terminos y condiciones del servicio</span>
           </div>
 
-          <div>
-            <BsArrowLeftCircle onClick={() => setStep(step => step - 1)}/>
+          <div className={styles.footer__div_buttons}>
+            <BsArrowLeftCircle 
+              className={styles.page__leftIcon}
+              onClick={() => setStep(step => step - 1)}
+            />
             
-            <div onClick={() => setStep(step => step + 1)}>
-              <span>Tambien puedes pagar escribiendonos</span>
-              <RiWhatsappFill/>
+            <div 
+              className={styles.form__div_page__button}
+              onClick={() => setStep(step => step + 1)}
+            >
+              <span>Enviar</span>
             </div>
           </div>
         </div>
