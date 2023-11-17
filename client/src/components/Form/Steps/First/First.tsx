@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import {AiOutlineHome} from "react-icons/ai";
 
 /* Definitions */
-import { FormType } from '../../Stepper';
+import { FormType } from '../../../../types/global';
 
 /* CSS */
 import styles from "./First.module.css";

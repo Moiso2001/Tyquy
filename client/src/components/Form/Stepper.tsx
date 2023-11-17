@@ -103,8 +103,6 @@ export default function Stepper() {
     sendMessage(form)
   }
 
-  console.log(form)
-
   return (  
     <div className={styles.div_global}>
       {/* Steps */}

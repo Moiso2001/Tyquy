@@ -2,7 +2,6 @@ import {useState, useEffect} from 'react'
 
 /* Icons */
 import {BsArrowLeftCircle} from "react-icons/bs"
-import {RiWhatsappFill} from "react-icons/ri"
 
 /* Styles */
 import styles from "./Payment.module.css"
