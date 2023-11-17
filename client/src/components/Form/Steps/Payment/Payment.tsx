@@ -94,6 +94,10 @@ export default function Payment({setStep, setForm, form, sendWhatsapp}: PaymentP
     getPlanReceipt()
   },[])
 
+  useEffect(() => {
+    setForm(form => ({...form, receipt}))
+  }, [receipt])
+
   return (
     <div className={styles.div_global}>
       <div>

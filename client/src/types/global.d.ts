@@ -39,4 +39,12 @@ export type FormType = {
       photos: never[];
     }
     third: {nombre:string, tipo: string}
+    receipt: {
+      total: number;
+      title: string;
+      dogs: {
+        line: string;
+        price: number;
+      }[];
+    }
   }
