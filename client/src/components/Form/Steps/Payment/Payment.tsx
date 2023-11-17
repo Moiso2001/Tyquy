@@ -2,7 +2,6 @@ import {useState, useEffect} from 'react'
 
 /* Icons */
 import {BsArrowLeftCircle} from "react-icons/bs"
-import {RiWhatsappFill} from "react-icons/ri"
 
 /* Styles */
 import styles from "./Payment.module.css"
@@ -93,6 +92,10 @@ export default function Payment({setStep, setForm, form, sendWhatsapp}: PaymentP
   useEffect(() => {
     getPlanReceipt()
   },[])
+
+  useEffect(() => {
+    setForm(form => ({...form, receipt}))
+  }, [receipt])
 
   return (
     <div className={styles.div_global}>

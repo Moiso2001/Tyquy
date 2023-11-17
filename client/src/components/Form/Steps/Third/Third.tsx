@@ -6,7 +6,7 @@ import {RiWhatsappFill} from "react-icons/ri"
 
 
 /* Definitions */
-import { FormType } from '../../Stepper'
+import { FormType } from '../../../../types/global'
 import Plan from './Cards/Plan'
 
 /* Styles */

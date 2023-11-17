@@ -8,7 +8,7 @@ import {BsArrowLeftCircle} from "react-icons/bs"
 import { MdUploadFile } from "react-icons/md";
 
 /* Definitions */
-import { FormType } from '../../Stepper';
+import { FormType } from '../../../../types/global';
 
 /* Styles */
 import styles from "./Second.module.css";

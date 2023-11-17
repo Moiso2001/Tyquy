@@ -40,6 +40,11 @@ export default function Stepper() {
       photos: []
     },
     third: {nombre: 'office', tipo: ''},
+    receipt: {
+      total: 0,
+      title: '',
+      dogs: []
+    }
   })
 
   /* This validation will be used to return the correct step depending of the status of the "step" react state */
@@ -61,7 +66,7 @@ export default function Stepper() {
     }
     if(step === 4){
       return(
-        <Payment setStep={setStep}setForm={setForm} form={form} sendWhatsapp={sendWhatsapp}/>
+        <Payment setStep={setStep} setForm={setForm} form={form} sendWhatsapp={sendWhatsapp}/>
       )
     }
     if(step === 5){
