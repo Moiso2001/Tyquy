@@ -1,3 +1,5 @@
+
+
 export function convertNumberToPrice(number: number){
     const numberDigits = number.toString().split('')
 

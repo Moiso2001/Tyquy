@@ -20,25 +20,9 @@ import Lottie from "lottie-react";
 import dogWalking from "../../assets/lottie/dog_walking_step.json";
 import trees from "../../assets/lottie/trees.json";
 
-export type FormType = {
-  first: {
-    nombre: string;
-    celular: string;
-    correo: string;
-    direccion: string;
-  }
-  second: {
-    info: {
-        id: string;
-        name: string;
-        raza: string;
-        edad: string;
-        peso: string;
-    }[];
-    photos: never[];
-  }
-  third: {nombre:string, tipo: string}
-}
+/* Definitions */
+import { FormType } from '../../types/global';
+import { sendMessage } from '../../utils/api';
 
 
 export default function Stepper() {
@@ -59,7 +43,7 @@ export default function Stepper() {
   })
 
   /* This validation will be used to return the correct step depending of the status of the "step" react state */
-  const validation = (step: number) => {
+  const validation = (step: number, sendWhatsapp: Function) => {
     if(step === 1){
       return (
         <First setStep={setStep} form={form.first} setForm={setForm}/>
@@ -77,7 +61,7 @@ export default function Stepper() {
     }
     if(step === 4){
       return(
-        <Payment setStep={setStep}setForm={setForm} form={form}/>
+        <Payment setStep={setStep}setForm={setForm} form={form} sendWhatsapp={sendWhatsapp}/>
       )
     }
     if(step === 5){
@@ -108,6 +92,10 @@ export default function Stepper() {
     } else {
       return "0"
     }
+  }
+
+  function sendWhatsappForm() {
+    sendMessage(form)
   }
 
   return (  
@@ -158,7 +146,7 @@ export default function Stepper() {
 
       {/* Form */}
       <div className={styles.div__form}>
-        {validation(step)}
+        {validation(step, sendWhatsappForm)}
       </div>
 
     </div>
