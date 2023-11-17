@@ -8,7 +8,7 @@ import {RiWhatsappFill} from "react-icons/ri"
 import styles from "./Payment.module.css"
 
 /* Types */
-import { FormType } from '../../Stepper'
+import { FormType } from '../../../../types/global'
 
 /* Utils */
 import { convertNumberToPrice } from '../../../../utils/controller'
@@ -18,6 +18,7 @@ type PaymentProps = {
     setStep: React.Dispatch<React.SetStateAction<number>>
     setForm: React.Dispatch<React.SetStateAction<FormType>>
     form: FormType
+    sendWhatsapp: Function
 }
 
 type Receipt = {
@@ -30,7 +31,7 @@ type Receipt = {
 }
 
 
-export default function Payment({setStep, setForm, form}: PaymentProps) {
+export default function Payment({setStep, setForm, form, sendWhatsapp}: PaymentProps) {
   const [receipt, setReceipt] = useState<Receipt>({total: 0, title: '', dogs: []})
 
   function getPlanReceipt () {
@@ -142,7 +143,7 @@ export default function Payment({setStep, setForm, form}: PaymentProps) {
             
             <div 
               className={styles.form__div_page__button}
-              onClick={() => setStep(step => step + 1)}
+              onClick={() => {{setStep(step => step + 1); sendWhatsapp()}}}
             >
               <span>Enviar</span>
             </div>
