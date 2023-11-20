@@ -120,3 +120,17 @@
 .div__form{
     width: 94%;
 }
+
+@media (width >= 900px) {
+    .div_global{
+        margin-left: 9%;
+        margin-right: 9%;
+    }
+}
+
+@media (width >= 1250px) {
+    .div_global{
+        margin-left: 11%;
+        margin-right: 11%;
+    }
+}
