@@ -1,3 +1,7 @@
+.desktop__div_image{
+    display: none;
+}
+
 .div_form span{
     font-weight: 600;
     font-size: 0.95rem;
@@ -92,4 +96,34 @@
 
 .error_input{
     background-color: #feb6bb4b;
+}
+
+@media (width >= 900px) {
+    .div_global{
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .desktop__div_image{
+        display: flex;
+    }
+
+    .desktop__div_image img{
+        width: 300px;
+        height: 300px;
+        
+    }
+}
+
+@media (width >= 1000px) {
+    .desktop__div_image img{
+        width: 350px;
+        height: 350px;   
+    }
+
+    .form__div_contacto{    
+        display: grid;
+        grid-template-columns: 48% 48.5%
+    }
+
 }

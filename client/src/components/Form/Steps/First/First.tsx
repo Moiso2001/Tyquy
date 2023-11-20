@@ -1,8 +1,10 @@
 import {useCallback, useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
 
-/* Icons */
+/* Icons and Images */
 import {AiOutlineHome} from "react-icons/ai";
+
+import deskpImage from "../../../../assets/form/first-desk-form.png"
 
 /* Definitions */
 import { FormType } from '../../../../types/global';
@@ -58,8 +60,8 @@ export default function First({setStep, form, setForm}: FirstProps) {
 
   return (
       <div className={styles.div_global}>
-        <div>
-
+        <div className={styles.desktop__div_image}>
+          <img src={deskpImage}/> 
         </div>
 
         <div className={styles.div_form}>
