@@ -188,7 +188,7 @@ export default function Second({setStep, setForm, form}: SecondProps) {
                     } 
 
                     <MdUploadFile 
-                      className={styles.functions__icon}
+                      className={styles.functions__icon2}
                     />
                   </div>
                 </div>

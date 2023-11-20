@@ -125,5 +125,11 @@
         display: grid;
         grid-template-columns: 48% 48.5%
     }
+}
 
+@media (width >= 1250px) {
+    .desktop__div_image img{
+        width: 420px;
+        height: 420px;   
+    }
 }
