@@ -102,7 +102,7 @@ export default function Head() {
             <div className={styles.register__div_button}>
                 <Link to='/formulario'>
                     <Lottie animationData={dogAnimation} className={styles.register__dogAnimation}/>
-                    <button>Registra a tu peludito</button>
+                    <button>Haz tu cotizacion ahora</button>
                 </Link>
             </div>
             

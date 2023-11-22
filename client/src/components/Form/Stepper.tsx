@@ -90,7 +90,7 @@ export default function Stepper() {
       if(step < 5){
         return "0"
       } else if(step >= 5){
-        return "35%"
+        return "40%"
       } else {
         return "0"
       }

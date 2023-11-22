@@ -23,7 +23,7 @@
     width: 56px;
 
     top: -42px;
-    left: 305px;
+    left: 82%;
 }
 
 .div_body p{
@@ -49,4 +49,23 @@
     color: black;
 
     font-size: 2rem;
+}
+
+@media (width >= 800px) {
+    .div_body img{
+        left: 90%;
+    }
+}
+
+@media (width >= 1000px) {
+    .div_title h3{
+        font-size: 1.4rem;
+    }
+    .div_body{
+        width: 80%;
+    }
+
+    .div_body p{
+        font-size: 18px;
+    }    
 }
