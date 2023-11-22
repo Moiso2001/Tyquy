@@ -195,34 +195,40 @@ export default function Second({setStep, setForm, form}: SecondProps) {
             )}
         </div>  
 
-        {/* Upload Images */}
-        <div className={styles.div__upload_images_desktop}> 
-            {names.map(dog => 
-              <div>
-                <label>{dog.name} foto (opcional)</label>
-                <input 
-                  name={`${dog.name}_photo`} 
-                  type='file' 
-                  accept='.jpg, .jpeg, .png'
-                  // onChange={e => {}}
-                />
-              </div>
-            )}
+        <div className={styles.div_footer}>
+          {/* Upload Images */}
+          <div className={styles.div__upload_images_desktop}> 
+              {names.map(dog => 
+                <div className={styles.desktop__div_dog_upload}>
+                  <label>{dog.name} foto (opcional)</label>
+                  <div className={styles.upload__div_input}>
+                    <MdUploadFile className={styles.functions__icon_desktop}/>
+                    <input 
+                      name={`${dog.name}_photo`} 
+                      type='file' 
+                      accept='.jpg, .jpeg, .png'
+                      // onChange={e => {}}
+                    />
+                  </div>
+                </div>
+              )}
+          </div>
+
+          <div className={styles.form__div_page}>
+              <BsArrowLeftCircle 
+                className={styles.page__afterIcon}
+                onClick={() => setStep(step => step - 1)}
+              />
+              <button 
+                onClick={() => {setStep(step => step + 1); updateForm()}}
+                disabled={error.length !== 0}
+                className={error.length !== 0 ? styles.form__div_page__button__disabled : styles.form__div_page__button}
+              >
+                Continuar
+              </button>
+          </div>
         </div>
 
-        <div className={styles.form__div_page}>
-            <BsArrowLeftCircle 
-              className={styles.page__afterIcon}
-              onClick={() => setStep(step => step - 1)}
-            />
-            <button 
-              onClick={() => {setStep(step => step + 1); updateForm()}}
-              disabled={error.length !== 0}
-              className={error.length !== 0 ? styles.form__div_page__button__disabled : styles.form__div_page__button}
-            >
-              Continuar
-            </button>
-        </div>
     </div>
   )
 }

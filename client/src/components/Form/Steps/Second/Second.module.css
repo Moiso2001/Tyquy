@@ -89,7 +89,7 @@
     color: white;
     font-size: 1.6rem;
 
-    height: 71.2%;
+    height: 30px;
 
     background-color: #FF808B;
     padding: 0.4rem 0.6rem 0.4rem 0.6rem;
@@ -100,6 +100,8 @@
 
     background-color: #FF808B;
     padding: 0 3rem 0 3rem;
+
+    height: 43px;
 
     color: white;
 
@@ -149,5 +151,74 @@
 
     .div_functions{
         margin-top: 2%;
+    }
+
+    .div_footer{
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: end;
+    }
+
+    .div_footer label{
+        font-size: 0.8rem;
+        font-weight: 300;
+        
+        margin-bottom: 1rem;
+    }
+
+    .div__upload_images_desktop{
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        gap: 2rem;
+    }
+
+    .desktop__div_dog_upload{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .upload__div_input{
+        position: relative;
+        background-color: #D9D9D9;
+
+        width: 200px;
+        height: 200px;
+
+        border-radius: 100%;
+    }
+    .desktop__div_dog_upload input{
+        position: absolute;
+
+        top: 60px;
+        left: 60px;
+
+        width: 150px;
+        height: 150px;
+
+        border-radius: 100%;
+
+        outline: none;
+        opacity: 0;
+    }
+
+    .page__afterIcon{
+        font-size: 2.7rem;
+    }
+
+    .functions__icon_desktop{
+        position: absolute;
+
+        font-size: 2.5rem;
+
+        top: 40%;
+        bottom: 0;
+        left: 40%;
+        right: 0;
+
+        z-index: 10;
+        opacity: 0.6;
     }
 }
