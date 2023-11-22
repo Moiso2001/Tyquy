@@ -16,11 +16,15 @@
 .office__div_esencial{
     margin-bottom: 2rem;
 
+    width: 100%;
+
     box-shadow: 4px 4px 3px 0px rgba(0, 0, 0, 0.686);
 }
 
 .office__div_esencial__focused{
     margin-bottom: 2rem;
+
+    width: 100%;
 
     box-shadow: 4px 4px 3px 0px rgba(0, 0, 0, 0.686);
     border: 2px solid white;
@@ -65,11 +69,15 @@
 .office__div_estandard{
     margin-bottom: 2rem;
 
+    width: 100%;
+
     box-shadow: 4px 4px 3px 0px rgba(0, 0, 0, 0.686);
 }
 
 .office__div_estandard__focused{
     margin-bottom: 2rem;
+
+    width: 100%;
 
     box-shadow: 4px 4px 3px 0px rgba(0, 0, 0, 0.686);
     border: 2px solid white;
@@ -176,4 +184,21 @@
     font-weight: 200;
 
     text-align: justify;
+}
+
+@media (width >= 1000px){
+    .office__div_global{
+        display: grid;
+
+        grid-template-columns: 33% 33% 33%;
+        
+        gap: 2rem;
+    }
+
+    .office__div_esencial{
+        margin-bottom: 2rem;
+        width: 100%;
+    
+        box-shadow: 4px 4px 3px 0px rgba(0, 0, 0, 0.686);
+    }
 }
