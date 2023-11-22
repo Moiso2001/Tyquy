@@ -183,3 +183,32 @@
     font-size: 1.5rem;
     margin-right: 0.2rem;
 }
+
+@media (width >= 1000px){
+    .plan__div_office{
+        height: 38px;
+    }
+    
+    .plan__div_spa{
+        height: 38px;
+    }
+    
+    .plan__div_hotel{
+        height: 38px;
+    }
+    
+    .plan__div_office__focus{
+        height: 36px;
+    }
+    
+    .plan__div_spa__focus{
+        height: 36px;
+    }
+    
+    .plan__div_hotel__focus{
+        height: 36px;
+    }
+
+    
+    
+}
