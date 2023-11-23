@@ -146,6 +146,24 @@
     background-color: #feb6bb4b;
 }
 
+@media (width <= 350px) {
+    .div_info1 input{
+        width: 140px;
+    }
+}
+
+@media (width > 350px) and (width <= 450px) {
+    .div_info1 input{
+        width: 180px;
+    }
+}
+
+@media (width > 500px) {
+    .div_info1 input{
+        width: 240px;
+    }
+}
+
 @media (width < 900px) {
     .div__upload_images_desktop{
         display: none;
