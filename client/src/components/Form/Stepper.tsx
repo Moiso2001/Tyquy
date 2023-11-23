@@ -26,8 +26,8 @@ import { sendMessage } from '../../utils/api';
 
 
 export default function Stepper() {
+  /* States  to manage form and steps */
   const [step , setStep] = useState(1);
-
   const [form, setForm] = useState<FormType>({
     first: {
       nombre: '',
@@ -76,6 +76,7 @@ export default function Stepper() {
     }
   }
 
+  /* Function to set the movement on the bar step icons between each form step */
   function lottiePositionStyle (type: string): string {
     if(type === 'dog'){
       if(step === 1) return "3%";
@@ -90,7 +91,7 @@ export default function Stepper() {
       if(step < 5){
         return "0"
       } else if(step >= 5){
-        return "35%"
+        return "40%"
       } else {
         return "0"
       }
@@ -99,6 +100,7 @@ export default function Stepper() {
     }
   }
 
+  /* Conection with API to send whatsapp at the end of the form */
   function sendWhatsappForm() {
     sendMessage(form)
   }

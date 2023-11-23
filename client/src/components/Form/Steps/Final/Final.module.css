@@ -23,7 +23,7 @@
     width: 56px;
 
     top: -42px;
-    left: 305px;
+    left: 82%;
 }
 
 .div_body p{
@@ -43,10 +43,40 @@
     border-radius: 4px;
 
     padding: 0.8rem 2.2rem 0.8rem 2.2rem;
+
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.25s;
+
+    cursor: default;
+}
+
+.div_button:hover{
+    background-color: #fc9aa2;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .button__home{
     color: black;
 
     font-size: 2rem;
+}
+
+@media (width >= 800px) {
+    .div_body img{
+        left: 90%;
+    }
+}
+
+@media (width >= 1000px) {
+    .div_title h3{
+        font-size: 1.4rem;
+    }
+    .div_body{
+        width: 80%;
+    }
+
+    .div_body p{
+        font-size: 18px;
+    }    
 }

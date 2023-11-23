@@ -71,6 +71,15 @@
     color: white;
 
     font-weight: 300;
+
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.25s;
+}
+
+.form__div_page__button:hover{
+    background-color: #fc9aa2;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .form__div_page__button__disabled{
@@ -92,6 +101,17 @@
 
     background-color: #FF808B;
     padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.25s;
+
+    cursor: default;
+}
+
+.page__homeIcon:hover{
+    background-color: #fc9aa2;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .error_input{
@@ -125,5 +145,11 @@
         display: grid;
         grid-template-columns: 48% 48.5%
     }
+}
 
+@media (width >= 1250px) {
+    .desktop__div_image img{
+        width: 420px;
+        height: 420px;   
+    }
 }

@@ -113,6 +113,15 @@
 
     background-color: #FF808B;
     padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.25s;
+}
+
+.page__leftIcon:hover{
+    background-color: #fc9aa2;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .form__div_page__button{
@@ -127,4 +136,15 @@
     color: white;
 
     font-weight: 300;
+
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.25s;
+
+    cursor: default;
+}
+
+.form__div_page__button:hover{
+    background-color: #fc9aa2;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }

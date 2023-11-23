@@ -148,7 +148,7 @@ export default function Payment({setStep, setForm, form, sendWhatsapp}: PaymentP
               className={styles.form__div_page__button}
               onClick={() => {{setStep(step => step + 1); sendWhatsapp()}}}
             >
-              <span>Enviar</span>
+              <span>Enviar datos</span>
             </div>
           </div>
         </div>
