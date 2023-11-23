@@ -43,6 +43,17 @@
     border-radius: 4px;
 
     padding: 0.8rem 2.2rem 0.8rem 2.2rem;
+
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.25s;
+
+    cursor: default;
+}
+
+.div_button:hover{
+    background-color: #fc9aa2;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .button__home{

@@ -105,7 +105,6 @@ export default function Head() {
                     <button>Haz tu cotizacion ahora</button>
                 </Link>
             </div>
-            
         </div>
 
         {/* Opinions */}
