@@ -3,6 +3,7 @@ import { getS3Object, postS3Object } from "./controllers/S3"
 import { sendWhatsappMessage } from "./controllers/twilio";
 
 import cors from "cors"
+import { sendEmail } from "./controllers/mailer/mailer";
 
 const app = express()
 const port = 3001
@@ -26,6 +27,18 @@ app.get('/photo/:id', async (req, res) => {
         console.log(1, object)
     }
 });
+
+app.post('/email', async (req, res) => {
+    const body = req.body
+
+    try {
+        await sendEmail(body)
+
+        res.send('Alright email')
+    } catch (error) {
+        console.error(error)
+    }
+})
 
 app.post('/message', async (req, res) => {
     const body = req.body
