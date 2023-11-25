@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer"
-import { FormType } from "../types/global";
+import { FormType } from "../../types/global";
 
 const testAccount = {
     user: 'moises.espanglish@gmail.com',
@@ -25,13 +25,13 @@ transporter.verify()
         console.log(err)
     })
 
-async function sendEmail(formData: FormType) {
+export async function sendEmail(formData: FormType) {
     try {
         await transporter.sendMail({                
         from: '"Tyquy Cotizacion" <admin@tyqubayara.com>', // sender address
         // to: 'Tyquybayarapet@gmail.com', // list of receivers
         to: "wollxi@gmail.com",
-        subject: `${formData} necesita nuestra ayuda`, // Subject line
+        subject: `${'hola'} necesita nuestra ayuda`, // Subject line
         html: "<div>Allright</div>", })
     } catch (error) {
         console.error(error)
