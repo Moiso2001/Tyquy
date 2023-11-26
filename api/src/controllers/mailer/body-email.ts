@@ -1,6 +1,31 @@
 import { FormType } from "../../types/global";
 
 export function getBody(formData: FormType) {
+    const dogsLines = formData.second.info.map(dog => `
+        <ul class="leftList" start="1" style="margin-top: 0; margin-bottom: 0; padding: 0; padding-left: 20px; color: #101112; direction: ltr; font-family: Arial,'Helvetica Neue',Helvetica,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 120%; text-align: left; mso-line-height-alt: 19.2px; list-style-type: disc;">
+            <li style="margin-bottom: 0; text-align: left;"><b>Nombre: ${dog.name}</b></li>
+            <li style="margin-bottom: 0; text-align: left;">Raza: ${dog.raza}</li>
+            <li style="margin-bottom: 0; text-align: left;">Edad: ${dog.edad}</li>
+            <li style="margin-bottom: 0; text-align: left;">Peso: ${dog.peso}</li>
+            <span>------------------------------------------------------------------------</span>
+        </ul>
+    `)
+
+    const dogsReceiptLines = formData.receipt.dogs.map(dog => `
+        <span>${dog.line} <b>${dog.price}</b>K COP</span>
+    `)
+
+    const currentDate = new Date();
+
+    const formattedDate = currentDate.toLocaleString('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false // Use 24-hour format
+      });
+
     return `
     <!DOCTYPE html>
 
@@ -164,12 +189,7 @@ export function getBody(formData: FormType) {
 <tr>
 <td class="pad">
 <div class="levelOne" style="margin-left: 0;">
-<ul class="leftList" start="1" style="margin-top: 0; margin-bottom: 0; padding: 0; padding-left: 20px; color: #101112; direction: ltr; font-family: Arial,'Helvetica Neue',Helvetica,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 120%; text-align: left; mso-line-height-alt: 19.2px; list-style-type: disc;">
-<li style="margin-bottom: 0; text-align: left;">Nombre: ***NOMBREP***</li>
-<li style="margin-bottom: 0; text-align: left;">Raza: ***RAZA***</li>
-<li style="margin-bottom: 0; text-align: left;">Edad: ***EDAD***</li>
-<li style="margin-bottom: 0; text-align: left;">Peso: ***PESO***</li>
-</ul>
+${dogsLines.join('\n')}
 </div>
 </td>
 </tr>
@@ -199,9 +219,9 @@ export function getBody(formData: FormType) {
 <td class="pad">
 <div class="levelOne" style="margin-left: 0;">
 <ul class="leftList" start="1" style="margin-top: 0; margin-bottom: 0; padding: 0; padding-left: 20px; color: #101112; direction: ltr; font-family: Arial,'Helvetica Neue',Helvetica,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 120%; text-align: left; mso-line-height-alt: 19.2px; list-style-type: disc;">
-<li style="margin-bottom: 0; text-align: left;">Total: ***TOTAL***</li>
-<li style="margin-bottom: 0; text-align: left;">Plan: ***PLAN***</li>
-<li style="margin-bottom: 0; text-align: left;">Perritos: ***PERRITOS***</li>
+<li style="margin-bottom: 0; text-align: left;">Total: <b>${formData.receipt.total}K COP</b></li>
+<li style="margin-bottom: 0; text-align: left;">Plan: ${formData.receipt.title}</li>
+<li style="margin-bottom: 0; text-align: left;">Perritos: ${dogsReceiptLines.join('\n')}</li>
 </ul>
 </div>
 </td>
@@ -211,7 +231,7 @@ export function getBody(formData: FormType) {
 <tr>
 <td class="pad">
 <div style="color:#101112;direction:ltr;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
-<p style="margin: 0;">Fecha de envio: ***DATE***</p>
+<p style="margin: 0;">Fecha de envio: ${formattedDate}</p>
 </div>
 </td>
 </tr>

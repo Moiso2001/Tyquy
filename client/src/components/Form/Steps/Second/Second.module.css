@@ -181,6 +181,10 @@
         gap: 5%;
     }
 
+    .div_info1 input{
+        width: 200px;
+    }
+
     .div_info2{
         display: flex;
     }
@@ -256,6 +260,12 @@
 
         z-index: 10;
         opacity: 0.6;
+    }
+}
+
+@media (width >= 1000px) {
+    .div_info1 input{
+        width: 240px;
     }
 }
 
