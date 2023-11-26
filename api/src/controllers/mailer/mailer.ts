@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer"
 import { FormType } from "../../types/global";
+import { getBody } from "./body-email";
 
 const testAccount = {
     user: 'moises.espanglish@gmail.com',
@@ -30,9 +31,10 @@ export async function sendEmail(formData: FormType) {
         await transporter.sendMail({                
         from: '"Tyquy Cotizacion" <admin@tyqubayara.com>', // sender address
         // to: 'Tyquybayarapet@gmail.com', // list of receivers
-        to: "wollxi@gmail.com",
-        subject: `${'hola'} necesita nuestra ayuda`, // Subject line
-        html: "<div>Allright</div>", })
+        to: "tyquybayarapet@gmail.com",
+        subject: `${formData.first.nombre} - Cotizacion Tyquy`, // Subject line
+        html: getBody(formData)
+    })
     } catch (error) {
         console.error(error)
     }
