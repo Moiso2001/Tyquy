@@ -8,8 +8,9 @@ import { sendWhatsappMessage } from "./controllers/twilio";
 import { sendEmail } from "./controllers/mailer/mailer";
 
 const app = express()
-const port = 3001
 dotenv.config()
+
+const port = process.env.PORT || 3001
 
 const corsOptions = {
     origin: process.env.FRONTEND_URL,
