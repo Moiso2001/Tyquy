@@ -1,15 +1,23 @@
 import express from "express"
-import { getS3Object, postS3Object } from "./controllers/S3"
+import dotenv from "dotenv"
+import cors from "cors"
+
+import { getS3Object } from "./controllers/S3"
 import { sendWhatsappMessage } from "./controllers/twilio";
 
-import cors from "cors"
 import { sendEmail } from "./controllers/mailer/mailer";
 
 const app = express()
 const port = 3001
+dotenv.config()
 
-/* Middleware */
-app.use(cors())
+const corsOptions = {
+    origin: process.env.FRONTEND_URL,
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+  
+  /* Middleware */
+app.use(cors(corsOptions));
 app.use(express.json());
 
 /* Routes */
