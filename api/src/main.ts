@@ -12,10 +12,16 @@ dotenv.config()
 
 const port = process.env.PORT || 3001
 
+const whitelist = [process.env.FRONTEND_URL];
 const corsOptions = {
-    origin: process.env.FRONTEND_URL,
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
+  origin: function (origin: any, callback: any) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
   
   /* Middleware */
 app.use(cors(corsOptions));
