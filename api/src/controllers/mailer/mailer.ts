@@ -34,7 +34,7 @@ export async function sendEmail(formData: FormType) {
     try {
         await transporter.sendMail({                
         from: '"Tyquy Cotizacion" <admin@tyqubayara.com>', // sender address
-        to: "wollxi@gmail.com",
+        to: "tyquybayarapet@gmail.com",
         subject: `${formData.first.nombre} - Cotizacion Tyquy`, // Subject line
         html: getBody(formData)
     })
