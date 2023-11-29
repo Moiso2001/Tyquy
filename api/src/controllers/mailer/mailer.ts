@@ -38,6 +38,7 @@ export async function sendEmail(formData: FormType) {
         subject: `${formData.first.nombre} - Cotizacion Tyquy`, // Subject line
         html: getBody(formData)
     })
+        console.log(`${formData.first.correo} email sent`)
     } catch (error) {
         console.error(error)
     }
