@@ -12,7 +12,7 @@ dotenv.config()
 
 const port = process.env.PORT || 3001
 
-const whitelist = [process.env.FRONTEND_URL];
+const whitelist = process.env.FRONTEND_URL || '*';
 const corsOptions = {
   origin: function (origin: any, callback: any) {
     if (whitelist.indexOf(origin) !== -1) {
@@ -20,7 +20,8 @@ const corsOptions = {
     } else {
       callback(new Error('Not allowed by CORS'))
     }
-  }
+  },
+  credentials: false
 }
   
   /* Middleware */
